@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
 import Providers from '@/providers'
-import { Geist } from "next/font/google";
 import "../styles/globals.css";
 import localFont from 'next/font/local'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+
 
 
 
@@ -60,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body
-        className={`${damoon.variable}  ${geistSans.variable}  antialiased`}
+        className={`${damoon.variable}  antialiased`}
       >
         <Providers>
           {children}

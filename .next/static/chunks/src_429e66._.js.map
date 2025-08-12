@@ -1,9 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Projects/sabka/src/config/reactQueryConfig.ts"],"sourcesContent":["// reactQueryConfig.ts\r\nimport { QueryClient } from '@tanstack/react-query';\r\n\r\nexport const queryClient = new QueryClient({\r\n    defaultOptions: {\r\n        queries: {\r\n            retry: 3,\r\n            refetchOnWindowFocus: false,\r\n            /* staleTime: 5 * 60 * 1000, */\r\n        },\r\n        mutations: {\r\n            retry: 1,\r\n        },\r\n    },\r\n});\r\n\r\n\r\n"],"names":[],"mappings":"AAAA,sBAAsB;;;;AACtB;;AAEO,MAAM,cAAc,IAAI,gLAAA,CAAA,cAAW,CAAC;IACvC,gBAAgB;QACZ,SAAS;YACL,OAAO;YACP,sBAAsB;QAE1B;QACA,WAAW;YACP,OAAO;QACX;IACJ;AACJ"}},
-    {"offset": {"line": 27, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":["file://D%3A/Projects/sabka/src/providers/ReactQueryProvider/index.tsx"],"sourcesContent":["'use client'\r\nimport React, { ReactNode } from 'react';\r\nimport { QueryClientProvider } from '@tanstack/react-query';\r\nimport { queryClient } from '../../config/reactQueryConfig';\r\nimport { ReactQueryDevtools } from '@tanstack/react-query-devtools'\r\nconst ReactQueryProvider = ({ children }: { children: ReactNode }) => {\r\n    return (\r\n        <QueryClientProvider client={queryClient}>\r\n            {children}\r\n            <ReactQueryDevtools initialIsOpen={false} />\r\n        </QueryClientProvider>\r\n    )\r\n}\r\nexport default ReactQueryProvider\r\n"],"names":[],"mappings":";;;;AAGA;AADA;AAEA;AAJA;;;;;AAKA,MAAM,qBAAqB,CAAC,EAAE,QAAQ,EAA2B;IAC7D,qBACI,6LAAC,yLAAA,CAAA,sBAAmB;QAAC,QAAQ,oIAAA,CAAA,cAAW;;YACnC;0BACD,6LAAC,uLAAA,CAAA,qBAAkB;gBAAC,eAAe;;;;;;;;;;;;AAG/C;KAPM;uCAQS"}},
-    {"offset": {"line": 71, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
