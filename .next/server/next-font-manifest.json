@@ -1,0 +1,16 @@
+{
+  "app": {
+    "[project]/src/app/page": [
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/DAMOONFANUM_Thin-s.p.76a20e1d.woff2",
+      "static/media/DAMOONFANUM_ExtraLight-s.p.609a2964.woff2",
+      "static/media/DAMOONFANUM_Light-s.p.ed3e5404.woff2",
+      "static/media/DAMOONFANUM_SemiBold-s.p.ea13b127.woff2",
+      "static/media/DAMOONFANUM_Bold-s.p.c98ee2d0.woff2",
+      "static/media/DAMOONFANUM_ExtraBold-s.p.5d4122fe.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}
