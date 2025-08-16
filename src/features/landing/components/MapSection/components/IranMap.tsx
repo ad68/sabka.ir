@@ -54,7 +54,7 @@ export default function IranProvincesMap({ onSelect, width = 720, height = 520 }
             )}
 
             <ComposableMap width={width} height={height} projectionConfig={{ scale: 1200, center: [54, 32] }}>
-                <ZoomableGroup minZoom={1} maxZoom={8}>
+                {/*<ZoomableGroup minZoom={1} maxZoom={8}>*/}
                     <Geographies geography={TOPO_URL}>
                         {({ geographies }) =>
                             geographies.map((geo) => {
@@ -82,7 +82,7 @@ export default function IranProvincesMap({ onSelect, width = 720, height = 520 }
                             })
                         }
                     </Geographies>
-                </ZoomableGroup>
+                {/*</ZoomableGroup>*/}
             </ComposableMap>
         </div>
     );
