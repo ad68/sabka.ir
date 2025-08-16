@@ -112,3 +112,12 @@ li {
 .trap-bottom-short {
   clip-path: polygon(0 0, 100% 0, 100% 100%, var(--cut) 100%);
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}

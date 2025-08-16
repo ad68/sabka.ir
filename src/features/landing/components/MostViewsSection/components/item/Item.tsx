@@ -14,7 +14,7 @@ export default function Index({
     isSelected,
 }: MostViewItemProps) {
     return (
-        <section className={`rounded-3xl  relative flex flex-col h-[280px] xl:h-[350px] max-w-[250px] `}>
+        <section className={`rounded-3xl  relative flex flex-col h-[280px] xl:h-[300px] max-w-[250px] `}>
             <section className="absolute inset-0 bg-cover bg-center rounded-2xl" style={{ backgroundImage: `url(${img})` }}></section>
             <section onClick={() => {}} className='absolute cursor-pointer top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
                 <PlayVideoIcon className='w-12 h-12'/>

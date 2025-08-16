@@ -50,8 +50,6 @@ export default function Index() {
                         </p>
 
                     </section>
-
-
                 </section>
             </section>
         </section>

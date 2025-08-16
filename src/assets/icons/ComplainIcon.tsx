@@ -1,5 +1,4 @@
 import React from 'react';
-
 export function ComplainIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg {...props} width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -7,7 +6,6 @@ export function ComplainIcon(props: React.SVGProps<SVGSVGElement>) {
             <path d="M11.9998 12.3403V12.1304C11.9998 11.4504 12.4198 11.0904 12.8398 10.8004C13.2498 10.5204 13.6598 10.1604 13.6598 9.50037C13.6598 8.58037 12.9198 7.84033 11.9998 7.84033C11.0798 7.84033 10.3398 8.58037 10.3398 9.50037" stroke="#35663A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M11.9955 14.7305H12.0045" stroke="#35663A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-
     )
 }
 

@@ -9,11 +9,9 @@ import ForthSec2 from "@/assets/img/landing/FourthSec2.png";
 import ForthSec3 from "@/assets/img/landing/FourthSec3.png";
 import ForthSec5 from "@/assets/img/landing/FourthSec5.png";
 import ForthSec6 from "@/assets/img/landing/FourthSec6.png";
-import FourthSectionBg from "@/assets/img/landing/FourthSectionBg.png";
 import FourthSectionItem from "./components/FourthSectionItem";
-import React, {useEffect, useState} from "react";
+import React, {useRef, useState} from "react";
 import { useIsMobile } from "@/features/products/hooks/useIsMobile";
-import Slider from "react-slick";
 
 const newsChildren = [
     { key: 1, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec1, link: '' },
@@ -34,60 +32,33 @@ const tabSection = [
 export default function Index() {
     const [selectedItem, setSelectedItem] = useState(tabSection[0]);
     const [activeTab, setActiveTab] = useState(0);
-    const [currentSlide, setCurrentSlide] = useState(0);
     const isMobile = useIsMobile();
-    const [centerPadding, setCenterPadding] = useState("0px");
-    useEffect(() => {
-        function updateCenterPadding() {
-            const width = window.innerWidth;
-            if (width <= 550) {
-                setCenterPadding("80px");
-            }else if (width <= 600) {
-                setCenterPadding("20px");
-            }else if (width <= 670) {
-                setCenterPadding("20px");
-            } else {
-                setCenterPadding("50px");
-            }
-        }
 
-        updateCenterPadding();
+    const scrollRef = useRef<HTMLDivElement>(null);
 
-        window.addEventListener("resize", updateCenterPadding);
-        return () => window.removeEventListener("resize", updateCenterPadding);
-    }, []);
-    const settings = {
-        className: 'center',
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerPadding:centerPadding,
-        centerMode: true,
-        rtl: true,
-        arrows: false,
-        dots: false,
-        autoplay: false,
-        beforeChange: (oldIndex: number, newIndex: number) => {
-            setCurrentSlide(newIndex);
-        },
-        responsive: [
-            {
-                breakpoint: 800,
-                settings: {
-                    slidesToShow: 2,
-                    centerMode: true,
-                },
-            },
-            {
-                breakpoint: 500,
-                settings: {
-                    slidesToShow: 1,
-                    centerMode: true,
-                },
-            },
-        ],
+
+    const isDragging = useRef(false);
+    const startX = useRef(0);
+    const scrollLeft = useRef(0);
+
+    const onMouseDown = (e: React.MouseEvent) => {
+        if (!scrollRef.current) return;
+        isDragging.current = true;
+        startX.current = e.pageX - scrollRef.current.offsetLeft;
+        scrollLeft.current = scrollRef.current.scrollLeft;
     };
+
+    const onMouseLeave = () => (isDragging.current = false);
+    const onMouseUp = () => (isDragging.current = false);
+
+    const onMouseMove = (e: React.MouseEvent) => {
+        if (!isDragging.current || !scrollRef.current) return;
+        e.preventDefault();
+        const x = e.pageX - scrollRef.current.offsetLeft;
+        const walk = (x - startX.current) * 1; // scroll speed
+        scrollRef.current.scrollLeft = scrollLeft.current - walk;
+    };
+
 
     return (
         <section
@@ -104,36 +75,36 @@ export default function Index() {
 
             <section className="w-[96%] mx-auto p-6 flex flex-col justify-center items-center gap-6">
                 {isMobile ? (
-                    <section className='bg-[#F5F5F5] w-full h-auto p-2' >
-                        <Slider {...settings}>
+                    <section className='bg-[#F5F5F5] w-full h-auto p-2 ' >
+                        <div
+                            ref={scrollRef}
+                            className="flex gap-2 overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing"
+                            onMouseDown={onMouseDown}
+                            onMouseLeave={onMouseLeave}
+                            onMouseUp={onMouseUp}
+                            onMouseMove={onMouseMove}
+                        >
                             {tabSection.map((item, idx) => (
-                                <section
-                                    key={idx}
-                                    className={` transition-all duration-300 ease-in-out ${
-                                        idx === currentSlide ? 'scale-95 z-20' : 'scale-95 z-10'
+                                <li
+                                    key={item.key}
+                                    onClick={() => {
+                                        setActiveTab(idx);
+                                        setSelectedItem(item);
+                                    }}
+                                    className={`relative flex group flex-row gap-1 justify-center items-center w-40 rounded-md h-[40px] cursor-pointer flex-shrink-0 ${
+                                        activeTab === idx ? "bg-[#35663A] text-white" : "bg-white"
                                     }`}
                                 >
-                                    <li
-                                        onClick={() => {
-                                            setActiveTab(idx);
-                                            setSelectedItem(item);
-                                        }}
-                                        className={`relative flex group flex-row gap-1 justify-center items-center w-40  rounded-md h-[40px] cursor-pointer ${
-                                            activeTab === idx ? 'bg-[#35663A] text-white' : 'bg-white'
-                                        }`}
-                                        key={item.key}
-                                    >
-                                        {React.cloneElement(item.icon, {
-                                            color: 'black',
-                                            className: `${
-                                                activeTab === idx ? 'bg-[#35663A] text-white' : 'bg-white'
-                                            } hover:text-white`,
-                                        })}
-                                        {item.title}
-                                    </li>
-                                </section>
+                                    {React.cloneElement(item.icon, {
+                                        color: "black",
+                                        className: `${
+                                            activeTab === idx ? "bg-[#35663A] text-white" : "bg-white"
+                                        } hover:text-white`,
+                                    })}
+                                    {item.title}
+                                </li>
                             ))}
-                        </Slider>
+                        </div>
                     </section>
                 ) : (
                     <ul className="flex flex-row justify-center items-center bg-[#F5F5F5] rounded-xl p-4 gap-6">

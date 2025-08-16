@@ -1,5 +1,4 @@
 import React from 'react';
-
 export function PortalIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg {...props} width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -10,7 +9,6 @@ export function PortalIcon(props: React.SVGProps<SVGSVGElement>) {
             <path d="M9.00043 12.2704C10.0001 12.2704 10.8104 11.46 10.8104 10.4604C10.8104 9.46075 10.0001 8.65039 9.00043 8.65039C8.00079 8.65039 7.19043 9.46075 7.19043 10.4604C7.19043 11.46 8.00079 12.2704 9.00043 12.2704Z" stroke="#558C5A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M12.5 17.3102C12.36 15.8602 11.21 14.7202 9.76 14.5902C9.26 14.5402 8.75 14.5402 8.24 14.5902C6.79 14.7302 5.64 15.8602 5.5 17.3102" stroke="#558C5A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-
     )
 }
 

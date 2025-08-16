@@ -1,6 +1,4 @@
-
 import React from 'react';
-
 export function PlayVideoIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg {...props} width="81" height="81" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">

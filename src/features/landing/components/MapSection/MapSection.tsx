@@ -2,7 +2,6 @@
 import {LeafIcon} from "@/assets/icons/LeafIcon";
 import React from "react";
 import IranProvincesMap from "@/features/landing/components/MapSection/components/IranMap";
-import MapPageBg from "@/assets/img/landing/MapPageBg.png";
 import {SearchIcon} from "@/assets/icons/SearchIcon";
 
 export default function Index() {

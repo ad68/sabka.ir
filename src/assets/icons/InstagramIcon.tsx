@@ -1,6 +1,4 @@
 import React from "react";
-
-
 export function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg {...props} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -8,7 +6,5 @@ export function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
             <path d="M9.99967 12.9167C11.6105 12.9167 12.9163 11.6108 12.9163 10C12.9163 8.38918 11.6105 7.08334 9.99967 7.08334C8.38884 7.08334 7.08301 8.38918 7.08301 10C7.08301 11.6108 8.38884 12.9167 9.99967 12.9167Z" stroke="#070D07" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M14.6971 5.83332H14.7067" stroke="#070D07" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-
-
     )
 }

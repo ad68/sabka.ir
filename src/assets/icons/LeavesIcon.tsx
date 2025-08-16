@@ -1,7 +1,4 @@
-
-
 import React from 'react';
-
 export function LeavesIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg {...props} width="848" height="111" viewBox="0 0 848 111" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">

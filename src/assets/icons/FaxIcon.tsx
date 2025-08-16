@@ -1,5 +1,4 @@
 import React from 'react';
-
 export function FaxIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg {...props} width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -8,8 +7,6 @@ export function FaxIcon(props: React.SVGProps<SVGSVGElement>) {
             <path d="M10.5498 10.1523H13.8798" stroke="#558C5A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M9.71973 7.15234H14.7197" stroke="#558C5A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-
-
     )
 }
 

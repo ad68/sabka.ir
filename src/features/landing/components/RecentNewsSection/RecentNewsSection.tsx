@@ -3,7 +3,6 @@ import {LeafIcon} from "@/assets/icons/LeafIcon";
 import React, {useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {ArrowRTLIcon} from "@/assets/icons/ArrowRTL";
 import {LeftArrowIcon} from "@/assets/icons/LeftArrowIcon";
 
 type NewsType  = {title:string , desc:string , img:string , date:string , isSelected:boolean , link:string};

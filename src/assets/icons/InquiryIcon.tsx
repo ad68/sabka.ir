@@ -1,5 +1,4 @@
 import React from 'react';
-
 export function InquiryIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
         <svg {...props} width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -9,7 +8,6 @@ export function InquiryIcon(props: React.SVGProps<SVGSVGElement>) {
             <path d="M8 7.98047H16" stroke="#35663A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M9 11.9805H15" stroke="#558C5A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-
     )
 }
 

@@ -7,7 +7,6 @@ export function RulesIcon(props: React.SVGProps<SVGSVGElement>) {
             <path d="M7.5 10.4805H17.5" stroke="#35663A" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M7.5 15.4805H14.5" stroke="#35663A" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-
     )
 }
 
