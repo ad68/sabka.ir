@@ -1,8 +1,6 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 @layer base {
   :root {
@@ -66,13 +64,13 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-damoon) !important;
+    font-family: var(--font-yekanBakh) !important;
   }
 }
 input[type="checkbox"] {
-  accent-color: #72814E;
+  accent-color: #72814e;
 }
-li{
+li {
   cursor: pointer;
 }
 .slick-dots li button {
@@ -87,10 +85,30 @@ li{
 .slick-dots li.slick-active button {
   width: 30px;
   height: 10px;
-  background-color: #558C5A;
+  background-color: #558c5a;
   border-radius: 40%;
   opacity: 1;
 }
 .slick-dots li.slick-active button:before {
-  content: none!important;
+  content: none !important;
+}
+.trap {
+  --w: 80%;
+  --h: 74px;
+  --cut: 48px;
+  width: var(--w);
+  height: var(--h);
+  padding-right: 152px;
+  display: grid;
+  place-items: center;
+
+  background: #eaaa1e;
+}
+
+.trap-top-short {
+  clip-path: polygon(var(--cut) 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.trap-bottom-short {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, var(--cut) 100%);
 }

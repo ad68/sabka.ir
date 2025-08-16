@@ -11,20 +11,22 @@ import MostViewsSection from "../components/MostViewsSection/MostViewsSection"
 
 export default function Index() {
     return (
-            <section className='w-full'>
-                <FirstSection />
-                <section className='mt-[-100px]'>
-                    <CardSection />
-                </section>
-                <ThirdSection />
-                <FourthSection/>
-                <PerformanceSection/>
-                <MostViewsSection/>
-                <ElectronicServices/>
-                <MapSection/>
-                <RecentNewsSection/>
-                <ReportSection />
+        <section className='w-full'>
+
+
+            <FirstSection />
+            <section className='mt-[-100px]'>
+                <CardSection />
             </section>
-        )
+            <ThirdSection />
+            <FourthSection />
+            <PerformanceSection />
+            <MostViewsSection />
+            <ElectronicServices />
+            <MapSection />
+            <RecentNewsSection />
+            <ReportSection />
+        </section>
+    )
 
 }

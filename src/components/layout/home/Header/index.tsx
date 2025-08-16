@@ -12,17 +12,17 @@ const menuItemsProducts: MenuItemType[] = [
     {
         title: "اطلاعات بیمه ای",
         children: [
-            { title: "بیمه محصولات زراعی", onClick: () => {} },
-            { title: "بیمه محصولات باغی و طبیعی", onClick: () => {} },
-            { title: "معرفی بیمه منابع طبیعی", onClick: () => {} },
-            { title: "بیمه عوامل تولید کشاورزی", onClick: () => {} },
-            { title: "بیمه محصولات زراعی", onClick: () => {} },
+            { title: "بیمه محصولات زراعی", onClick: () => { } },
+            { title: "بیمه محصولات باغی و طبیعی", onClick: () => { } },
+            { title: "معرفی بیمه منابع طبیعی", onClick: () => { } },
+            { title: "بیمه عوامل تولید کشاورزی", onClick: () => { } },
+            { title: "بیمه محصولات زراعی", onClick: () => { } },
         ],
-        onClick: () => {},
+        onClick: () => { },
     },
-    { title: "آئین نامه و دستورالمل ها", onClick: () => {} },
-    { title: "تعرفه های بیمه گری", onClick: () => {} },
-    { title: "فرآیندهای بیمه و خساریت", onClick: () => {} },
+    { title: "آئین نامه و دستورالمل ها", onClick: () => { } },
+    { title: "تعرفه های بیمه گری", onClick: () => { } },
+    { title: "فرآیندهای بیمه و خساریت", onClick: () => { } },
 ];
 
 const links = [
@@ -102,9 +102,8 @@ export default function Index() {
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
-                                    className={`w-4 h-4 transform transition-transform duration-200 ${
-                                        openSubmenus[i] ? "rotate-180" : ""
-                                    }`}
+                                    className={`w-4 h-4 transform transition-transform duration-200 ${openSubmenus[i] ? "rotate-180" : ""
+                                        }`}
                                 >
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                                 </svg>
@@ -160,30 +159,34 @@ export default function Index() {
                 </section>
             ) : (
                 <section className="relative w-full">
-                    <section className="absolute top-0 right-0 w-full md:w-[90%] lg:w-[80%] overflow-hidden">
+                    {/* <section className="absolute top-0 right-0 w-full md:w-[90%] lg:w-[80%] overflow-hidden">
                         <Image className="w-full h-[74px]" src={HeaderBg.src} alt="sabka" width={200} height={100} />
-                    </section>
+                    </section> */}
+                    <div className="trap trap-top-short font-">
+                        <section
+                            className="relative w-full z-50"
+                            onMouseLeave={() => setHoveredIndex(null)}
+                        >
+                            {/* Main Navigation Bar */}
+                            <nav className="flex flex-wrap justify-between items-center px-4 py-3 md:px-0 xl:px-4 md:py-4">
+                                <section className="flex items-center gap-4">{renderLinkItems()}</section>
+                            </nav>
 
-                    <section
-                        className="relative w-full z-50"
-                        onMouseLeave={() => setHoveredIndex(null)}
-                    >
-                        {/* Main Navigation Bar */}
-                        <nav className="flex flex-wrap justify-between items-center px-4 py-3 md:px-0 xl:px-4 md:py-4">
-                            <section className="flex items-center gap-4">{renderLinkItems()}</section>
-                        </nav>
+                            {/* Submenu dropdown - absolutely positioned */}
+                            {hoveredIndex !== null && links[hoveredIndex].hasChildren && (
+                                <div
+                                    className="absolute top-[74px] left-0 w-full bg-white z-[999] shadow-md animate-fade-down"
+                                    onMouseEnter={() => setHoveredIndex(hoveredIndex)}
+                                    onMouseLeave={() => setHoveredIndex(null)}
+                                >
+                                    <div className="px-4 py-6">{links[hoveredIndex].children}</div>
+                                </div>
+                            )}
+                        </section>
 
-                        {/* Submenu dropdown - absolutely positioned */}
-                        {hoveredIndex !== null && links[hoveredIndex].hasChildren && (
-                            <div
-                                className="absolute top-[74px] left-0 w-full bg-white z-[999] shadow-md animate-fade-down"
-                                onMouseEnter={() => setHoveredIndex(hoveredIndex)}
-                                onMouseLeave={() => setHoveredIndex(null)}
-                            >
-                                <div className="px-4 py-6">{links[hoveredIndex].children}</div>
-                            </div>
-                        )}
-                    </section>
+                    </div>
+
+
 
                 </section>
             )}
