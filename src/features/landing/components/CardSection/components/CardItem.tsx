@@ -6,7 +6,6 @@ export default function Index({ title, icon, desc , link , index}) {
     const bgColor =     (index % 2 == 0) ? '#E9AA1E' :'#558C5A';
     return (
         <div className="relative w-[300px] hover:shadow-2xl hover:-translate-y-2 transition-all ">
-            {/* Dots along the right side */}
             <div
                 className={`
                     pointer-events-none absolute -right-4 top-2 bottom-2 w-3 mt-14
@@ -16,7 +15,6 @@ export default function Index({ title, icon, desc , link , index}) {
                     `}
             />
 
-            {/* Dots along the left side */}
             <div
                 className={`
                     pointer-events-none absolute -left-4 -top-3 bottom-40 w-3
@@ -26,7 +24,6 @@ export default function Index({ title, icon, desc , link , index}) {
                     `}
             />
 
-            {/* Dots above the card */}
             <div
                 className={`
                     pointer-events-none absolute left-0 right-[50px] -top-4 h-3
@@ -36,9 +33,7 @@ export default function Index({ title, icon, desc , link , index}) {
                     `}
             />
 
-            {/* Card */}
             <div className="relative h-[400px] rounded-2xl bg-white p-6 shadow-xl flex flex-col justify-center">
-                {/* Corner-only border (top+right) */}
                 <span
                     className={`
                         pointer-events-none absolute -top-3 -right-3 block h-16 w-16
@@ -48,7 +43,6 @@ export default function Index({ title, icon, desc , link , index}) {
                     style={{ borderColor: bgColor }}
                 />
 
-                {/* Icon */}
                 <div className="flex justify-center mb-4">
                     {icon}
                     {/*<svg*/}
@@ -63,15 +57,12 @@ export default function Index({ title, icon, desc , link , index}) {
                     {/*</svg>*/}
                 </div>
 
-                {/* Title */}
                 <h2 className="text-center font-bold mb-2">{title}</h2>
 
-                {/* Description */}
                 <p className="text-center text-sm text-gray-600 leading-6">
                     {desc}
                 </p>
 
-                {/* Folded corner */}
                 <Link href={link}
                     className={`
                         absolute -bottom-0 -left-0 h-24 w-24 
