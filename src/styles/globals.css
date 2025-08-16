@@ -1,6 +1,8 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
   :root {
@@ -69,4 +71,26 @@
 }
 input[type="checkbox"] {
   accent-color: #72814E;
+}
+li{
+  cursor: pointer;
+}
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.slick-dots li.slick-active button {
+  width: 30px;
+  height: 10px;
+  background-color: #558C5A;
+  border-radius: 40%;
+  opacity: 1;
+}
+.slick-dots li.slick-active button:before {
+  content: none!important;
 }

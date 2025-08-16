@@ -1,0 +1,44 @@
+"use client"
+import Link from "next/link";
+import {ArrowRTLIcon} from "@/assets/icons/ArrowRTL";
+import Image from "next/image";
+import {useIsMobile} from "@/features/products/hooks/useIsMobile";
+
+export default function Index({title , link , img}) {
+    const isMobile = useIsMobile();
+    return (
+        <>
+
+            {isMobile ? (
+                <>
+                    <section className='group flex flex-col items-center justify-center p-2 w-[200px] h-[200px]  rounded-2xl bg-white hover:bg-[#7BB28033] group  transition-all duration-500 cursor-pointer'>
+                        <section className='flex flex-row justify-between items-center p-4'>
+                            <span className='font-bold text-xs'>{title}</span>
+                        </section>
+                        <section  className='relative w-[151px] mx-auto h-[100px] bg-cover' style={{ backgroundImage: img }}>
+                            <Image src={img.src} alt={title} fill />
+                            <Link href={link} className='absolute left-[-2] top-0 border-white border-2 w-[30px] rounded-br-lg h-[30px] p-2 flex justify-center items-center rounded-md bg-[#35663A] text-white group-hover:bg-[#E9AA1E]  transition-all duration-500 cursor-pointer'>
+                                <ArrowRTLIcon />
+                            </Link>
+                        </section>
+                    </section>
+                </>
+            ) : (
+                    <>
+                        <section className='group flex flex-col items-center justify-center p-2 w-[300px] h-[300px] xl:w-[365px] xl:h-[365px] rounded-2xl bg-white hover:bg-[#7BB28033] group  transition-all duration-500 cursor-pointer'>
+                            <section className='flex flex-row justify-between items-center p-4'>
+                                <span className='font-bold text-sm'>{title}</span>
+                                <Link href={link} className='w-[24px] h-[24px] p-2 flex justify-center items-center rounded-md bg-[#35663A] text-white group-hover:bg-[#E9AA1E]  transition-all duration-500 cursor-pointer'>
+                                    <ArrowRTLIcon />
+                                </Link>
+                            </section>
+                            <section  className='relative w-[90%] mx-auto h-[240px] bg-cover' style={{ backgroundImage: img }}>
+                                <Image src={img.src} alt={title} fill />
+                            </section>
+                        </section>
+                    </>
+                )
+            }
+        </>
+    )
+}
