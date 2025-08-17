@@ -3,6 +3,7 @@ import {LeafIcon} from "@/assets/icons/LeafIcon";
 import React from "react";
 import IranProvincesMap from "@/features/landing/components/MapSection/components/IranMap";
 import {SearchIcon} from "@/assets/icons/SearchIcon";
+import OtherLeafBg from '@/assets/img/landing/OtherLeafBg.png';
 
 export default function Index() {
     const provinces = [
@@ -44,8 +45,13 @@ export default function Index() {
 
     const data = { tehran: 1, fars: 0, yazd: 5 }; // دلخواه
     return ( <section
-        className='w-full bg-contain
+        className='w-full bg-contain bg-no-repeat
           flex flex-col md:flex-row flex-wrap  gap-10 justify-center items-center min-h-screen p-10'
+        style={{
+            backgroundImage: `url(${OtherLeafBg.src})` ,
+            backgroundPosition: 'left bottom',
+            backgroundSize: 'auto 50%',
+        }}
         >
 
         <section className='w-full mt-8 flex flex-col justify-start items-start md:justify-start md:items-start gap-3'>

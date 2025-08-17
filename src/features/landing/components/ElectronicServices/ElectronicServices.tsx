@@ -12,6 +12,7 @@ import {ComplainIcon} from "@/assets/icons/ComplainIcon";
 import {PortalIcon} from "@/assets/icons/PortalIcon";
 import Link from "next/link";
 import {ArrowRTLIcon} from "@/assets/icons/ArrowRTL";
+import TwoLeavesBg from '@/assets/img/landing/TwoLeavesBg.png';
 const items = [
     {title:'مجوز ها' , icon:<CertificateIcon/>  , link:''},
     {title:'مقالات و نشریات' , icon:<CalendarIcon/>  , link:''},
@@ -25,7 +26,12 @@ const items = [
 export default function Index() {
     return (
         <section
-            className='w-full bg-contain min-h-screen flex flex-row flex-wrap gap-10 justify-center items-center  p-10'
+            className='w-full bg-no-repeat bg-contain min-h-screen flex flex-row flex-wrap gap-10 justify-center items-center  p-10'
+            style={{
+                backgroundImage: `url(${TwoLeavesBg.src})` ,
+                backgroundPosition: 'right bottom',
+                backgroundSize: 'auto 50%',
+            }}
         >
                 <section className="hidden  md:visible md:flex relative">
                     <Image

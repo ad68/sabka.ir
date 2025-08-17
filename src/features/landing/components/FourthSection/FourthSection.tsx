@@ -12,6 +12,7 @@ import ForthSec6 from "@/assets/img/landing/FourthSec6.png";
 import FourthSectionItem from "./components/FourthSectionItem";
 import React, {useRef, useState} from "react";
 import { useIsMobile } from "@/features/products/hooks/useIsMobile";
+import LeafRightBg from '@/assets/img/landing/LeafRightBg.png';
 
 const newsChildren = [
     { key: 1, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec1, link: '' },
@@ -63,6 +64,11 @@ export default function Index() {
     return (
         <section
             className="w-full bg-contain bg-no-repeat flex flex-row flex-wrap gap-10 justify-center items-center min-h-screen p-2 md:p-10 overflow-x-hidden"
+            style={{
+                backgroundImage: `url(${LeafRightBg.src})` ,
+                backgroundPosition: 'right center',
+                backgroundSize: 'auto 100%'
+            }}
         >
             <section className="w-full mt-8 flex flex-col justify-center items-center md:justify-center md:items-center gap-3">
                 <span className="flex flex-row gap-2">

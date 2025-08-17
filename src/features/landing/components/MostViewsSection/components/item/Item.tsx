@@ -20,7 +20,6 @@ export default function Index({
                 <PlayVideoIcon className='w-12 h-12'/>
             </section>
             <div className="flex-grow"></div>
-            {!isSelected &&
                 <section className='p-2 w-[96%] rounded-xl mx-auto mb-2 relative text-right'>
                         <span className='text-white text-xs'>{date}</span>
                     <p className='text-xs text-white'>{title}</p>
@@ -31,7 +30,6 @@ export default function Index({
                         </button>
                     </Link>
                 </section>
-            }
         </section>
     )
 }

@@ -8,38 +8,38 @@ import Link from "next/link";
 const eventItems: MostViewItem[] = [
     {
         img: "/assets/img/landing/MostViewImg2.png",
-        title: "حضور نمایندگان سازمان برنامه و بودجه کشور در صندوق بیمه کشاورزی",
+        title: "حضور نمایندگان سازمان برنامه و بودجه کشور در صندوق بیمه کشاورزی1",
         date: "۲۳ اردیبهشت، ۱۴۰۳",
         link: "/",
-        desc: "",
+        desc: "11",
     },
     {
         img: "/assets/img/landing/MostViewImg3.png",
-        title: "حضور نمایندگان سازمان برنامه و بودجه کشور در صندوق بیمه کشاورزی",
+        title: "حضور نمایندگان سازمان برنامه و بودجه کشور در صندوق بیمه کشاورزی2",
         date: "۲۳ اردیبهشت، ۱۴۰۳",
         link: "/",
-        desc: "",
+        desc: "22",
     },
     {
         img: "/assets/img/landing/MostViewImg3.png",
-        title: "حضور نمایندگان سازمان برنامه و بودجه کشور در صندوق بیمه کشاورزی",
+        title: "حضور نمایندگان سازمان برنامه و بودجه کشور در صندوق بیمه کشاورزی3",
         date: "۲۳ اردیبهشت، ۱۴۰۳",
         link: "/",
         desc: "همراه با دوستان جدید،در جشن ها شرکت کنید و لحظاتی آرام، پرانرژی و به‌یادماندنی را تجربه کنید.",
     },
     {
         img: "/assets/img/landing/MostViewImg2.png",
-        title: "حضور نمایندگان سازمان برنامه و بودجه کشور در صندوق بیمه کشاورزی",
+        title: "حضور نمایندگان سازمان برنامه و بودجه کشور در صندوق بیمه کشاورزی4",
         date: "۲۳ اردیبهشت، ۱۴۰۳",
         link: "/",
-        desc: "",
+        desc: "33",
     },
     {
         img: "/assets/img/landing/MostViewImg3.png",
-        title: "حضور نمایندگان سازمان برنامه و بودجه کشور در صندوق بیمه کشاورزی",
+        title: "حضور نمایندگان سازمان برنامه و بودجه کشور در صندوق بیمه کشاورزی5",
         date: "۲۳ اردیبهشت، ۱۴۰۳",
         link: "/",
-        desc: "",
+        desc: "444",
     },
 ];
 
@@ -51,7 +51,6 @@ export default function Index() {
     const [scrollLeft, setScrollLeft] = useState(0);
     const [selectedIndex, setSelectedIndex] = useState(0);
 
-    // Mouse / touch drag events
     const onMouseDown = (e: React.MouseEvent) => {
         if (!scrollRef.current) return;
         setIsDragging(true);
@@ -83,7 +82,6 @@ export default function Index() {
     };
     const onTouchEnd = () => setIsDragging(false);
 
-    // Update selectedIndex based on scroll position
     const onScroll = () => {
         if (!scrollRef.current) return;
         const children = scrollRef.current.children;
@@ -137,7 +135,7 @@ export default function Index() {
             >
                 {otherEvents.map((item, i) => (
                     <section key={i} className="flex-shrink-0 transition-transform duration-300 ease-in-out w-[250px] sm:w-[200px] xs:w-[150px]">
-                        <MostViewsSectionItem {...item} isSelected={i === selectedIndex} />
+                        <MostViewsSectionItem {...item}  />
                     </section>
                 ))}
             </section>

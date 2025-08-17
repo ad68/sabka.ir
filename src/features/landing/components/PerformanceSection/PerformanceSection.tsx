@@ -6,6 +6,7 @@ import {InsuranceIcon} from "@/assets/icons/InsuranceIcon";
 import PerformanceImg from "@/assets/img/landing/PerformanceImg.png";
 import PerformanceImgBg from "@/assets/img/landing/PerformanceImgBg.png";
 import Image from "next/image";
+import LeafLeftBg from '@/assets/img/landing/LeafLeftBg.png';
 const performanceItems = [
     {title:'حوره برنامه ریزی و فناوری' , icon:<TecIcon/> ,
         children:['تشکیل شورای راهبری'
@@ -30,7 +31,12 @@ const performanceItems = [
 export default function Index() {
     return (
         <section
-            className='w-full bg-contain flex flex-row-reverse flex-wrap  gap-10 justify-center items-center min-h-screen p-10'
+            className='w-full bg-contain bg-no-repeat flex flex-row-reverse flex-wrap  gap-10 justify-center items-center min-h-screen p-10'
+            style={{
+                backgroundImage: `url(${LeafLeftBg.src})` ,
+                backgroundPosition: 'left center',
+                backgroundSize: 'auto 100%',
+            }}
 >
 
             <section
