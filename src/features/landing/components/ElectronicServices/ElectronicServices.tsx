@@ -26,7 +26,7 @@ const items = [
 export default function Index() {
     return (
         <section
-            className='w-full bg-no-repeat bg-contain min-h-screen flex flex-row flex-wrap gap-10 justify-center items-center  p-10'
+            className='w-full bg-no-repeat bg-contain min-h-screen flex flex-row flex-wrap gap-5 xl:gap-10 justify-center items-center  p-10'
             style={{
                 backgroundImage: `url(${TwoLeavesBg.src})` ,
                 backgroundPosition: 'right bottom',
@@ -35,7 +35,7 @@ export default function Index() {
         >
                 <section className="hidden  md:visible md:flex relative">
                     <Image
-                        className="w-full h-[400px] xl:h-[500px] "
+                        className="w-full h-[400px] md:h-[450px] xl:h-[500px] "
                         src={ElectronicService.src}
                         alt='sabka'
                         width={400}
@@ -56,7 +56,7 @@ export default function Index() {
                     <p className='text-right text-xl md:text-2xl font-bold'>خدمات الکترونیکی صندوق بیمه کشاورزی</p>
                     <section className='text-right md:text-center text-sm max-w-2xl xl:max-w-4xl'>دسترسی سریع و آسان به سامانه‌ها، مجوزها و اطلاعات بیمه‌ای برای بهره‌برداران، کارشناسان و عموم کاربران</section>
                 </section>
-                <section className='max-w-2xl xl:max-w-4xl mx-auto flex flex-row justify-center items-center md:justify-start md:items-start xl:justify-center xl:items-center flex-wrap gap-6'>
+                <section className='max-w-2xl xl:max-w-2xl 2xl:max-w-4xl mx-auto flex flex-row justify-center items-center md:justify-start md:items-start xl:justify-center xl:items-center flex-wrap gap-3 lg:gap-6'>
                     {items.map((item , index) => {
                         return (
                             <section className='cursor-pointer group flex flex-row justify-between items-center min-w-[300px] hover:shadow-lg transition-all duration-500  border-[1px] hover:border-[#E9AA1E] border-[#A7D9AC] p-2 rounded-xl'  key={index}>
