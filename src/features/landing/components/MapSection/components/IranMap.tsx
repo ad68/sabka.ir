@@ -1,12 +1,11 @@
-// IranProvincesMap.tsx
 "use client"
 import React from "react";
 import {
     ComposableMap,
     Geographies,
     Geography,
-    ZoomableGroup
 } from "react-simple-maps";
+import {useIsMobile} from '@/features/products/hooks/useIsMobile';
 
 const TOPO_URL =
     "https://raw.githubusercontent.com/map-ir/datasets/main/dataset_province.topojson";
@@ -19,7 +18,7 @@ type Props = {
 
 export default function IranProvincesMap({ onSelect, width = 720, height = 520 }: Props) {
     const [tooltip, setTooltip] = React.useState<{ x: number; y: number; text: string } | null>(null);
-
+    const isMobile = useIsMobile();
     // کمک‌تابع: با چند اسم پراپرتی رایج امتحان می‌کند
     const getName = (props: any) =>
         props?.province_name ||
@@ -37,8 +36,8 @@ export default function IranProvincesMap({ onSelect, width = 720, height = 520 }
                 <section
                     style={{
                         position: "absolute",
-                        top: tooltip.y -200 ,
-                        left: tooltip.x  - 200,
+                        top: isMobile ? (tooltip.y - 200) :  (tooltip.y),
+                        left:  (tooltip.x) ,
                         background: "#FAFAFA",
                         color: "#000",
                         padding: "6px 10px",
@@ -58,14 +57,14 @@ export default function IranProvincesMap({ onSelect, width = 720, height = 520 }
                     <Geographies geography={TOPO_URL}>
                         {({ geographies }) =>
                             geographies.map((geo) => {
-                                console.log(geo.properties)
+                                // console.log(geo.properties)
                                 const name = getName(geo.properties);
                                 return (
                                     <Geography
                                         key={geo.rsmKey}
                                         geography={geo}
                                         onMouseEnter={(e) => {
-                                            setTooltip({ x: e.clientX, y: e.clientY, text: name });
+                                            setTooltip({ x: e.clientX , y: e.clientY, text: name });
                                         }}
                                         onMouseMove={(e) => {
                                             setTooltip((t) => (t ? { ...t, x: e.clientX, y: e.clientY } : null));

@@ -107,14 +107,14 @@ export default function Index() {
     return (
         <section className="relative w-full md:max-w-5xl xl:max-w-6xl m-auto flex flex-col md:flex-row  justify-center md:justify-between items-center py-50 md:py-5 mb-[100px] overflow-x-hidden">
             <section
-                className="bg-cover bg-no-repeat z-10 w-full bg-opacity-10 xl:max-w-3xl h-[320px] md:h-[350px] 2xl:h-[500px] flex flex-col justify-start md:justify-center items-center md:items-start md:pr-10 gap-3 md:rounded-2xl"
+                className="bg-cover bg-no-repeat z-10 w-full bg-opacity-10 xl:max-w-3xl h-[320px] md:h-[380px] 2xl:h-[500px] flex flex-col justify-start md:justify-start md:pt-10 xl:justify-center xl:pt-0 items-center md:items-start md:pr-10 gap-3 md:rounded-2xl"
                 style={{ backgroundImage: `url(/assets/img/landing/MostViewImg1.png)` }}
             >
-                <section className="flex flex-col justify-start items-center md:items-start gap-2 md:gap-3 max-w-lg mt-4 md:mt-0">
-                    <p className="font-bold text-sm md:text-2xl xl:max-w-3xl text-white max-w-[200px]">
+                <section className="flex flex-col justify-start items-center md:items-start gap-3 md:gap-3 max-w-lg mt-10 md:mt-0">
+                    <p className="font-bold text-md md:text-2xl xl:max-w-3xl text-white max-w-[320px]">
                         پربازدیدترین تصاویر و ویدئوها
                     </p>
-                    <p className="text-white text-sm md:text-md">تصاویر نشست‌ها و جلسات نمایندگان</p>
+                    <p className="text-white text-md md:text-md ">تصاویر نشست‌ها و جلسات نمایندگان</p>
                     <Link href={"/"} className="flex items-center justify-center">
                         <button className="group-hover:bg-white py-2 px-3 w-fit flex flex-row justify-center items-center gap-2 text-xs border-2 border-neutral-200 text-white rounded-lg transition-all duration-300 z-10">
                             مشاهده همه

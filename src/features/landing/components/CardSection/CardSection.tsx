@@ -86,13 +86,17 @@ export default function Index() {
 
     const onScroll = () => {
         if (!scrollRef.current) return;
-        const children = scrollRef.current.children;
+        const container = scrollRef.current;
+        const containerCenter = container.scrollLeft + container.offsetWidth / 2;
+
         let closestIndex = 0;
         let closestDistance = Infinity;
 
-        Array.from(children).forEach((child, idx) => {
+        Array.from(container.children).forEach((child, idx) => {
             const el = child as HTMLElement;
-            const distance = Math.abs(el.offsetLeft - scrollRef.current!.scrollLeft);
+            const cardCenter = el.offsetLeft + el.offsetWidth / 2;
+            const distance = Math.abs(containerCenter - cardCenter);
+
             if (distance < closestDistance) {
                 closestDistance = distance;
                 closestIndex = idx;
@@ -101,7 +105,6 @@ export default function Index() {
 
         setCurrentIndex(closestIndex);
     };
-
     useEffect(() => {
         const ref = scrollRef.current;
         if (!ref) return;
