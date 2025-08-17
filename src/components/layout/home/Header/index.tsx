@@ -4,9 +4,8 @@ import MenuItem, { MenuItemType } from "./components/MenuItem";
 import { useState } from "react";
 import { useIsMobile } from "@/features/products/hooks/useIsMobile";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
-import HeaderBg from '@/assets/img/landing/HeaderBg.png';
 import { HamburgerMenuIcon } from "@/assets/icons/HamburgerMenuIcon";
+import {CloseIcon} from '@/assets/icons/CloseIcon';
 
 const menuItemsProducts: MenuItemType[] = [
     {
@@ -66,7 +65,7 @@ export default function Index() {
     }
 
     const renderLinkItems = () => (
-        <ul className={`w-full flex flex-col md:flex-row gap-1 md:gap-2 lg:gap-4 ${isMobile ? "items-start" : "items-center"}`}>
+        <ul className={`w-full flex flex-col md:flex-row gap-0  lg:gap-2 ${isMobile ? "items-start" : "items-center"}`}>
             {links.map((link, i) => (
                 <li
                     key={i}
@@ -111,9 +110,8 @@ export default function Index() {
                         </section>
                     </button>
 
-                    {/* Render submenu (mobile only) */}
                     {isMobile && link.hasChildren && openSubmenus[i] && (
-                        <div className="pl-4 pt-1">{link.children}</div>
+                        <section className="pl-4 pt-1">{link.children}</section>
                     )}
                 </li>
             ))}
@@ -125,33 +123,30 @@ export default function Index() {
             {isMobile ? (
                 <section className="w-full z-40 h-auto relative overflow-visible">
                     <section className="relative w-full flex justify-start">
-                        <section className="relative w-[80%] h-[74px] z-10">
-                            <Image src={HeaderBg.src} alt="sabka" fill />
+                        <section className="relative w-[80%] h-[74px] z-10 trap trap-top-short font-">
                             <section className="absolute top-0 left-0 z-20 flex justify-between items-center w-full h-full px-6 text-black">
                                 <HamburgerMenuIcon onClick={openMenu} className="cursor-pointer" />
-                                <span className="text-sm font-semibold">شنبه 4 مرداد 1404</span>
+                                <span className="text-sm font-semibold ml-3">شنبه 4 مرداد 1404</span>
                             </section>
                         </section>
                     </section>
 
                     {isMenuOpen && (
                         <>
-                            {/* Backdrop */}
-                            <div
+                            <section
                                 onClick={() => setIsMenuOpen(false)}
                                 className="fixed inset-0 bg-black bg-opacity-50 z-[9998]"
-                            ></div>
+                            ></section>
 
-                            {/* Menu Panel */}
                             <nav className="fixed top-[0] left-0 right-0 bg-white z-[9999] p-4 shadow-lg max-h-[calc(100vh-74px)] overflow-auto">
-                                <div className="flex justify-end mb-4">
+                                <section className="flex justify-end mb-4">
                                     <button
                                         onClick={() => setIsMenuOpen(false)}
                                         className="text-gray-600 hover:text-yellow-500 text-sm font-semibold"
                                     >
-                                        ✕
+                                        <CloseIcon />
                                     </button>
-                                </div>
+                                </section>
                                 {renderLinkItems()}
                             </nav>
                         </>
@@ -159,32 +154,27 @@ export default function Index() {
                 </section>
             ) : (
                 <section className="relative w-full">
-                    {/* <section className="absolute top-0 right-0 w-full md:w-[90%] lg:w-[80%] overflow-hidden">
-                        <Image className="w-full h-[74px]" src={HeaderBg.src} alt="sabka" width={200} height={100} />
-                    </section> */}
-                    <div className="trap trap-top-short font-">
+                    <section className="trap trap-top-short font-  md:pr-[5px] lg:pr-[10px]  xl:pr-[150px]">
                         <section
                             className="relative w-full z-50"
                             onMouseLeave={() => setHoveredIndex(null)}
                         >
-                            {/* Main Navigation Bar */}
                             <nav className="flex flex-wrap justify-between items-center px-4 py-3 md:px-0 xl:px-4 md:py-4">
                                 <section className="flex items-center gap-4">{renderLinkItems()}</section>
                             </nav>
 
-                            {/* Submenu dropdown - absolutely positioned */}
                             {hoveredIndex !== null && links[hoveredIndex].hasChildren && (
-                                <div
+                                <section
                                     className="absolute top-[74px] left-0 w-full bg-white z-[999] shadow-md animate-fade-down"
                                     onMouseEnter={() => setHoveredIndex(hoveredIndex)}
                                     onMouseLeave={() => setHoveredIndex(null)}
                                 >
-                                    <div className="px-4 py-6">{links[hoveredIndex].children}</div>
-                                </div>
+                                    <section className="px-4 py-6">{links[hoveredIndex].children}</section>
+                                </section>
                             )}
                         </section>
 
-                    </div>
+                    </section>
 
 
 

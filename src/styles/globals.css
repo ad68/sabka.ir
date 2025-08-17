@@ -98,7 +98,7 @@ li {
   --cut: 48px;
   width: var(--w);
   height: var(--h);
-  padding-right: 152px;
+  /*padding-right: 152px;*/
   display: grid;
   place-items: center;
 
