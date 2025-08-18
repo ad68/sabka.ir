@@ -12,21 +12,22 @@ const menuItemsProducts: MenuItemType[] = [
     {
         title: "اطلاعات بیمه ای",
         children: [
-            { title: "بیمه محصولات زراعی", onClick: () => {} },
-            { title: "بیمه محصولات باغی و طبیعی", onClick: () => {} },
-            { title: "معرفی بیمه منابع طبیعی", onClick: () => {} },
-            { title: "بیمه عوامل تولید کشاورزی", onClick: () => {} },
-            { title: "بیمه محصولات زراعی", onClick: () => {} },
+            { title: "بیمه محصولات زراعی", onClick: () => { } },
+            { title: "بیمه محصولات باغی و طبیعی", onClick: () => { } },
+            { title: "معرفی بیمه منابع طبیعی", onClick: () => { } },
+            { title: "بیمه عوامل تولید کشاورزی", onClick: () => { } },
+            { title: "بیمه محصولات زراعی", onClick: () => { } },
         ],
-        onClick: () => {},
+        onClick: () => { },
     },
-    { title: "آئین نامه و دستورالمل ها", onClick: () => {} },
-    { title: "تعرفه های بیمه گری", onClick: () => {} },
-    { title: "فرآیندهای بیمه و خساریت", onClick: () => {} },
+    { title: "آئین نامه و دستورالمل ها", onClick: () => { } },
+    { title: "تعرفه های بیمه گری", onClick: () => { } },
+    { title: "فرآیندهای بیمه و خساریت", onClick: () => { } },
 ];
 
 const links = [
     { title: "خانه", href: "/", hasChildren: false, hasIcon: false },
+    { title: "درباره ما", href: "/", hasChildren: false, hasIcon: false },
     { title: "محصوات", href: "/products", hasChildren: false, hasIcon: true, icon: "" },
     {
         title: "اخبار",
@@ -129,8 +130,8 @@ export default function Index() {
                                 <span className="text-[#B8B9BF] group-hover:text-[#E3E6DC02]">{link.icon}</span>
                             )}
                             <span className="text-xs lg:text-sm font-semibold max-w-[80px] text-right md:max-w-[100px] lg:max-w-fit">
-                {link.title}
-              </span>
+                                {link.title}
+                            </span>
                         </section>
 
                         <section>
@@ -140,9 +141,8 @@ export default function Index() {
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
-                                    className={`w-4 h-4 transform transition-transform duration-200 ${
-                                        openSubmenus[i] ? "rotate-180" : ""
-                                    }`}
+                                    className={`w-4 h-4 transform transition-transform duration-200 ${openSubmenus[i] ? "rotate-180" : ""
+                                        }`}
                                 >
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                                 </svg>
