@@ -118,6 +118,21 @@ li {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.iran-map-wrapper .react-map-water {
+  fill: red !important;
+}
+.fm-agency-state {
+  fill: #305f56;
+  stroke: aliceblue;
+}
+.fm-agency-sea {
+  fill: #d7f0ed;
+}
+.fm-agency-state:hover {
+  fill: #e9aa1e;
+  transition: all 0.5s;
+  cursor: pointer;
 }

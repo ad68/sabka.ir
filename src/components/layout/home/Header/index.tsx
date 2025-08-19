@@ -1,5 +1,4 @@
 "use client";
-
 import MenuItem, { MenuItemType } from "./components/MenuItem";
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
@@ -7,40 +6,81 @@ import { useIsMobile } from "@/features/products/hooks/useIsMobile";
 import { cn } from "@/lib/utils";
 import { HamburgerMenuIcon } from "@/assets/icons/HamburgerMenuIcon";
 import { CloseIcon } from "@/assets/icons/CloseIcon";
+import Link from "next/link";
 
-const menuItemsProducts: MenuItemType[] = [
-    {
-        title: "اطلاعات بیمه ای",
-        children: [
-            { title: "بیمه محصولات زراعی", onClick: () => { } },
-            { title: "بیمه محصولات باغی و طبیعی", onClick: () => { } },
-            { title: "معرفی بیمه منابع طبیعی", onClick: () => { } },
-            { title: "بیمه عوامل تولید کشاورزی", onClick: () => { } },
-            { title: "بیمه محصولات زراعی", onClick: () => { } },
-        ],
-        onClick: () => { },
-    },
-    { title: "آئین نامه و دستورالمل ها", onClick: () => { } },
-    { title: "تعرفه های بیمه گری", onClick: () => { } },
-    { title: "فرآیندهای بیمه و خساریت", onClick: () => { } },
+const menuItemsNews: MenuItemType[] = [
+    { title: "اخبار و اطلاعیه", onClick: () => { } },
+    { title: "گزیده اخبار", onClick: () => { } },
+    { title: "اخبار استان ها", onClick: () => { } },
+    { title: "اطلاعیه ها", onClick: () => { } },
+    { title: "قوانین و مقررات", onClick: () => { } },
+];
+
+const menuItemsAboutUs: MenuItemType[] = [
+    { title: "تاریخچه", onClick: () => { } },
+    { title: "وظایف و اختیارات", onClick: () => { } },
+    { title: "منشور اخلاقی", onClick: () => { } },
+    { title: "نمودار سازمانی", onClick: () => { } },
+    { title: "قوانین و مقررات", onClick: () => { } },
+];
+const menuItemsMultiMedia: MenuItemType[] = [
+    { title: "گالری تصاویر", onClick: () => { } },
+    { title: "گالری فیلم", onClick: () => { } },
+
+];
+const menuItemsServices: MenuItemType[] = [
+    { title: "اطلاعات بیمه ای", onClick: () => { } },
+    { title: "فرآیند خرید بیمه نامه و ثبت درخواست خسارت", onClick: () => { } },
+
 ];
 
 const links = [
     { title: "خانه", href: "/", hasChildren: false, hasIcon: false },
-    { title: "درباره ما", href: "/", hasChildren: false, hasIcon: false },
-    { title: "محصوات", href: "/products", hasChildren: false, hasIcon: true, icon: "" },
+    {
+        title: "درباره ما",
+        href: "/",
+        hasChildren: true,
+        hasIcon: true,
+        icon: "",
+        children: <MenuItem menuItems={menuItemsAboutUs} />,
+    },
+    {
+        title: "خدمات",
+        href: "/",
+        hasChildren: true,
+        hasIcon: true,
+        icon: "",
+        children: <MenuItem menuItems={menuItemsServices} />,
+    },
     {
         title: "اخبار",
         href: "/",
         hasChildren: true,
         hasIcon: true,
         icon: "",
-        children: <MenuItem menuItems={menuItemsProducts} />,
+        children: <MenuItem menuItems={menuItemsNews} />,
+    },
+    {
+        title: "سامانه جامع",
+        href: "https://cs.sabka.ir/Login.aspx",
+        hasChildren: false,
+        hasIcon: false,
+    },
+    {
+        title: "چند رسانه ای",
+        href: "/",
+        hasChildren: true,
+        hasIcon: true,
+        icon: "",
+        children: <MenuItem menuItems={menuItemsMultiMedia} />,
+    },
+    {
+        title: "قانون شفافیت قوای یگانه",
+        href: "/",
+        hasChildren: false,
+        hasIcon: false,
     },
     { title: "ویژه همکاران", href: "/", hasChildren: false, hasIcon: false },
-    { title: "تالار ترویج بیمه", href: "/", hasChildren: false, hasIcon: false },
-    { title: "قانون شفافیت قوای یگانه", href: "/", hasChildren: false, hasIcon: false },
-    { title: "درباره ما", href: "/", hasChildren: false, hasIcon: false },
     { title: "ارتباط با ما", href: "/", hasChildren: false, hasIcon: false },
 ];
 
@@ -48,7 +88,9 @@ export default function Index() {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const isMobile = useIsMobile();
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-    const [openSubmenus, setOpenSubmenus] = useState<{ [key: number]: boolean }>({});
+    const [openSubmenus, setOpenSubmenus] = useState<{ [key: number]: boolean }>(
+        {}
+    );
 
     const navRef = useRef<HTMLDivElement | null>(null);
     const [dropdownTop, setDropdownTop] = useState<number>(0);
@@ -96,7 +138,10 @@ export default function Index() {
     };
 
     const renderLinkItems = () => (
-        <ul className={`w-full flex flex-col md:flex-row gap-0 lg:gap-2 ${isMobile ? "items-start" : "items-center"}`}>
+        <ul
+            className={`w-full flex flex-col md:flex-row gap-0 lg:gap-2 ${isMobile ? "items-start" : "items-center"
+                }`}
+        >
             {links.map((link, i) => (
                 <li
                     key={i}
@@ -111,31 +156,30 @@ export default function Index() {
                         if (!isMobile && link.hasChildren) scheduleClose();
                     }}
                 >
-                    <button
-                        onClick={() => {
-                            if (isMobile && link.hasChildren) {
-                                toggleSubmenu(i);
-                            } else {
-                                setIsMenuOpen(false);
-                            }
-                        }}
-                        aria-expanded={openSubmenus[i]}
-                        aria-haspopup={link.hasChildren}
-                        className={cn(
-                            "text-sm font-medium flex w-full justify-between items-center p-2 gap-1 hover:bg-green-50 rounded-2xl "
-                        )}
-                    >
-                        <section className="flex flex-row justify-start items-center gap-1">
-                            {isMobile && link.hasIcon && link.icon && (
-                                <span className="text-[#B8B9BF] group-hover:text-[#E3E6DC02]">{link.icon}</span>
+                    {link.hasChildren ? (
+                        <button
+                            onClick={() => {
+                                if (isMobile && link.hasChildren) {
+                                    toggleSubmenu(i);
+                                }
+                            }}
+                            aria-expanded={openSubmenus[i]}
+                            aria-haspopup={link.hasChildren}
+                            className={cn(
+                                "text-sm font-medium flex w-full justify-between items-center p-2 gap-1 hover:bg-green-50 rounded-2xl "
                             )}
-                            <span className="text-xs lg:text-sm font-semibold max-w-[80px] text-right md:max-w-[100px] lg:max-w-fit">
-                                {link.title}
-                            </span>
-                        </section>
-
-                        <section>
-                            {link.hasChildren && (
+                        >
+                            <section className="flex flex-row justify-start items-center gap-1">
+                                {isMobile && link.hasIcon && link.icon && (
+                                    <span className="text-[#B8B9BF] group-hover:text-[#E3E6DC02]">
+                                        {link.icon}
+                                    </span>
+                                )}
+                                <span className="text-xs lg:text-sm font-semibold max-w-[80px] text-right md:max-w-[100px] lg:max-w-fit">
+                                    {link.title}
+                                </span>
+                            </section>
+                            <section>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
@@ -144,11 +188,33 @@ export default function Index() {
                                     className={`w-4 h-4 transform transition-transform duration-200 ${openSubmenus[i] ? "rotate-180" : ""
                                         }`}
                                 >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M19 9l-7 7-7-7"
+                                    />
                                 </svg>
-                            )}
-                        </section>
-                    </button>
+                            </section>
+                        </button>
+                    ) : (
+                        <Link
+                            href={link.href}
+                            onClick={() => setIsMenuOpen(false)}
+                            className="text-sm font-medium flex w-full justify-between items-center p-2 gap-1 hover:bg-green-50 rounded-2xl"
+                        >
+                            <section className="flex flex-row justify-start items-center gap-1">
+                                {isMobile && link.hasIcon && link.icon && (
+                                    <span className="text-[#B8B9BF] group-hover:text-[#E3E6DC02]">
+                                        {link.icon}
+                                    </span>
+                                )}
+                                <span className="text-xs lg:text-sm font-semibold max-w-[80px] text-right md:max-w-[100px] lg:max-w-fit">
+                                    {link.title}
+                                </span>
+                            </section>
+                        </Link>
+                    )}
 
                     {isMobile && link.hasChildren && openSubmenus[i] && (
                         <section className="pl-4 pt-1">{link.children}</section>
@@ -204,7 +270,10 @@ export default function Index() {
                             />
                             <nav className="fixed top-0 left-0 right-0 bg-white z-[9999] p-4 shadow-lg max-h-[calc(100vh-74px)] overflow-auto">
                                 <section className="flex justify-end mb-4">
-                                    <button onClick={() => setIsMenuOpen(false)} className="text-gray-600 hover:text-yellow-500 text-sm font-semibold">
+                                    <button
+                                        onClick={() => setIsMenuOpen(false)}
+                                        className="text-gray-600 hover:text-yellow-500 text-sm font-semibold"
+                                    >
                                         <CloseIcon />
                                     </button>
                                 </section>
@@ -227,7 +296,6 @@ export default function Index() {
                             </nav>
                         </section>
                     </section>
-
                     {desktopDropdown}
                 </section>
             )}
