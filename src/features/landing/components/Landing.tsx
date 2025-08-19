@@ -5,15 +5,12 @@ import FourthSection from '../components/FourthSection/FourthSection'
 import PerformanceSection from "../components/PerformanceSection/PerformanceSection"
 import ElectronicServices from "../components/ElectronicServices/ElectronicServices"
 import MapSection from "../components/MapSection/MapSection"
-import RecentNewsSection from "../components/RecentNewsSection/RecentNewsSection"
-import ReportSection from "../components/ReportSection/ReportSection"
+/* import RecentNewsSection from "../components/RecentNewsSection/RecentNewsSection"
+import ReportSection from "../components/ReportSection/ReportSection" */
 import MostViewsSection from "../components/MostViewsSection/MostViewsSection"
-
 export default function Index() {
     return (
         <section className='w-full'>
-
-
             <FirstSection />
             <section className='mt-[-100px]'>
                 <CardSection />
@@ -24,8 +21,8 @@ export default function Index() {
             <MostViewsSection />
             <ElectronicServices />
             <MapSection />
-            <RecentNewsSection />
-            <ReportSection />
+            {/*   <RecentNewsSection /> */}
+            {/* <ReportSection /> */}
         </section>
     )
 
