@@ -1,44 +1,45 @@
-import {LeafIcon} from "@/assets/icons/LeafIcon";
+import { LeafIcon } from "@/assets/icons/LeafIcon";
 import React from "react";
-import {TecIcon} from "@/assets/icons/TecIcon";
-import {UserIcon} from "@/assets/icons/UserIcon";
-import {InsuranceIcon} from "@/assets/icons/InsuranceIcon";
+import { TecIcon } from "@/assets/icons/TecIcon";
+import { UserIcon } from "@/assets/icons/UserIcon";
+import { InsuranceIcon } from "@/assets/icons/InsuranceIcon";
 import PerformanceImg from "@/assets/img/landing/PerformanceImg.png";
 import PerformanceImgBg from "@/assets/img/landing/PerformanceImgBg.png";
 import Image from "next/image";
 import LeafLeftBg from '@/assets/img/landing/LeafLeftBg.png';
 const performanceItems = [
-    {title:'حوره برنامه ریزی و فناوری' , icon:<TecIcon/> ,
-        children:['تشکیل شورای راهبری'
-            , 'پیگیری تدوین سند راهبردی' ,
-            'برنامه ریزی برای ارتقا بیمه کشاورزی'  ,
-            'سامانه ارزیابی خسارت بر خط']} ,
-    {title:'حوزه توسعه منابع انسانی' , icon:<UserIcon/> , children:[
-        'بازنگری ساختار کمیته‌ها  کارگروه‌ها',
+    {
+        title: 'حوره برنامه ریزی و فناوری', icon: <TecIcon />,
+        children: ['تشکیل شورای راهبری'
+            , 'پیگیری تدوین سند راهبردی',
+            'برنامه ریزی برای ارتقا بیمه کشاورزی',
+            'سامانه ارزیابی خسارت بر خط']
+    },
+    {
+        title: 'حوزه توسعه منابع انسانی', icon: <UserIcon />, children: [
+            'بازنگری ساختار کمیته‌ها  کارگروه‌ها',
             'اصلاح ساختار سازمانی با هدف توسعه ',
             'تدوین مبانی و برنامه راهبردی آموزش ',
             'توسعه و پیاده سازی سامانه هوشمند ارزیابی'
-        ]} ,
-    {title:'حوزه امور بیمه' , icon:<InsuranceIcon/> ,
-        children:[
+        ]
+    },
+    {
+        title: 'حوزه امور بیمه', icon: <InsuranceIcon />,
+        children: [
             'دستور امهال اقساط بیمه ',
             'پرداخت کامل غرامت‌های تایید شده ',
             'بازنگری دستورالعمل‌های بیمه کشاورزی ',
             'بررسی جامع عملکرد عوامل اجرایی'
-        ]} ,
+        ]
+    },
 ]
 
 export default function Index() {
     return (
         <section
-            className='w-full bg-contain bg-no-repeat flex flex-row-reverse flex-wrap  gap-10 justify-center items-center min-h-screen p-10'
-            style={{
-                backgroundImage: `url(${LeafLeftBg.src})` ,
-                backgroundPosition: 'left center',
-                backgroundSize: 'auto 100%',
-            }}
->
-
+            className='w-full relative flex flex-row-reverse flex-wrap gap-10 justify-center mt-[159px] items-center  p-10'
+        >
+            <Image src={LeafLeftBg} className="absolute left-0 w-[200px] xl:w-[300px] top-[-200px] xl:top-[-300px]" alt="" />
             <section
                 className="relative max-w-2xl h-auto" >
                 <section className="absolute inset-0 z-0 top-4 le-ft-2 overflow-hidden rounded-3xl">
@@ -54,13 +55,13 @@ export default function Index() {
                 </section>
             </section>
             <section className='max-w-2xl  mt-8 flex flex-col justify-center items-center md:justify-start md:items-start gap-3'>
-               <section className=''>
-                   <span className='flex flex-row gap-2 justify-start text-sm mb-2'>
-               عملکرد 2 ماهه گذشته
-                   <LeafIcon />
-               </span>
-                   <p className='text-lg md:text-2xl font-bold max-w-lg'>مهمترین اقدامات قائم مقام صندوق بیمه کشاورزی در 60 روز نخست خدمت</p>
-               </section>
+                <section className=''>
+                    <span className='flex flex-row gap-2 justify-start text-sm mb-2'>
+                        عملکرد 2 ماهه گذشته
+                        <LeafIcon />
+                    </span>
+                    <p className='text-lg md:text-2xl font-bold max-w-lg'>مهمترین اقدامات قائم مقام صندوق بیمه کشاورزی در 60 روز نخست خدمت</p>
+                </section>
                 <section className='flex flex-col justify-start items-start '>
                     {performanceItems.map(performanceItem => {
                         return (
@@ -72,10 +73,10 @@ export default function Index() {
                                     <section className='font-bold'>{performanceItem.title}</section>
                                     <section className='flex max-w-xl flex-row mb-4 flex-wrap justify-between items-center'>
                                         {performanceItem.children.map(child => {
-                                            return(
-                                                <section className='inline-block min-w-72' key={child}>
+                                            return (
+                                                <p className='inline-block min-w-72  text-[14px] xl:text-[16px]' key={child}>
                                                     {child}
-                                                </section>
+                                                </p>
                                             )
                                         })}
                                     </section>

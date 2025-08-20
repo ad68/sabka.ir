@@ -6,7 +6,7 @@ import { PhoneIcon } from "@/assets/icons/PhoneIcon";
 import { IranFlag } from "@/assets/icons/IranFlag";
 import { UserIcon } from "@/assets/icons/UserIcon";
 import { SearchIcon } from "@/assets/icons/SearchIcon";
-import SocialMedia from "@/features/landing/components/SocialMedia/SocialMedia"
+import SocialMedia from "@/features/landing/components/SocialMedia"
 import { useIsMobile } from "@/features/products/hooks/useIsMobile";
 export default function Index() {
     const isMobile = useIsMobile();

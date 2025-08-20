@@ -135,7 +135,7 @@ export default function Index() {
             >
                 {otherEvents.map((item, i) => (
                     <section key={i} className="flex-shrink-0 transition-transform duration-300 ease-in-out w-[250px] sm:w-[200px] xs:w-[150px]">
-                        <MostViewsSectionItem {...item}  />
+                        <MostViewsSectionItem {...item} />
                     </section>
                 ))}
             </section>

@@ -5,7 +5,7 @@ import React from "react";
 import { MapIcon } from "@/assets/icons/MapIcon";
 import { PhoneIcon } from "@/assets/icons/PhoneIcon";
 import { FaxIcon } from "@/assets/icons/FaxIcon";
-import SocialMedia from "@/features/landing/components/SocialMedia/SocialMedia";
+import SocialMedia from "@/features/landing/components/SocialMedia";
 
 export default function Index() {
     return (

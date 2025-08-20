@@ -1,13 +1,13 @@
-import FirstSection from '../components/FirstSection/FirstSection'
-import CardSection from '../components/CardSection/CardSection'
-import ThirdSection from '../components/ThirdSection/ThirdSection'
-import FourthSection from '../components/FourthSection/FourthSection'
-import PerformanceSection from "../components/PerformanceSection/PerformanceSection"
-import ElectronicServices from "../components/ElectronicServices/ElectronicServices"
-import MapSection from "../components/MapSection/MapSection"
+import FirstSection from './FirstSection'
+import CardSection from './CardSection'
+import ThirdSection from './ThirdSection'
+import FourthSection from './FourthSection'
+import PerformanceSection from "./PerformanceSection"
+import ElectronicServices from "./ElectronicServices"
+import MapSection from "./MapSection"
 /* import RecentNewsSection from "../components/RecentNewsSection/RecentNewsSection"
 import ReportSection from "../components/ReportSection/ReportSection" */
-import MostViewsSection from "../components/MostViewsSection/MostViewsSection"
+import MostViewsSection from "./MostViewsSection"
 export default function Index() {
     return (
         <section className='w-full'>
