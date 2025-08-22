@@ -208,3 +208,11 @@ nav.menuBox {
   background: var(--c);
   clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
 }
+.about-slider-container {
+  perspective: 1000px;
+}
+
+.about-slider-slide {
+  transform: rotateY(var(--angle)) translateZ(var(--depth));
+  transition: transform 0.5s ease;
+}
