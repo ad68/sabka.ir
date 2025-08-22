@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Index() {
     return (
         <section
-            className='relative bg-cover bg-center w-full bg-no-repeat py-14 px-4 md:py-24 md:px-28 mt-[-30px] z-[-10] min-h-screen'
+            className='relative bg-center w-full bg-no-repeat px-4  md:px-28 mt-[-30px] z-[-10]'
             style={{ backgroundImage: `url(${FirstSectionBg.src})` }}
         >
             <section className='flex flex-col justify-center items-center relative py-6 md:py-14 px-12 md:px-28 mt-24 text-center max-w-[900px] xl:max-w-full mx-auto'>

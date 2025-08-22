@@ -37,7 +37,7 @@ const performanceItems = [
 export default function Index() {
     return (
         <section
-            className='w-full relative flex flex-row-reverse flex-wrap gap-10 justify-center mt-[159px] items-center  p-10'
+            className='w-full relative flex flex-row-reverse flex-wrap gap-10 justify-center mt-[159px] items-center'
         >
             <Image src={LeafLeftBg} className="absolute left-0 w-[200px] xl:w-[300px] top-[-200px] xl:top-[-300px]" alt="" />
             <section

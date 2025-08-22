@@ -25,7 +25,7 @@ const items = [
 ]
 export default function Index() {
     return (
-        <section className="w-full relative mt-[50px] xl:mt-[150px]">
+        <section className="w-full relative mt-[150px] xl:mt-[200px]">
             <Image src={TwoLeavesBg} className="hidden xl:block absolute right-0 w-[200px] xl:w-[300px]  xl:top-[-300px]" alt="" />
             <div
                 className='max-w-6xl m-auto flex flex-row  gap-5 xl:gap-[36px] justify-center items-center px-[20px] xl:px-0'
@@ -54,7 +54,7 @@ export default function Index() {
                     <div className=' xl:max-w-2xl 2xl:max-w-4xl mx-auto flex flex-row justify-center items-center md:justify-start md:items-start xl:justify-center xl:items-center flex-wrap gap-3 lg:gap-6'>
                         {items.map((item, index) => {
                             return (
-                                <div className='cursor-pointer group flex flex-row justify-between items-center min-w-full xl:min-w-[300px] hover:shadow-lg transition-all duration-500  border-[1px] hover:border-[#E9AA1E] border-[#A7D9AC] p-2 rounded-xl' key={index}>
+                                <div className='cursor-pointer group flex flex-row justify-between items-center min-w-full xl:min-w-[340px] hover:shadow-lg transition-all duration-500  border-[1px] hover:border-[#E9AA1E] border-[#A7D9AC] p-2 rounded-xl' key={index}>
                                     <div className='flex flex-row gap-1 justify-start items-center'>
                                         <span className='font-bold text-sm'>{item.icon}</span>
                                         <span className='font-bold text-sm'>{item.title}</span>

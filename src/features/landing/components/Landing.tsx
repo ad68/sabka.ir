@@ -5,6 +5,7 @@ import FourthSection from './FourthSection'
 import PerformanceSection from "./PerformanceSection"
 import ElectronicServices from "./ElectronicServices"
 import MapSection from "./MapSection"
+import Slider from "./Slider"
 /* import RecentNewsSection from "../components/RecentNewsSection/RecentNewsSection"
 import ReportSection from "../components/ReportSection/ReportSection" */
 import MostViewsSection from "./MostViewsSection"
@@ -18,7 +19,8 @@ export default function Index() {
             <ThirdSection />
             <FourthSection />
             <PerformanceSection />
-            <MostViewsSection />
+            {/*   <MostViewsSection /> */}
+            <Slider />
             <ElectronicServices />
             <MapSection />
             {/*   <RecentNewsSection /> */}
