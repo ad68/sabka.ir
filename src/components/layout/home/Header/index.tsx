@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { HamburgerMenuIcon } from "@/assets/icons/HamburgerMenuIcon";
 import { CloseIcon } from "@/assets/icons/CloseIcon";
 import Link from "next/link";
+import {useRouter} from "next/navigation";
 
 const menuItemsNews: MenuItemType[] = [
     { title: "اخبار و اطلاعیه", onClick: () => { } },
@@ -38,7 +39,7 @@ const links = [
     { title: "خانه", href: "/", hasChildren: false, hasIcon: false },
     {
         title: "درباره ما",
-        href: "/",
+        href: "/about",
         hasChildren: true,
         hasIcon: true,
         icon: "",
@@ -95,6 +96,7 @@ export default function Index() {
     const navRef = useRef<HTMLDivElement | null>(null);
     const [dropdownTop, setDropdownTop] = useState<number>(0);
     const closeTimerRef = useRef<number | null>(null);
+    const navigate = useRouter();
 
     const calcDropdownTop = () => {
         if (!navRef.current) return;
@@ -144,6 +146,7 @@ export default function Index() {
         >
             {links.map((link, i) => (
                 <li
+                    onClick={() => navigate.push(link.href)}
                     key={i}
                     className={`group relative ${isMobile ? "w-full" : ""}`}
                     onMouseEnter={() => {

@@ -136,3 +136,12 @@ li {
   transition: all 0.5s;
   cursor: pointer;
 }
+
+.about-slider-container {
+  perspective: 1000px;
+}
+
+.about-slider-slide {
+  transform: rotateY(var(--angle)) translateZ(var(--depth));
+  transition: transform 0.5s ease;
+}
