@@ -8,12 +8,12 @@ import MapSection from "./MapSection"
 import Slider from "./Slider"
 /* import RecentNewsSection from "../components/RecentNewsSection/RecentNewsSection"
 import ReportSection from "../components/ReportSection/ReportSection" */
-import MostViewsSection from "./MostViewsSection"
+/* import MostViewsSection from "./MostViewsSection" */
 export default function Index() {
     return (
         <section className='w-full'>
             <FirstSection />
-            <section className='mt-[-100px]'>
+            <section className='xl:mt-[-150px] 2xl:mt-[-200px]'>
                 <CardSection />
             </section>
             <ThirdSection />

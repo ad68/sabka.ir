@@ -78,17 +78,18 @@ export default {
 			backgroundImage: {
 				'gradient-text': 'radial-gradient(58.25% 85.71% at 78.39% 14.29%, #4EB301 0%, #01532F 100%)',
 				'custom-radial-home-page': 'radial-gradient(58.25% 85.71% at 78.39% 14.29%, #4EB301 0%, #01532F 100%)',
-				'button-join-background': 'radial-gradient(53.77% 107.14% at 74.19% 0%, #F5AC38 0%, #D11F01 100%)'
-},
+				'button-join-background': 'radial-gradient(53.77% 107.14% at 74.19% 0%, #F5AC38 0%, #D11F01 100%)',
+				'gradient-radial': 'radial-gradient(circle at center, var(--tw-gradient-stops))',
+			},
 			screens: {
 				'10xl': '1900px',
 			},
 		}
 	},
 	plugins: [
-	// eslint-disable-next-line @typescript-eslint/no-require-imports
+		// eslint-disable-next-line @typescript-eslint/no-require-imports
 		require("tailwindcss-animate"),
-		function ({ addComponents }:{addComponents:never}) {
+		function ({ addComponents }: { addComponents: never }) {
 			// @ts-expect-error
 			addComponents({
 				'.underline-clip::after': {

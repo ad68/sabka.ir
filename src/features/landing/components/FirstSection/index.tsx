@@ -1,4 +1,4 @@
-import FirstSectionBg from "@/assets/img/landing/FirstSectionBg.png";
+
 import Leaves from "@/assets/img/landing/Leaves.png";
 import NewsItems from "./components/NewsItems";
 import Image from "next/image";
@@ -7,30 +7,38 @@ import Image from "next/image";
 export default function Index() {
     return (
         <section
-            className='relative bg-center w-full bg-no-repeat px-4  md:px-28 mt-[-30px] z-[-10]'
-            style={{ backgroundImage: `url(${FirstSectionBg.src})` }}
+            className='relative w-full z-[-10px]'
         >
-            <section className='flex flex-col justify-center items-center relative py-6 md:py-14 px-12 md:px-28 mt-24 text-center max-w-[900px] xl:max-w-full mx-auto'>
-                <section className='p-4 md:p-8 mb-6 md:mb-14 relative flex flex-row gap-4 md:gap-6 justify-center items-center'>
-                    <Image src={Leaves.src} alt='sabka' width={60} height={60} />
-                    <p className='font-bold text-white text-2xl md:text-4xl lg:text-6xl leading-snug'>
-                        سرمایه‌ات را در دل خاک امن کن
+            <div className="w-full flex justify-center overflow-hidden">
+                {/*  <div className=" relative  m-auto  clip-ellipse overflow-hidden">
+                    <Image width={1920} height={700} className="w-[full] h-auto" src="/assets/img/landing/FirstSectionBg.png" alt="" />
+                </div> */}
+                <Image width={1920} height={700} className="w-[full] h-auto" src="/assets/img/landing/FirstSectionBg.png" alt="" />
+            </div>
+            <section className='absolute top-0 left-0 w-full xl:mt-[24px] 2xl:mt-[100px] flex flex-col justify-center items-center px-[200px] md:px-28  text-center max-w-[900px] xl:max-w-full mx-auto'>
+                <div className="w-[1136px] relative flex flex-col justify-center items-center">
+                    <div className=' xl:p-2 2xl:p-4 relative flex flex-row gap-4 md:gap-6 justify-center items-center'>
+                        <Image src={Leaves.src} alt='sabka' width={60} height={60} />
+                        <p className='font-bold text-white xl:text-[36px] 2xl:text-[48px] leading-snug'>
+                            سرمایه‌ات را در دل خاک امن کن
+                        </p>
+                        <Image src={Leaves.src} alt='sabka' width={60} height={60} />
+                    </div>
+                    <p className='font-bold text-white xl:text-[20px] 2xl:text-[36px] lg:text-[32px] leading-relaxed'>
+                        با بیمه کشاورزی، خیال آسوده برای امروز و فردای مزرعه‌ات
                     </p>
-                    <Image src={Leaves.src} alt='sabka' width={60} height={60} />
-                </section>
-
-                <p className='font-bold text-white text-xl md:text-4xl lg:text-5xl leading-relaxed max-w-[700px]'>
-                    با بیمه کشاورزی، خیال آسوده برای امروز و فردای مزرعه‌ات
-                </p>
-
-                <div className="absolute top-0 left-2 md:left-0 border-t-4 border-l-4 border-dotted border-white w-[60px] h-[2px]" />
-                <div className="absolute top-3 left-2 md:left-0 border-t-4 border-l-4 border-dotted border-white w-[60px] h-[2px]" />
-                <div className="absolute bottom-0 right-2 md:right-0 border-b-4 border-r-4 border-dotted border-white w-[60px] h-[2px]" />
-                <div className="absolute bottom-3 right-2 md:right-0 border-b-4 border-r-4 border-dotted border-white w-[60px] h-[2px]" />
-            </section>
-
-            <section className='mt-8 xl:mt-24 max-w-[1200px] mx-auto px-4 md:px-0'>
-                <NewsItems />
+                    <div className="absolute bottom-[-30px] right-0 flex flex-col gap-2">
+                        <div className="border-t-4 border-l-4 border-dotted border-white w-[60px] h-[2px]" />
+                        <div className="border-t-4 border-l-4 border-dotted border-white w-[60px] h-[2px]" />
+                    </div>
+                    <div className="absolute top-0 left-0 flex flex-col gap-2">
+                        <div className="border-b-4 border-r-4 border-dotted border-white w-[60px] h-[2px]" />
+                        <div className="border-b-4 border-r-4 border-dotted border-white w-[60px] h-[2px]" />
+                    </div>
+                </div>
+                <div className="mt-[100px]">
+                    <NewsItems />
+                </div>
             </section>
         </section>
     );

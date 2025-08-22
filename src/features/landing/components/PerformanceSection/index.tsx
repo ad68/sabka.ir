@@ -37,7 +37,7 @@ const performanceItems = [
 export default function Index() {
     return (
         <section
-            className='w-full relative flex flex-row-reverse flex-wrap gap-10 justify-center mt-[159px] items-center'
+            className='w-full relative flex flex-row-reverse flex-wrap gap-10 justify-center mt-[80px] items-center'
         >
             <Image src={LeafLeftBg} className="absolute left-0 w-[200px] xl:w-[300px] top-[-200px] xl:top-[-300px]" alt="" />
             <section
@@ -47,14 +47,14 @@ export default function Index() {
                 </section>
                 <Image className='w-[80%] relative  z-10 top-1/5 left-1/3 -translate-x-1/2 transform -translate-y-1/5' src={PerformanceImg.src} alt='sabka.ir' width={300} height={300} />
 
-                <section className=' mt-4 p-4'>
+                <section className='mt-4 p-4 relative z-50'>
                     <p className='font-bold px-2 border-r-2 border-r-[#35663A]'>دکتر بهزاد باباخانی</p>
                     <section className='max-w-sm mt-2 font-semibold'>
                         در تاریخ ۷ خردادماه ۱۴۰۴ با صدور حکمی از سوی وزیر جهاد کشاورزی به عنوان قائم مقام مدیرعامل و عضو هیئت مدیره صندوق کشاورزی منصوب شد.
                     </section>
                 </section>
             </section>
-            <section className='max-w-2xl  mt-8 flex flex-col justify-center items-center md:justify-start md:items-start gap-3'>
+            <section className='max-w-2xl px-[20px] xl:px-0 mt-8 flex flex-col justify-center items-center md:justify-start md:items-start gap-3'>
                 <section className=''>
                     <span className='flex flex-row gap-2 justify-start text-sm mb-2'>
                         عملکرد 2 ماهه گذشته

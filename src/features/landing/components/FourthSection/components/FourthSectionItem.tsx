@@ -27,9 +27,9 @@ export default function Index({ title, link, img }: any) {
                 <>
                     <section className='group flex flex-col items-center justify-center p-2 w-[300px] h-[300px] xl:w-[365px] xl:h-[365px] rounded-2xl bg-white hover:bg-[#7BB28033] group  transition-all duration-500 cursor-pointer'>
                         <section className='flex flex-row justify-between items-center p-4'>
-                            <span className='font-bold text-sm'>{title}</span>
-                            <Link href={link} className='w-[24px] h-[24px] p-2 flex justify-center items-center rounded-md bg-[#35663A] text-white group-hover:bg-[#E9AA1E]  transition-all duration-500 cursor-pointer'>
-                                <ArrowRTLIcon />
+                            <p className='w-[85%] font-bold text-sm'>{title}</p>
+                            <Link href={link} className='w-[38px] h-[38px] p-2 flex justify-center items-center rounded-md bg-[#35663A] text-white group-hover:bg-[#E9AA1E]  transition-all duration-500 cursor-pointer'>
+                                <ArrowRTLIcon className="w-[10px]" />
                             </Link>
                         </section>
                         <section className='relative w-[90%] mx-auto h-[240px] bg-cover' style={{ backgroundImage: img }}>

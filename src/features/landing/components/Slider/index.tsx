@@ -3,9 +3,9 @@ import Slider from './component/Slider'
 import Link from 'next/link'
 export default function Index() {
     return <section className="max-w-6xl flex justify-between relative m-auto h-[400px] bg-gradient-to-r  mt-[119px] rounded-[20px]">
-        <div className="w-[682px] relative">
+        <div className="w-full relative">
             <section
-                className="bg-cover bg-no-repeat z-10 w-full bg-opacity-10 xl:max-w-3xl h-[320px] md:h-[380px] xl:h-[421px] flex flex-col justify-start md:justify-start md:pt-10 xl:justify-center xl:pt-0 items-center md:items-start md:pr-10 gap-3 md:rounded-2xl"
+                className="bg-cover bg-no-repeat z-10  bg-opacity-10  w-full h-[320px] md:h-[380px] xl:h-[421px] flex flex-col justify-start md:justify-start md:pt-10 xl:justify-center xl:pt-0 items-center md:items-start md:pr-10 gap-3 md:rounded-2xl"
                 style={{ backgroundImage: `url(/assets/img/landing/MostViewImg1.png)` }}
             >
                 <section className="flex flex-col justify-start items-center md:items-start gap-3 md:gap-3 max-w-lg mt-10 md:mt-0">
@@ -22,7 +22,7 @@ export default function Index() {
             </section>
 
         </div>
-        <div className='absolute w-[800px] mt-[150px] left-2'>
+        <div className='absolute w-[800px] mt-[150px] xl:mt-0 left-2'>
             <Slider />
         </div>
 

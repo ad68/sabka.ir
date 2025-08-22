@@ -1,11 +1,11 @@
-import {ArrowRTLIcon} from '@/assets/icons/ArrowRTL';
+import { ArrowRTLIcon } from '@/assets/icons/ArrowRTL';
 import Link from "next/link";
 
-export default function Index({ title, icon, desc , link , index}) {
-    const textColor =     (index % 2 == 0) ? 'text-[#E9AA1E]' :'text-[#558C5A]';
-    const bgColor =     (index % 2 == 0) ? '#E9AA1E' :'#558C5A';
+export default function Index({ title, icon, desc, link, index }: any) {
+    const textColor = (index % 2 == 0) ? 'text-[#E9AA1E]' : 'text-[#558C5A]';
+    const bgColor = (index % 2 == 0) ? '#E9AA1E' : '#558C5A';
     return (
-        <div className="relative w-[300px] hover:shadow-2xl hover:-translate-y-2 transition-all ">
+        <div className="relative w-[300px] hover:shadow-2xl hover:-translate-y-2 transition-all">
             <div
                 className={`
                     pointer-events-none absolute -right-4 top-2 bottom-2 w-3 mt-14
@@ -14,7 +14,6 @@ export default function Index({ title, icon, desc , link , index}) {
                     ${textColor}
                     `}
             />
-
             <div
                 className={`
                     pointer-events-none absolute -left-4 -top-3 bottom-40 w-3
@@ -45,16 +44,7 @@ export default function Index({ title, icon, desc , link , index}) {
 
                 <div className="flex justify-center mb-4">
                     {icon}
-                    {/*<svg*/}
-                    {/*    xmlns="http://www.w3.org/2000/svg"*/}
-                    {/*    viewBox="0 0 24 24"*/}
-                    {/*    fill="none"*/}
-                    {/*    stroke="currentColor"*/}
-                    {/*    strokeWidth="1.5"*/}
-                    {/*    className="w-10 h-10 text-gray-700"*/}
-                    {/*>*/}
-                    {/*    <path strokeLinecap="round" strokeLinejoin="round" d="M4 12l4 4 8-8" />*/}
-                    {/*</svg>*/}
+
                 </div>
 
                 <h2 className="text-center font-bold mb-2">{title}</h2>
@@ -63,15 +53,25 @@ export default function Index({ title, icon, desc , link , index}) {
                     {desc}
                 </p>
 
-                <Link href={link}
+                {/* <Link href={link}
                     className={`
                         absolute -bottom-0 -left-0 h-24 w-24 
                         [clipPath:polygon(0%_0%,0%_100%,100%_100%)]
                         rounded-tr-xl flex items-center justify-center
                         `}
-                      style={{ backgroundColor: bgColor }}
+                    style={{ backgroundColor: bgColor }}
                 >
-                    <ArrowRTLIcon  className="w-4 h-4 text-white left-3 top-[3.5rem] absolute"  />
+                    <ArrowRTLIcon className="w-4 h-4 text-white left-3 top-[3.5rem] absolute" />
+                </Link> */}
+                <Link
+                    href={link}
+                    className="absolute -bottom-0 -left-0 h-24 w-24 flex items-center justify-center rounded-bl-xl overflow-hidden"
+                    style={{
+                        backgroundColor: bgColor,
+                        clipPath: "polygon(0% 0%, 0% 100%, 100% 100%)",
+                    }}
+                >
+                    <ArrowRTLIcon className="w-4 h-4 text-white left-3 top-[3.5rem] absolute" />
                 </Link>
             </div>
         </div>

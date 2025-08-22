@@ -1,16 +1,9 @@
 import { useState } from "react";
-type Province = {
-    name: string;
-    d: string; // مسیر SVG
-};
+
 export default function Index() {
 
 
-    const provinces: Province[] = [
-        { name: "اردبیل", d: "" },
-        { name: "هرمزگان", d: "M922.6,1021.8..." },
-        { name: "ایلام", d: "M253.3,566.6..." },
-    ];
+
     const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, name: "" });
 
     const handleMouseEnter = (e: React.MouseEvent<SVGPathElement>, name: string) => {

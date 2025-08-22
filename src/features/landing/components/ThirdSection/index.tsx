@@ -6,7 +6,7 @@ import leftBg from '@/assets/img/landing/third-left-bg.png'
 export default function Index() {
     return (
         <section
-            className='w-full relative flex flex-col gap-2 justify-center items-center mt-[158px] '>
+            className='w-full relative flex flex-col gap-2 justify-center items-center mt-[80px]'>
             <Image width={400} height={400} alt='' className=' w-[100px] xl:w-auto h-auto absolute right-0 top-[-80px]' src={rightBg} />
             <Image width={400} height={400} alt='' className='w-[100px] xl:w-auto h-auto absolute left-0 top-[-80px]' src={leftBg} />
             <header className='w-full flex flex-col justify-center items-center md:justify-center md:items-center gap-3'>
@@ -14,7 +14,6 @@ export default function Index() {
                     کشاورزی، ستون خودکفایی ملی
                     <LeafIcon />
                 </span>
-
                 <p className='text-2xl md:text-3xl font-bold'>رهنمودهای رهبر انقلاب</p>
                 <p className='text-center text-sm xl:text-base max-w-sm md:max-w-2xl px-[25px] lg:px-0'>سخنان مقام معظم رهبری در حوزه کشاورزی، مسیر روشن استقلال غذایی کشور را ترسیم می‌کند؛ نگاهی راهبردی برای حفظ امنیت، تولید، و کرامت کشاورزان.</p>
             </header>
@@ -37,7 +36,6 @@ export default function Index() {
                                 اهمیت کشاورزی دانش بنیان و امنیت غذایی
                                 در کلام مقام معظم رهبری
                             </div>
-
                             <p className="text-gray-600 text-[16px] md:text-md font-semibold hidden xl:block">
                                 اولاً هفته‌ای کشاورزی بر همه‌ی شما کشاورزان عزیز. بلکه بر
                                 همه‌ی ملت ایران مبارک باشد. دیدار با زحمتکشان عرصه‌ی کشاورزی
@@ -53,12 +51,9 @@ export default function Index() {
                                 همه‌ی ملت ایران مبارک باشد. دیدار با زحمتکشان عرصه‌ی کشاورزی
                                 - با توجه به اهمیت که این بخش برای امروز و فردای ....
                             </p>
-
                         </div>
                         <div className='bg-[#35663A] w-[61px] h-[96px] xl:w-[20px] xl:h-[187px]  rounded-md absolute top-[80%] z-[0] xl:top-1/2 -translate-x-2 -left-2  transform  -translate-y-1/2'></div>
-
                     </div>
-
                 </div>
             </div>
         </section>

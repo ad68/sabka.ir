@@ -64,7 +64,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-yekanBakh) !important;
+    font-family: var(--font-iranYekan) !important;
   }
 }
 input[type="checkbox"] {
@@ -135,4 +135,76 @@ li {
   fill: #e9aa1e;
   transition: all 0.5s;
   cursor: pointer;
+}
+.clip-ellipse {
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+}
+
+nav.menuBox {
+  width: 100%;
+  top: 0px;
+}
+
+.wrapper .nav-links {
+  display: flex;
+  height: 100%;
+}
+
+.nav-links .mobile-item {
+  display: none;
+}
+.nav-links .drop-menu {
+  position: absolute;
+  background: #242526;
+  width: 780px;
+  line-height: 45px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-box {
+  transition: all 0.3s ease;
+  top: 80px;
+  opacity: 1;
+  visibility: visible;
+}
+.drop-menu li a {
+  width: 100%;
+  display: block;
+  padding: 0 0 0 15px;
+  border-radius: 0px;
+}
+.mega-box {
+  position: fixed;
+  width: 80%;
+  right: 0;
+  padding: 0 30px;
+  top: 95px;
+  opacity: 0;
+  visibility: hidden;
+}
+.mega-box .content {
+  background: white;
+  padding: 25px 20px;
+  border: 1px solid silver;
+}
+
+.content .row .mega-links {
+  margin-left: -40px;
+  border-left: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.row .mega-links li a:hover {
+  color: #f2f2f2;
+}
+.tri {
+  --w: 90px;
+  --h: 80px;
+  --c: #e9aa1e;
+  width: var(--w);
+  height: var(--h);
+  background: var(--c);
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
 }

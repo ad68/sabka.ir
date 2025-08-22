@@ -7,7 +7,7 @@ import { InsuranceAmtIcon } from "@/assets/icons/InsuranceAmtIcon";
 import { WalletIcon } from "@/assets/icons/WalletIcon";
 import { CropsIcon } from "@/assets/icons/CropsIcon";
 import { useIsMobile } from "@/features/products/hooks/useIsMobile";
-import React, {useEffect, useRef, useState} from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const cardItems = [
     {
@@ -54,14 +54,12 @@ export default function Index() {
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [scrollLeft, setScrollLeft] = useState(0);
-
     const onMouseDown = (e: React.MouseEvent) => {
         if (!scrollRef.current) return;
         setIsDragging(true);
         setStartX(e.pageX - scrollRef.current.offsetLeft);
         setScrollLeft(scrollRef.current.scrollLeft);
     };
-
     const onMouseLeave = () => setIsDragging(false);
     const onMouseUp = () => setIsDragging(false);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -83,7 +81,6 @@ export default function Index() {
         });
         setCurrentIndex(index);
     };
-
     const onScroll = () => {
         if (!scrollRef.current) return;
         const container = scrollRef.current;
@@ -114,7 +111,7 @@ export default function Index() {
     return (
         <>
             {isMobile ? (<>
-                    <section
+                <section
                     ref={scrollRef}
                     className="flex gap-10 overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing px-20
                      py-10 w-full
@@ -133,21 +130,21 @@ export default function Index() {
                         </section>
                     ))}
                 </section>
-                    <section className="flex justify-center mt-4 gap-2">
-                        {cardItems.map((_, idx) => (
-                            <button
-                                key={idx}
-                                className={`w-3 h-3 rounded-full transition-colors ${
-                                    currentIndex === idx ? "bg-[#35663A] rounded-3xl w-6" : "bg-gray-400 w-3"
+                <section className="flex justify-center mt-4 gap-2">
+                    {cardItems.map((_, idx) => (
+                        <button
+                            key={idx}
+                            className={`w-3 h-3 rounded-full transition-colors ${currentIndex === idx ? "bg-[#35663A] rounded-3xl w-6" : "bg-gray-400 w-3"
                                 }`}
-                                onClick={() => scrollToIndex(idx)}
-                            />
-                        ))}
-                    </section>
-                </>
+                            onClick={() => scrollToIndex(idx)}
+                        />
+                    ))}
+                </section>
+            </>
 
             ) : (
-                <section className="w-full flex flex-row flex-wrap max-w-6xl mx-auto gap-10 justify-center items-center min-h-screen p-10">
+                <section className="w-full flex flex-row flex-wrap max-w-6xl mx-auto gap-10 justify-center items-center p-10">
+
                     {cardItems.map((carItem, index) => (
                         <CardItem key={index} {...carItem} index={index} />
                     ))}

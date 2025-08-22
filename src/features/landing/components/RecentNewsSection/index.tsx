@@ -1,50 +1,47 @@
 "use client"
-import {LeafIcon} from "@/assets/icons/LeafIcon";
-import React, {useState} from "react";
+import { LeafIcon } from "@/assets/icons/LeafIcon";
 import Image from "next/image";
 import Link from "next/link";
-import {LeftArrowIcon} from "@/assets/icons/LeftArrowIcon";
+import { LeftArrowIcon } from "@/assets/icons/LeftArrowIcon";
 
-type NewsType  = {title:string , desc:string , img:string , date:string , isSelected:boolean , link:string};
-const news:NewsType[] = [
+type NewsType = { title: string, desc: string, img: string, date: string, isSelected: boolean, link: string };
+const news: NewsType[] = [
     {
         title: 'شتاب در تحول و توسعه بیمه کشاورزی همراه با تکیه بر خلق منابع جدید',
         desc: 'صنــدوق بیمه کشــاورزی با بهرهگیری از یک هــزار و ۲۹۰ ارزیاب فعال، دو شــرکت ملی ارزیابــی و حمایــت نهادهایی چون وزارت کشــور،',
         img: '/assets/img/landing/RecentNewPic1.png',
         date: '۱۹ مرداد ۱۴۰۳',
         link: '',
-        isSelected:true,
+        isSelected: true,
     },
     {
         title: 'پیام قائم مقام صندوق بیمه کشاورزی به مناسبت چهل و یکمین سالگرد تأسیس صندوق بیمه کشاورزی',
-        desc:'',
+        desc: '',
         img: '/assets/img/landing/RecentNewPic2.png',
         date: '۱۹ مرداد ۱۴۰۳',
         link: '',
-        isSelected:false,
+        isSelected: false,
     },
     {
         title: 'پیام قائم مقام صندوق بیمه کشاورزی به مناسبت چهل و یکمین سالگرد تأسیس صندوق بیمه کشاورزی',
-        desc:'',
+        desc: '',
         img: '/assets/img/landing/RecentNewPic3.png',
         date: '۱۹ مرداد ۱۴۰۳',
         link: '',
-        isSelected:false,
+        isSelected: false,
     },
     {
         title: 'پیام قائم مقام صندوق بیمه کشاورزی به مناسبت چهل و یکمین سالگرد تأسیس صندوق بیمه کشاورزی',
-        desc:'',
+        desc: '',
         img: '/assets/img/landing/RecentNewPic4.png',
         date: '۱۹ مرداد ۱۴۰۳',
         link: '',
-        isSelected:false,
+        isSelected: false,
     },
 ]
 
 export default function Index() {
-    const [selectedNews, setSelectedNews] = useState<NewsType>(
-        () => news.find(news => news.isSelected) || news[0]
-    );
+    const selectedNews = news.find(news => news.isSelected) || news[0]
     const filteredNews = news.filter(newsItem => newsItem.title !== selectedNews.title);
     return (
         <section
@@ -53,10 +50,10 @@ export default function Index() {
 
             <section
                 className='w-full mt-8 flex flex-col justify-center items-center md:justify-center md:items-center gap-3'>
-               <span className='flex flex-row gap-2'>
-                با ما از تازه‌ترین تحولات باخبر شوید
-                   <LeafIcon/>
-               </span>
+                <span className='flex flex-row gap-2'>
+                    با ما از تازه‌ترین تحولات باخبر شوید
+                    <LeafIcon />
+                </span>
 
                 <p className='text-xl md:text-3xl font-bold'>جدیدترین نشریات خبری</p>
                 <section className='text-center font-semibold text-sm md:text-md max-w-2xl'>در این بخش می‌توانید به جدیدترین نشریات، اخبار و تحلیل‌های
@@ -66,7 +63,7 @@ export default function Index() {
 
             <section className='w-full flex flex-row justify-center items-center  gap-2 xl:gap-10 flex-wrap'>
                 <section className='max-w-md xl:max-w-2xl'>
-                    <Image src={selectedNews.img} alt='sabka' width={491} height={427}/>
+                    <Image src={selectedNews.img} alt='sabka' width={491} height={427} />
                     <section>
                         <section>
                             <p className='my-3 font-bold text-md md:text-lg'>{selectedNews.title}</p>
@@ -85,7 +82,7 @@ export default function Index() {
                     </section>
                 </section>
                 <section className='flex flex-col gap-3 xl:gap-4 '>
-                    {filteredNews.map((newsItem , index) => {
+                    {filteredNews.map((newsItem, index) => {
                         return (
                             <section key={index} className='flex flex-row justify-start max-w-2xl mx-auto'>
                                 <Image src={newsItem.img} alt={newsItem.title} width={214} height={174} className='rounded-2xl' />
