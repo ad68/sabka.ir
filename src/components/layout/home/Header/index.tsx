@@ -1,9 +1,11 @@
-
-import Menu from './components/DesktopMenu'
+import { MenuIcon } from 'lucide-react'
+import DesktopMenu from './components/DesktopMenu'
+import MobileMenu from './components/MobileMenu'
 export default function Index() {
-    return <header className="hidden xl:block h-[84px] z-[200] w-full bg-white fixed top-0 left-0 border-b-[4px] border-b-green-700">
-        <div className=" m-auto flex items-center h-full">
-            <Menu />
+    return <header className="h-[60px] xl:h-[84px] z-[200] w-full bg-[#e9aa1e] xl:bg-white fixed top-0 left-0 border-b-[4px] border-b-green-700">
+        <div className="hidden xl:flex m-auto  items-center h-full">
+            <DesktopMenu />
         </div>
+        <MobileMenu />
     </header>
 }
