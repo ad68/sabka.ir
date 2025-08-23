@@ -54,7 +54,7 @@ export default function Index() {
                     </section>
                 </section>
             </section>
-            <section className='max-w-2xl px-[20px] xl:px-0 mt-8 flex flex-col justify-center items-center md:justify-start md:items-start gap-3'>
+            <section className=' max-w-full px-[20px] xl:px-0 mt-8 flex flex-col justify-center items-center md:justify-start md:items-start gap-3'>
                 <section className=''>
                     <span className='flex flex-row gap-2 justify-start text-sm mb-2'>
                         عملکرد 2 ماهه گذشته

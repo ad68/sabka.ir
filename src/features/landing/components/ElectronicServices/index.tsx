@@ -42,7 +42,7 @@ export default function Index() {
                         ثبت و پیگیری امور اداری، سریع و الکترونیکی
                     </div>
                 </div>
-                <div className='flex  flex-col justify-between  w-[707px] h-[488px]  gap-6 min-h-[400px]' >
+                <div className='flex  flex-col justify-between  w-[707px] h-auto xl:h-[488px]  gap-6 min-h-[400px]' >
                     <div className=' flex flex-col justify-start items-start  gap-3 '>
                         <span className='flex flex-row gap-2 text-sm'>
                             کشاورزی، ستون خودکفایی ملی

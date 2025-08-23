@@ -82,11 +82,13 @@ export default function RootLayout({
         className={`${iranYekan.variable}  ${geistSans.variable}  antialiased`}
       >
         <Providers>
-          {/*  <SubHeader /> */}
           <Header />
-          {/*   <HeaderOld /> */}
-          {children}
-          <Footer />
+          <main className="pt-[84px]">
+
+            {children}
+            <Footer />
+          </main>
+
         </Providers>
       </body>
     </html>
