@@ -19,29 +19,28 @@ export function CounterItem(props:{val:string}){
 
 export default function Index(){
     return (
-        <section className='w-full flex flex-col justify-center items-center mt-20'>
+        <section className='w-full flex flex-col justify-center items-center mt-20 2xl:mt-24'>
             <section className='flex flex-col justify-center items-center gap-10'>
-                <h3 className='font-bold text-3xl max-w-2xl text-[#284D2C] text-center'>سایر وظایف و حدود عمليات صندوق بر مبنای اساسنامه قانونی به شرح زير است:</h3>
+                <h3 className='font-bold text-3xl max-w-2xl text-[#284D2C] text-center 2xl:text-4xl'>سایر وظایف و حدود عمليات صندوق بر مبنای اساسنامه قانونی به شرح زير است:</h3>
                 <p className='flex flex-row justify-center items-start gap-2 max-w-2xl text-[#284D2C] mb-20'>
-                    <span className='flex flex-col gap-2'>
+                    <span className='flex flex-col gap-2 2xl:text-[20px]'>
                         تبصره
                         <LeafIcon />
                     </span>
-                    <span className='text-[16px] text-[#284D2C] max-w-lg'>
+                    <span className='text-[16px] text-[#284D2C] max-w-lg 2xl:text-[20px]'>
                         اقدامات موضوع بندهای 1، 2 و 3 این ماده با استفاده از منابع اطلاعاتی و نتایج تحقیقاتی و همکاری سایر مؤسسات کشور انجام خواهد شد.
                     </span>
                 </p>
-
             </section>
 
-            <section className='flex flex-row justify-center items-center' >
-                <section className='flex flex-col gap-2'>
+            <section className='flex flex-row justify-center items-center gap-2 2xl:gap-4' >
+                <section className='flex flex-col gap-2 2xl:gap-4'>
                     {items.map((item , idx) => {
                         return <section key={idx}>
                             {idx < 3 &&  (
-                                <section className=' flex flex-row gap-2 text-[14px] ' >
+                                <section className=' flex flex-row gap-2 text-[14px] 2xl:text-[20px]' >
                                    <CounterItem val={'0'+(idx + 1)} />
-                                    <p className='max-w-xs text-sm text-[#558C5A]'>{item}</p>
+                                    <p className='max-w-xs text-sm text-[#558C5A]  xl:text-[16px]'>{item}</p>
                                 </section>
                             )
                             }
@@ -52,13 +51,13 @@ export default function Index(){
                 <section>
                     <Image src='/assets/img/about/FourthSection.png' width={293} height={350} alt='' />
                 </section>
-                <section className='flex flex-col  gap-2'>
+                <section className='flex flex-col  gap-2 2xl:gap-4'>
                     {items.map((item , idx) => {
                         return <section key={idx}>
                             {idx > 2 &&  (
-                                <section className=' flex flex-row gap-2 text-[14px]' >
+                                <section className=' flex flex-row gap-2 text-[14px] 2xl:text-[20px]' >
                                     <CounterItem val={'0'+(idx + 1)} />
-                                    <p className='max-w-xs text-sm text-[#558C5A]'>{item}</p>
+                                    <p className='max-w-xs text-sm text-[#558C5A] 2xl:text-[16px]'>{item}</p>
                                 </section>
                             )
                             }

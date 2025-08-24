@@ -8,10 +8,12 @@ const images = [
 ]
 export default function Index(){
     return(
-        <section className='w-full flex flex-row gap-2 justify-center items-center my-20 '>
+        <section className='w-full flex flex-row gap-2 justify-center items-center my-20 2xl:my-24  overflow-x-hidden'>
             {images.map((image,index) => {
                 return (
-                    <Image className='rounded-3xl' key={index} src={image} alt='' width={(index == 0 || index == 3) ? 273 : 287} height={(index == 0 || index == 3) ? 250 : 320} />
+                    <section key={index}>
+                    <Image className='rounded-3xl'  src={image} alt='' width={(index == 0 || index == 3) ? 273 : 287} height={(index == 0 || index == 3) ? 250 : 320} />
+                    </section>
                 )
             })}
         </section>
