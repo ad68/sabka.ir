@@ -11,14 +11,14 @@ export default function Index() {
     return (
         <section className='w-full'>
             <FirstSection />
-            {/*<SecondSection />*/}
-            {/*<ThirdSection/>*/}
-            {/*<FourthSection/>*/}
-            {/*<FifthSection/>*/}
-            {/*<SixSection/>*/}
-            {/*<SevenSection/>*/}
-            {/*<EightSection/>*/}
-            {/*<NineSection/>*/}
+            <SecondSection />
+            <ThirdSection/>
+            <FourthSection/>
+            <FifthSection/>
+            <SixSection/>
+            <SevenSection/>
+            <EightSection/>
+            <NineSection/>
 
 
         </section>
