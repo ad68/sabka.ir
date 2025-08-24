@@ -14,7 +14,7 @@ const items = [
 
 export default function Index() {
     return (
-        <section className="w-full max-w-[1440] h-[691px] m-auto flex flex-col justify-center items-center lg:flex-row xl:justify-between xl:items-center mb-[100px] 2xl:mb-[200px]">
+        <section className="w-full max-w-[1440] h-[691px] m-auto flex flex-col justify-center items-center lg:flex-row xl:justify-between xl:items-center mb-[120px]">
             <section style={{ backgroundImage: `url(${bg.src})` }} className="max-w-[821px] bg-no-repeat  px-[75px] py-[47px] bg-[#F5F5F5]  h-full text-justify">
                 <h2 className="text-[#284D2C] text-3xl max-w-md font-bold 2xl:text-4xl 2xl:max-w-xl">
                     مفاد منشور اخلاقی کارکنان صندوق بیمه کشاورزی

@@ -18,8 +18,8 @@ export default function Index() {
                 <Image src='/assets/img/about/EightSection.png' alt='' fill />
             </section>
             <section className='w-[821px] h-full px-[85px] py-[112px] bg-[#F5F5F5]'>
-                <h2 className='text-[#284D2C] text-xl md:text-3xl  max-w-md 2xl:max-w-full font-bold'>نحوه رفتار و برخورد با ارباب رجوع و همکاران</h2>
-                <section className='text-[#808080] mt-3 text-[13px] xl:text-[18px] 2xl:text-xl'>
+                <h2 className='text-[#284D2C] text-xl md:text-[36px]  max-w-md 2xl:max-w-full font-bold'>نحوه رفتار و برخورد با ارباب رجوع و همکاران</h2>
+                <section className='text-[#808080] mt-[25px] text-[13px] xl:text-[16px] 2xl:text-xl'>
                     {items.map((item, index) => {
                         return (
                             <p key={index}>
