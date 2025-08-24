@@ -11,23 +11,31 @@ const items = [
     'همیشه و در همه حال رضایت خدای متعال را مدنظر قرار داده و بر آنچه که خداوند امر یا از آن نهی می.کند. توجه کامل داشته و او را ناظر بر اعمال و کردار خویش بدانیم',
 ]
 
-export default function Index(){
+export default function Index() {
     return (
-        <section className='w-full flex flex-row justify-between items-center mb-[100px]'>
-            <section className='max-w-lg mr-[100px] text-justify'>
-                <h2 className='text-[#284D2C] text-3xl max-w-md font-bold'>مفاد منشور اخلاقی کارکنان صندوق بیمه کشاورزی</h2>
-                <section className='text-[#808080] mt-3 text-[13px]'>
-                    {items.map((item , index) => {
-                        return (
-                            <p key={index}>
-                                {index+1}.{item}
-                            </p>
-                        )
-                    })}
+        <section className="w-full flex flex-col justify-center items-center lg:flex-row xl:justify-between xl:items-start mb-[100px] 2xl:mb-[200px]">
+            <section className="max-w-lg lg:mr-[100px] xl:max-w-3xl 2xl:max-w-4xl text-justify p-5 md:p-6 xl:p-10">
+                <h2 className="text-[#284D2C] text-3xl max-w-md font-bold 2xl:text-4xl 2xl:max-w-xl">
+                    مفاد منشور اخلاقی کارکنان صندوق بیمه کشاورزی
+                </h2>
+                <section className="text-[#808080] mt-3 text-[13px] 2xl:text-[18px]">
+                    {items.map((item, index) => (
+                        <p key={index}>
+                            {index + 1}. {item}
+                        </p>
+                    ))}
                 </section>
             </section>
-             <Image src='/assets/img/about/SevenSection.png' alt='' width={507} height={550} className=' '  />
 
+            <section className="flex justify-center items-center max-w-[600px] 2xl:max-w-[700px]">
+                <Image
+                    src="/assets/img/about/SevenSection.png"
+                    alt=""
+                    width={507}
+                    height={550}
+                    className="w-full h-auto object-contain"
+                />
+            </section>
         </section>
-    )
+    );
 }

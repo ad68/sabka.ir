@@ -14,7 +14,7 @@ export default function Index() {
     const [openItemIndex, setOpenItemIndex] = useState(0);
     return (
         <section className='w-full mt-20   gap-2 '>
-            <p className='text-[#284D2C] text-3xl  max-w-4xl mx-auto font-bold justify-self-start'>قوانین و مقررات بیمه کشاورزی</p>
+            <p className='text-[#284D2C] text-xl md:text-3xl text-center max-w-4xl mx-auto font-bold md:text-right'>قوانین و مقررات بیمه کشاورزی</p>
             <ul className='w-full flex flex-col gap-2 mt-5 justify-center items-center  max-w-4xl  mx-auto '>
                 {items.map((item, i) => (
                     <li key={i} className="w-full cursor-pointer p-2 transition-transform duration-500 ease-in-out  py-2  "   onClick={() => setOpenItemIndex(i === openItemIndex ? -1 : i)}>

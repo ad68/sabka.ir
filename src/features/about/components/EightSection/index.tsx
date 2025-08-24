@@ -11,15 +11,15 @@ const items = [
 ]
 export default function Index(){
     return (
-        <section className='w-full relative flex flex-row justify-between items-center'>
+        <section className='w-full relative flex flex-col justify-center md:flex-row md:justify-between items-center'>
             <Image src={Wheat.src} alt='' width={257} height={200} className='object-contain absolute left-0 bottom-0 z-0' />
 
             <section>
                 <Image src='/assets/img/about/EightSection.png' alt='' width={600} height={600} className='w-full h-full' />
             </section>
-            <section className='max-w-2xl ml-[80px] mr-[50px] z-10'>
-                <h2 className='text-[#284D2C] text-3xl max-w-md font-bold'>نحوه رفتار و برخورد با ارباب رجوع و همکاران</h2>
-                <section className='text-[#808080] mt-3 text-[13px]'>
+            <section className='max-w-2xl ml-[80px] 2xl:ml-[160px] mr-[50px] z-10 mt-10 2xl:max-w-3xl'>
+                <h2 className='text-[#284D2C] text-xl md:text-3xl  max-w-md 2xl:max-w-full font-bold'>نحوه رفتار و برخورد با ارباب رجوع و همکاران</h2>
+                <section className='text-[#808080] mt-3 text-[13px] xl:text-[18px] 2xl:text-xl'>
                     {items.map((item , index) => {
                         return (
                             <p key={index}>

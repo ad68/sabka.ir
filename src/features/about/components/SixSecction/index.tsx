@@ -18,8 +18,8 @@ const items = [
 export default function Index(){
     return (
         <section className='w-full flex flex-col justify-center items-center p-6'>
-            <h1 className='text-[#284D2C] text-3xl font-bold'>منشور اخلاقی کــارکــنــان</h1>
-            <section className='flex flex-row flex-wrap justify-center items-center gap-10 max-w-5xl my-16'>
+            <h1 className='text-[#284D2C] text-3xl font-bold 2xl:text-4xl'>منشور اخلاقی کــارکــنــان</h1>
+            <section className='flex flex-row flex-wrap justify-center items-center gap-10 2xl:gap-12 max-w-5xl 2xl:max-w-7xl my-16 2xl:my-20'>
                 {items.map((item,index) => {
                     return (
                         <CardItem key={index} index={index} title={item.title} icon={item.icon}/>
