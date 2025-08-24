@@ -6,14 +6,14 @@ import { MapIcon } from "@/assets/icons/MapIcon";
 import { PhoneIcon } from "@/assets/icons/PhoneIcon";
 import { FaxIcon } from "@/assets/icons/FaxIcon";
 import SocialMedia from "@/features/landing/components/SocialMedia";
-
+import Image from "next/image";
 export default function Index() {
     return (
         <footer
             className="w-full  bg-gradient-to-r from-white via-[#e9aa1e] to-white mt-20 bg-cover pt-[5px] bg-no-repeat bg-center  overflow-hidden"
         /* style={{ backgroundImage: `url(${FooterBg.src})` }} */
         >
-            <div className="w-full h-full bg-white p-6 md:p-10 lg:p-10" style={{ backgroundImage: `url(${FooterBg.src})` }}>
+            <div className="w-full h-full bg-white p-6 md:p-10 lg:p-10 bg-no-repeat bg-left-bottom xl:bg-repeat" style={{ backgroundImage: `url(${FooterBg.src})` }}>
                 <div className="max-w-7xl mx-auto w-full space-y-10 h-full ">
                     {/* Top Section */}
                     <section className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6">
@@ -67,7 +67,11 @@ export default function Index() {
                         </div>
 
                         {/* Useful Links 2 */}
-                        <div className="flex flex-col gap-4">
+                        <div className="flex relative flex-col gap-4">
+                            <div className="absolute top-[-100px] flex items-center justify-between gap-2">
+                                <Image width={100} height={100} src="/assets/img/landing/slogan.png" className="w-[85px] h-[85px]" alt="" />
+                                <Image width={100} height={100} src="/assets/img/landing/iran-flag.webp" className="w-[80px] h-[80px]" alt="" />
+                            </div>
                             <h3 className="font-bold text-lg">پیوندها</h3>
                             <ul className="text-sm space-y-2 text-right">
                                 <li>پایگاه اطلاع رسانی دولت</li>
@@ -83,7 +87,7 @@ export default function Index() {
                     <div className="border-t border-gray-300 pt-4 text-sm text-gray-600">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-2 px-4">
                             <span>© ۲۰۲۵ کلیه حقوق متعلق به صندوق بیمه کشاورزی می‌باشد</span>
-                            <span>بازدید سایت: ۱۶۸۹۸</span>
+                            <span>طراحی و توسعه توسط شرکت سامانه نوآوری ایرانیان پوشش (سناپ)</span>
                         </div>
                     </div>
                 </div>

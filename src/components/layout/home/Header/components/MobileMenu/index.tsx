@@ -3,6 +3,7 @@ import { useState } from "react";
 import { UserIcon } from "@/assets/icons/UserIcon";
 import { ChevronDown, ChevronLeft, MenuIcon } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 export default function Index() {
     const [isOpenMenu, setIsOpenMenu] = useState(false)
     const menus: any = [
@@ -90,16 +91,13 @@ export default function Index() {
     ]
     return <>
         <div className='flex h-full justify-between items-center px-[10]'>
-            <section className="w-full flex justify-between items-center">
-
-                <MenuIcon onClick={() => setIsOpenMenu(true)} />
-                <div className="flex gap-1">
-                    <button className="flex h-[40px] items-center justify-center bg-[#35663A] text-white px-4 py-[10px] rounded-lg text-sm font-semibold">
-                        <UserIcon />
-                        <span>ورود</span>
-                    </button>
-                </div>
-            </section>
+            <MenuIcon onClick={() => setIsOpenMenu(true)} />
+            <div className="flex gap-1">
+                <button className="flex h-[40px] items-center justify-center bg-[#35663A] text-white px-4 py-[10px] rounded-lg text-sm font-semibold">
+                    <UserIcon />
+                    <span>ورود</span>
+                </button>
+            </div>
         </div>
         {isOpenMenu && <div onClick={() => setIsOpenMenu(false)} className="bg-transparent fixed top-0 left-0 w-full h-full z-50"></div>}
         <aside className={`fixed shadow-2xl h-[100%] top-0 ${isOpenMenu ? `right-0` : `right-[-100%]`} pt-[20px] transition-all duration-500 ease-in-out bg-white z-[200] w-[80%]`}>
@@ -119,6 +117,7 @@ export default function Index() {
                     }
                 </li>))}
             </ul>
+
         </aside>
     </>
 }

@@ -29,7 +29,7 @@ export default function Index() {
                         <div className="border-t-4 border-l-4 border-dotted border-white w-[40px] xl:w-[60px] h-[2px]" />
                         <div className="border-t-4 border-l-4 border-dotted border-white w-[40px] xl:w-[60px] h-[2px]" />
                     </div>
-                    <div className="absolute top-[-35px] xl:top-0 left-[35px] xl:left-0 flex flex-col gap-2">
+                    <div className="absolute top-[-35px] xl:top-0 left-[20px] xl:left-0 flex flex-col gap-2">
                         <div className="border-b-4 border-r-4 border-dotted border-white w-[40px] xl:w-[60px] h-[2px]" />
                         <div className="border-b-4 border-r-4 border-dotted border-white w-[40px] xl:w-[60px] h-[2px]" />
                     </div>
