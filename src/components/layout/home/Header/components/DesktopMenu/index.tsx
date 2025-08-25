@@ -12,13 +12,13 @@ export default function Index({ menuClass }: any) {
     const menus: any = [
         {
             title: "خانه",
-            href: "#",
+            href: "/",
         },
         {
             title: "درباره ما",
             children: [
                 {
-                    href: "#",
+                    href: "/about-us",
                     title: "تاریخچه"
                 },
                 {
@@ -58,7 +58,7 @@ export default function Index({ menuClass }: any) {
         {
             title: "اخبار",
             children: [
-                { title: "اخبار و اطلاعیه", href: "#" },
+                { title: "اخبار و اطلاعیه", href: "/news" },
                 { title: "گزیده اخبار", href: "#" },
                 { title: "اخبار استان ها", href: "#" },
                 { title: "اطلاعیه ها", href: "#" },
@@ -89,7 +89,7 @@ export default function Index({ menuClass }: any) {
         },
         {
             title: "ارتباط با ما",
-            href: "#",
+            href: "/contact-us",
         },
     ]
     useEffect(() => {

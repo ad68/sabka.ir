@@ -11,7 +11,7 @@ export default function Index() {
     return (
         <footer
             className="w-full  bg-gradient-to-r from-white via-[#e9aa1e] to-white mt-20 bg-cover pt-[5px] bg-no-repeat bg-center  overflow-hidden"
-        /* style={{ backgroundImage: `url(${FooterBg.src})` }} */
+
         >
             <div className="w-full h-full bg-white p-6 md:p-10 lg:p-10 bg-no-repeat bg-left-bottom xl:bg-repeat" style={{ backgroundImage: `url(${FooterBg.src})` }}>
                 <div className="max-w-7xl mx-auto w-full space-y-10 h-full ">
@@ -68,9 +68,9 @@ export default function Index() {
 
                         {/* Useful Links 2 */}
                         <div className="flex relative flex-col gap-4">
-                            <div className="absolute top-[-100px] flex items-center justify-between gap-2">
-                                <Image width={100} height={100} src="/assets/img/landing/slogan.png" className="w-[85px] h-[85px]" alt="" />
-                                <Image width={100} height={100} src="/assets/img/landing/iran-flag.webp" className="w-[80px] h-[80px]" alt="" />
+                            <div className="absolute top-[-10] xl:top-[-100px] left-0 xl:right-0 flex items-center gap-2">
+                                <Image width={100} height={100} src="/assets/img/landing/slogan.png" className="w-[60px] h-[60px] xl:w-[85px] xl:h-[85px]" alt="" />
+                                <Image width={100} height={100} src="/assets/img/landing/iran-flag.webp" className="w-[55px] h-[55px] xl:w-[80px] xl:h-[80px]" alt="" />
                             </div>
                             <h3 className="font-bold text-lg">پیوندها</h3>
                             <ul className="text-sm space-y-2 text-right">

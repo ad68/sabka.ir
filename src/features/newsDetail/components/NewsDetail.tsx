@@ -1,0 +1,68 @@
+'use client'
+import { DownloadCloud, Link2Icon, MinusIcon, Paperclip, PlusIcon, PrinterIcon, Undo2Icon } from "lucide-react"
+import Image from "next/image"
+import Leaf from '@/assets/img/contactUs/leaf.png'
+import { Rating } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
+import useNewsDetail from "../hook/useNewsDetail";
+export default function Index() {
+    const { val, setVal, currentNews } = useNewsDetail()
+    return (
+        <main className="w-[1140px]  h-auto relative  m-auto  rounded-xl mt-10 min-h-10 max-w-full">
+            <div className="w-full h-[60px]">
+                <Image src="/assets/img/news/news-header.png" className="absolute  rounded-lg  z-0 top-0 w-full h-[60px]" width={1400} height={300} alt="" />
+                <div className="w-full h-full px-[81px] z-30 relative flex  justify-between items-center">
+                    <Image src="/assets/img/news/hand.png" className="w-[45] h-[45]" width={111} height={111} alt="" />
+                    <span className="text-white text-lg font-medium">تعداد بازدید :{currentNews?.view}</span>
+                    <span className="text-white text-lg font-medium">تاريخ :{currentNews?.date}</span>
+                    <span className="text-white text-lg font-medium">ساعت : {currentNews?.time}</span>
+                    <div className="flex justify-between text-white gap-[20px]">
+                        <PlusIcon className="cursor-pointer" />
+                        <MinusIcon className="cursor-pointer" />
+                        <Link2Icon className="cursor-pointer" />
+                        <Paperclip className="cursor-pointer" />
+                    </div>
+                </div>
+            </div>
+            <article className="mt-[37] h-auto ">
+                <div>
+                    <div>
+                        <h2 className="text-lg">
+                            {currentNews?.miniTitle}
+                        </h2>
+                        {currentNews && <Image src={currentNews.imgUrl} className="float-left mr-10 rounded-lg w-[400px] h-auto" width={400} height={300} alt="" />}
+                        <div className="text-justify mt-[27px]">
+                            <h1 className="font-bold text-[#284D2C] text-[32px]">{currentNews?.title}</h1>
+                            {currentNews?.summary !== "" && <p className="bg-white relative text-[#284D2C] rounded-[10px] mt-[26] px-[34] py-[18] w-[700px] ml-10 p-4">
+                                {currentNews?.summary}
+                                <Image className="absolute bottom-0 left-[20px] w-[27px] h-[22px]" src={Leaf} alt="" />
+                            </p>}
+                            <div className="leading-loose text-justify mt-[16px]">
+                                {currentNews?.description}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <footer className="mt-[56px] flex justify-between">
+                <div className="flex items-center gap-[17px]">
+                    <Rating style={{ maxWidth: 110 }} value={val} onChange={setVal} />
+                    <span className="text-lg font-medium">امتیاز : 1.00 </span>
+                    <span className="text-lg font-medium">مجموع : 1 </span>
+                </div>
+                <div className="flex gap-[12px]">
+                    <button className="bg-primary hover:shadow-xl hover:bg-[#35663ac7]  transition-all w-[150] h-[40] text-white font-medium rounded-[8px] flex justify-center items-center gap-[8px]">
+                        <DownloadCloud className="w-[20px]" />
+                        دانلود ضمیمه
+                    </button>
+                    <button className="bg-primary hover:shadow-xl hover:bg-[#35663ac7]  transition-all w-[52] h-[40] text-white font-medium rounded-[8px] flex justify-center items-center gap-[8px]">
+                        <PrinterIcon className="w-[20px]" />
+                    </button>
+                    <button className="bg-primary hover:shadow-xl hover:bg-[#35663ac7]  transition-all w-[52] h-[40] text-white font-medium rounded-[8px] flex justify-center items-center gap-[8px]">
+                        <Undo2Icon className="w-[20px]" />
+                    </button>
+                </div>
+            </footer>
+        </main>
+    )
+}

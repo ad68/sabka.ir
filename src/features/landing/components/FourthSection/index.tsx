@@ -17,6 +17,7 @@ import ForthSec6 from "@/assets/img/landing/FourthSec6.png";
 import LeafRightBg from '@/assets/img/landing/LeafRightBg.png';
 import FourthSectionItem from "./components/FourthSectionItem";
 import { useIsMobile } from "@/features/products/hooks/useIsMobile";
+import Link from "next/link";
 
 const newsChildren = [
     { key: 1, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec1, link: '' },
@@ -153,9 +154,9 @@ export default function Index() {
                 </div>
 
                 <div className="flex justify-center items-center">
-                    <button className="bg-[#35663A] hover:shadow-xl hover:bg-[#35663ac7]  transition-all rounded-2xl text-white h-[40px] px-3 text-center">
+                    <Link href="/news" className="bg-[#35663A] hover:shadow-xl hover:bg-[#35663ac7]  transition-all flex justify-center items-center rounded-2xl text-white h-[40px] px-3 text-center">
                         مشاهده بیشتر
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>

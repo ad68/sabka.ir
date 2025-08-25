@@ -22,12 +22,13 @@ export default {
 					foreground: 'hsl(var(--popover-foreground))'
 				},
 				primary: {
-					DEFAULT: '#700B97',
-					foreground: 'white'
+					DEFAULT: '#35663A',
+					foreground: 'white',
+
 				},
 				secondary: {
-					DEFAULT: 'white',
-					foreground: '#700B97'
+					DEFAULT: '#eaaa1e',
+					foreground: '#35663A'
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
