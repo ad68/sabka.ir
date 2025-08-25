@@ -1,5 +1,5 @@
-import { ContactCheckIcon } from "@/assets/icons/ContactCheckIcon";
-import { ArrowDown, CheckCircle, CheckCircle2, ChevronDown } from "lucide-react";
+
+import { ArrowDown } from "lucide-react";
 import Image from "next/image";
 import ListItem from './components/ListItem'
 export default function Index() {

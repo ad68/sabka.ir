@@ -2,7 +2,7 @@
 import { ChevronDown, ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+/* import { useEffect } from "react"; */
 import { EmailIcon } from "@/assets/icons/EmailIcon";
 import { PhoneIcon } from "@/assets/icons/PhoneIcon";
 import { IranFlag } from "@/assets/icons/IranFlag";
@@ -92,10 +92,10 @@ export default function Index({ menuClass }: any) {
             href: "/contact-us",
         },
     ]
-    useEffect(() => {
-        /*  window.addEventListener("scroll", listenScrollEvent); */
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    /*  useEffect(() => {
+          window.addEventListener("scroll", listenScrollEvent);
+     
+     }, []); */
     // ─── Functions ──────────────────────────────────────────────────────────────────
     /*     const listenScrollEvent = (e: any) => {
             if (window.scrollY > 0) {

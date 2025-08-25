@@ -1,9 +1,8 @@
-import {ArrowRTLIcon} from '@/assets/icons/ArrowRTL';
-import Link from "next/link";
 
-export default function Index({ title, icon , index}) {
-    const textColor =     (index % 2 == 0) ? 'text-[#E9AA1E]' :'text-[#558C5A]';
-    const bgColor =     (index % 2 == 0) ? '#E9AA1E' :'#558C5A';
+
+export default function Index({ title, icon, index }: any) {
+    const textColor = (index % 2 == 0) ? 'text-[#E9AA1E]' : 'text-[#558C5A]';
+    const bgColor = (index % 2 == 0) ? '#E9AA1E' : '#558C5A';
     return (
         <div className={`relative hover:shadow-2xl hover:-translate-y-2 transition-all w-[240px]`}  >
             <div

@@ -1,3 +1,4 @@
+
 import { useParams } from "next/navigation"
 import { useEffect, useState } from "react"
 import { NewsDetail } from "../types"
@@ -11,6 +12,7 @@ const useNewsDetail = () => {
 
     useEffect(() => {
         setCurrentNews(news.find(el => el.id === id))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [newsId])
     useEffect(() => {
         console.log("currentNews", currentNews)

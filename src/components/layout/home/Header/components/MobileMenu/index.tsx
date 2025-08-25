@@ -1,9 +1,8 @@
 'use client'
 import { useState } from "react";
 import { UserIcon } from "@/assets/icons/UserIcon";
-import { ChevronDown, ChevronLeft, MenuIcon } from "lucide-react";
+import { ChevronDown, MenuIcon } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 export default function Index() {
     const [isOpenMenu, setIsOpenMenu] = useState(false)
     const menus: any = [
