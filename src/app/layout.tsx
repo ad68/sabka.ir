@@ -16,6 +16,10 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: "صندوق بیمه کشاورزی",
   description: "صندوق بیمه کشاورزی",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const iranYekan = localFont({
