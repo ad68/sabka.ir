@@ -28,7 +28,7 @@ export default function Index() {
                 </section>
             </section>
 
-            <section className="w-auto xl:w-[619px] h-full relative order-2 xl:order-1">
+            <section className="w-auto xl:w-[619px] h-full relative order-1 xl:order-2">
                 <Image src='/assets/img/about/SevenSection.png' className="w-full h-full " alt='' width={700} height={700} />
             </section>
         </section>
