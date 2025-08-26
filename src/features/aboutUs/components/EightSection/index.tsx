@@ -11,15 +11,14 @@ const items = [
 ]
 export default function Index() {
     return (
-        <section className=' max-w-[1440] h-[691px] m-auto relative flex flex-col justify-between md:flex-row items-center'>
-            <Image src={Wheat.src} alt='' width={257} height={200} className='object-contain absolute left-0 bottom-0 z-0' />
-
-            <section className="w-[619px] h-full relative">
-                <Image src='/assets/img/about/EightSection.png' alt='' fill />
+        <section className=' max-w-[1440] xl:h-[691px]  pb-[70px] xl:pb-0 m-auto relative flex flex-col justify-between md:flex-row items-center'>
+            <Image src={Wheat.src} alt='' width={257} height={200} className='object-contain absolute right-0 xl:left-0 bottom-0 z-0' />
+            <section className="xl:w-[619px] h-full relative ">
+                <Image src='/assets/img/about/EightSection.png' className="w-full h-full" alt='' width={700} height={700} />
             </section>
-            <section className='w-[821px] h-full px-[85px] py-[112px] bg-[#F5F5F5]'>
+            <section className='xl:w-[821px] h-full px-[20px] xl:px-[85px] py-[112px] bg-[#F5F5F5]'>
                 <h2 className='text-[#284D2C] text-xl md:text-[36px]  max-w-md 2xl:max-w-full font-bold'>نحوه رفتار و برخورد با ارباب رجوع و همکاران</h2>
-                <section className='text-[#808080] mt-[25px] text-[13px] xl:text-[16px] 2xl:text-xl'>
+                <section className='text-[#808080] mt-[25px] text-[13px] xl:text-[16px] leading-relaxed'>
                     {items.map((item, index) => {
                         return (
                             <p key={index}>
