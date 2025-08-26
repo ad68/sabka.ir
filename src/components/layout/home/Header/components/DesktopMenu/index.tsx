@@ -112,7 +112,7 @@ export default function Index({ menuClass }: any) {
                 <div className="wrapper relative bg-[#e9aa1e] w-[80%] h-[80px] items-center xl:flex px-[70px]">
                     <Image width={100} height={100} className="w-[50px]" src="/assets/img/logo.png" alt="logo" />
                     <ul className="nav-links items-center xl:mr-0 2xl:mr-[70px]">
-                        {menus.map((item: any, index: number) => (<li className="mr-3 h-full flex items-center  2xl:px-2" key={index}>
+                        {menus.map((item: any, index: number) => (<li className="mr-3 h-full flex items-center 2xl:px-2" key={index}>
                             {item.href && <Link className=" xl:text-xs 2xl:text-[14px] font-bold text-black" href={item.href} >
                                 {item.title}
                             </Link>}
