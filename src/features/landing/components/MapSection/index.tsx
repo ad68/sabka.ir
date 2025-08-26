@@ -37,7 +37,7 @@ export default function Index() {
         "یزد"
     ];
     return (
-        <section className="w-full mt-[96px] xl:mt-[150px]">
+        <section className="w-full mt-[96px] xl:mt-[150px] mb-20">
             <div
                 className='max-w-6xl m-auto px-[20px] xl:flex-row'
             >

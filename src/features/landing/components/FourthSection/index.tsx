@@ -103,8 +103,7 @@ export default function Index() {
                                                 setActiveTab(idx);
                                                 setSelectedItem(item);
                                             }}
-                                            className={`relative flex group flex-row gap-1 justify-center items-center w-40 rounded-md h-[40px] cursor-pointer flex-shrink-0 ${activeTab === idx ? "bg-[#35663A] text-white" : "bg-white"
-                                                }`}
+                                            className={`relative flex group flex-row gap-1 justify-center items-center w-40 rounded-md h-[40px] cursor-pointer flex-shrink-0 ${activeTab === idx ? "bg-[#35663A] text-white" : "bg-white"}`}
                                         >
                                             <Icon
                                                 color="black"

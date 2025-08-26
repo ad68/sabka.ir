@@ -9,7 +9,7 @@ const customIcon = L.icon({
     popupAnchor: [0, -40],
 });
 
-const azadiCoordinates: [number, number] = [35.77011, 51.41545];
+const azadiCoordinates: [number, number] = [35.712552, 51.360432];
 
 export default function MapAzadi() {
 

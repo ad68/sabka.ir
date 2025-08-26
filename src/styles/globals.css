@@ -217,3 +217,26 @@ nav.menuBox {
   transform: rotateY(var(--angle)) translateZ(var(--depth));
   transition: transform 0.5s ease;
 }
+
+.my-scroll-box {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.my-scroll-box::-webkit-scrollbar {
+  width: 4px;
+}
+
+.my-scroll-box::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.my-scroll-box::-webkit-scrollbar-thumb {
+  background: #35663a;
+  border-radius: 8px;
+}
+
+.my-scroll-box::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

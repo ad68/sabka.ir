@@ -16,29 +16,7 @@ export default function Index({ menuClass }: any) {
         },
         {
             title: "درباره ما",
-            children: [
-                {
-                    href: "/about-us",
-                    title: "تاریخچه"
-                },
-                {
-                    href: "#",
-                    title: "وظایف و اختیارت"
-                },
-                {
-                    href: "#",
-                    title: "منشور اخلاقی"
-                },
-                {
-                    href: "#",
-                    title: "نمودار سازمانی"
-                },
-                {
-                    href: "#",
-                    title: "قوانین و مقررات"
-                }
-
-            ]
+            href: "/about-us"
         },
         {
             title: "خدمات",
@@ -85,7 +63,14 @@ export default function Index({ menuClass }: any) {
         },
         {
             title: "ویژه همکاران",
-            href: "#",
+            children: [
+                { title: "سامانه جامع", href: "https://cs.sabka.ir/Login.aspx" },
+                { title: "اپلیکیشن ارزیابان", href: "https://bakapp.ir" },
+                { title: "امداد رایانه", href: "http://itreq.sbkiran.ir/" },
+                { title: "پست الکترونیک", href: "http://mail.sbkiran.ir/" },
+                { title: "سیمای مهر", href: "https://didgah.bki.ir/" },
+
+            ]
         },
         {
             title: "ارتباط با ما",
@@ -109,8 +94,12 @@ export default function Index({ menuClass }: any) {
     return (
         <>
             <nav className="menuBox z-[9998] flex" style={{ backgroundColor: menuClass }}>
-                <div className="wrapper relative bg-[#e9aa1e] w-[80%] h-[80px] items-center xl:flex px-[70px]">
-                    <Image width={100} height={100} className="w-[50px]" src="/assets/img/logo.png" alt="logo" />
+                <div className="wrapper relative bg-[#e9aa1e] w-[80%] h-[80px] items-center xl:flex xl:px-[20px] 2xl:px-[70px]">
+                    <div className="w-[100px] flex flex-col items-center">
+                        <Image width={100} height={100} className="w-[50px]" src="/assets/img/logo.png" alt="logo" />
+                        <span className="text-[10px] font-semibold">صندوق بیمه کشاورزی</span>
+                    </div>
+
                     <ul className="nav-links items-center xl:mr-0 2xl:mr-[70px]">
                         {menus.map((item: any, index: number) => (<li className="mr-3 h-full flex items-center 2xl:px-2" key={index}>
                             {item.href && <Link className=" xl:text-xs 2xl:text-[14px] font-bold text-black" href={item.href} >
@@ -143,19 +132,18 @@ export default function Index({ menuClass }: any) {
                 </div>
                 <div className="tri mr-[-1px]"></div>
                 <div className="flex items-center space-x-4">
-                    <div className="flex flex-row items-center gap-1 text-xs px-2 justify-center border-l-[1px] border-l-black">
-                        <span>۲۰۰۰۴۸۸۲</span>
-                        <EmailIcon className='w-4 h-4' />
-                    </div>
-                    <div className="flex flex-row items-center gap-1 text-xs justify-center px-2">
-                        <span>۶۴۰۰۹۰۰۰</span>
-                        <PhoneIcon className='w-4 h-4' />
-                    </div>
+                    <a href="sms:20004882" className="flex flex-row items-center gap-1 text-xs px-2 justify-center border-l-[1px] border-l-black">
+                        <span className="font-bold text-[14px]">20004882</span>
+                        <EmailIcon className='text-primary w-[20px] h-[20px]' />
+                    </a>
+                    <a href="tel:64009000" className="flex flex-row items-center gap-1 font-bold text-[14px] justify-center px-2">
+                        <span>64009000</span>
+                        <PhoneIcon className='w-[20px] h-[20px] text-primary' />
+                    </a>
                     <button className="w-[72px] h-[40px] flex items-center justify-center gap-[8px] border-[1px] border-black py-[10px] rounded-lg ">
                         <IranFlag />
                         <span>فا</span>
                     </button>
-
                     <button className="flex h-[40px] items-center justify-center bg-[#35663A] text-white px-4 py-[10px] rounded-lg text-sm font-semibold">
                         <UserIcon />
                         <span>ورود</span>
