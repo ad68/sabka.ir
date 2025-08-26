@@ -21,9 +21,9 @@ export default function Index(){
     return (
         <section className='w-full flex flex-col justify-center items-center mt-20 2xl:mt-24'>
             <section className='flex flex-col justify-center items-center gap-10'>
-                <h3 className='font-bold text-xl md:text-3xl max-w-2xl text-[#284D2C] text-center 2xl:text-4xl'>سایر وظایف و حدود عمليات صندوق بر مبنای اساسنامه قانونی به شرح زير است:</h3>
-                <p className='flex flex-col md:flex-row justify-center items-center md:items-start gap-2 max-w-2xl text-[#284D2C] mb-20'>
-                    <span className='flex flex-col gap-2 2xl:text-[20px]'>
+                <h3 className='font-bold text-[24px] max-w-sm md:text-3xl md:max-w-2xl text-[#284D2C] text-center 2xl:text-4xl'>سایر وظایف و حدود عمليات صندوق بر مبنای اساسنامه قانونی به شرح زير است:</h3>
+                <p className='flex flex-row text-[14px] md:text-[16px] max-w-[350px] justify-center items-center md:items-start gap-2 md:max-w-2xl text-[#284D2C] mb-20'>
+                    <span className='flex flex-col text-[14px] gap-2 2xl:text-[20px]'>
                         تبصره
                         <LeafIcon />
                     </span>
@@ -48,8 +48,8 @@ export default function Index(){
                     })}
 
                 </section>
-                <section>
-                    <Image src='/assets/img/about/FourthSection.png' width={293} height={350} alt='' />
+                <section  className="relative w-[350px] h-[417px] md:w-[293px]  md:h-[350px]">
+                    <Image src='/assets/img/about/FourthSection.png' alt='' fill className="object-contain w-full h-full "  />
                 </section>
                 <section className='flex flex-col  gap-2 2xl:gap-4'>
                     {items.map((item , idx) => {

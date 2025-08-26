@@ -14,12 +14,12 @@ const items = [
 
 export default function Index() {
     return (
-        <section className="w-full max-w-[1440] h-[691px] m-auto flex flex-col justify-center items-center lg:flex-row xl:justify-between xl:items-center mb-[120px]">
-            <section style={{ backgroundImage: `url(${bg.src})` }} className="max-w-[821px] bg-no-repeat  px-[75px] py-[47px] bg-[#F5F5F5]  h-full text-justify">
-                <h2 className="text-[#284D2C] text-3xl max-w-md font-bold 2xl:text-4xl 2xl:max-w-xl">
+        <section className="w-full max-w-[1440] h-auto md:h-[691px] m-auto flex flex-col-reverse justify-center items-center lg:flex-row xl:justify-between xl:items-center mb-[120px]">
+            <section style={{ backgroundImage: `url(${bg.src})` }} className="max-w-[821px] bg-no-repeat  md:px-[75px] md:py-[47px] bg-[#F5F5F5]  h-full text-justify">
+                <h2 className="text-[#284D2C] text-[24px] md:text-3xl max-w-[348px] md:max-w-md font-bold 2xl:text-4xl 2xl:max-w-xl">
                     مفاد منشور اخلاقی کارکنان صندوق بیمه کشاورزی
                 </h2>
-                <section className="text-[#808080] mt-[25px]  text-[13px] 2xl:text-[16px] font-medium">
+                <section className="text-[#808080] max-w-sm md:max-w-full mt-[25px] text-[16px] md:text-[13px] 2xl:text-[16px] font-medium">
                     {items.map((item, index) => (
                         <p key={index}>
                             {index + 1}. {item}
@@ -28,8 +28,8 @@ export default function Index() {
                 </section>
             </section>
 
-            <section className="w-[619px] h-full relative">
-                <Image src='/assets/img/about/SevenSection.png' alt='' fill />
+            <section className="w-full h-[410px] md:w-[619px] md:h-full relative mb-[75px] md:mb-0">
+                <Image src='/assets/img/about/SevenSection.png' alt='' fill className='object-cover w-full h-full'/>
             </section>
         </section>
     );

@@ -4,7 +4,7 @@ export default function Index({ title, icon, index }: any) {
     const textColor = (index % 2 == 0) ? 'text-[#E9AA1E]' : 'text-[#558C5A]';
     const bgColor = (index % 2 == 0) ? '#E9AA1E' : '#558C5A';
     return (
-        <div className={`relative hover:shadow-2xl hover:-translate-y-2 transition-all w-[240px]`}  >
+        <div className={`relative hover:shadow-2xl hover:-translate-y-2 transition-all w-[338px] md:w-[240px]`}  >
             <div
                 className={`
                     pointer-events-none absolute -right-4 top-2 bottom-2 w-3 mt-14
@@ -32,7 +32,7 @@ export default function Index({ title, icon, index }: any) {
                     `}
             />
 
-            <div className={`relative h-[200px] rounded-2xl bg-white max-w-4xl shadow-xl flex flex-col justify-center`}>
+            <div className={`relative h-[265px] md:h-[200px] rounded-2xl bg-white max-w-4xl shadow-xl flex flex-col justify-center`}>
                 <span
                     className={`
                         pointer-events-none absolute -top-3 -right-3 block h-16 w-16
@@ -41,10 +41,10 @@ export default function Index({ title, icon, index }: any) {
                         `}
                     style={{ borderColor: bgColor }}
                 />
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center mb-8 md:mb-4">
                     {icon}
                 </div>
-                <h2 className="text-center text-[14px] font-bold mb-2">{title}</h2>
+                <h2 className="text-center text-[18px] md:text-[14px] font-bold mb-2">{title}</h2>
             </div>
         </div>
 

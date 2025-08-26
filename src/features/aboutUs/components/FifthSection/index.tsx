@@ -44,18 +44,20 @@ export default function Index() {
             onMouseMove={onMouseMove}
         >
             {images.map((image, index) => (
-                <div
+                <section
                     key={index}
-                    className="flex-shrink-0 rounded-3xl overflow-hidden shadow-md"
+                    className={`relative flex-shrink-0 rounded-3xl overflow-hidden shadow-md 
+                    ${index === 0 || index === 3 ? 'w-[284px] md:w-[273px]' : 'w-[284px] md:w-[280px]'}
+                    ${index === 0 || index === 3 ? 'h-[258px] md:h-[250px]' : 'h-[316px] md:h-[320]'}
+                    `}
                 >
                     <Image
-                        className="rounded-3xl object-cover"
+                        className="rounded-3xl object-contain w-full h-full"
                         src={image}
                         alt=""
-                        width={index === 0 || index === 3 ? 273 : 287}
-                        height={index === 0 || index === 3 ? 250 : 320}
+                        fill
                     />
-                </div>
+                </section>
             ))}
         </section>
     );
