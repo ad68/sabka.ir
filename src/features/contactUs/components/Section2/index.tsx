@@ -5,7 +5,7 @@ import ListItem from './components/ListItem'
 export default function Index() {
     return <div className="w-full py-[96px] m-auto rounded-2xl mt-[30px] overflow-hidden  max-w-[1440px] bg-[#e9aa1e] relative flex justify-center items-center">
         <div className="absolute flex justify-center top-[-50]">
-            <div className="w-[100px] h-[100px] flex justify-center items-end bg-white rounded-full">
+            <div className="w-[100px] h-[100px] flex justify-center items-end bg-[#fafafa] rounded-full">
                 <ArrowDown className="mb-[20px]" />
             </div>
         </div>
@@ -25,10 +25,8 @@ export default function Index() {
                             <ListItem>صندوق پستی :   3365-14155</ListItem>
                             <ListItem>
                                 آدرس: <br />
-
                                 تهران - خیابان شهید دکتر حبیب الهی - خیابان یکم دریان نو (سروش یکم) - تقاطع زنجان شمالی - پلاک 58
                             </ListItem>
-
                         </div>
                     </div>
                 </div>

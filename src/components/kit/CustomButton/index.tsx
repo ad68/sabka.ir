@@ -11,9 +11,9 @@ type CustomButtonProps = {
 const CustomButton = forwardRef<HTMLButtonElement, CustomButtonProps>(
     ({ onClick, children, className, variant = "default", bubble }, ref) => {
         const baseStyles =
-            "relative overflow-hidden w-auto w-[100px] flex justify-center items-center px-[10px] h-12 rounded-[8px] border transition-all";
+            "relative overflow-hidden w-auto w-[100px] flex justify-center items-center px-[10px] h-12 rounded-[8px]  border transition-all";
         const defaultStyles =
-            "bg-primary hover:bg-[#511269] text-white border-gray-300";
+            "bg-primary hover:bg-[#162717] hover:shadow-2xl text-white border-gray-300";
         const outlinedStyles =
             "bg-white text-primary border-primary hover:bg-slate-200";
         const bubbleColor =

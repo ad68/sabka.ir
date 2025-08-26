@@ -107,11 +107,11 @@ li {
 }
 
 .trap-top-short {
-  clip-path: polygon(var(--cut) 0, 100% 0, 100% 100%, 0 100%);
+  clippath: polygon(var(--cut) 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .trap-bottom-short {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, var(--cut) 100%);
+  clippath: polygon(0 0, 100% 0, 100% 100%, var(--cut) 100%);
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -138,7 +138,7 @@ li {
   cursor: pointer;
 }
 .clip-ellipse {
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  clippath: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
 }
 
 nav.menuBox {
@@ -207,7 +207,7 @@ nav.menuBox {
   width: var(--w);
   height: var(--h);
   background: var(--c);
-  clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+  clippath: polygon(100% 0%, 100% 100%, 0% 100%);
 }
 .about-slider-container {
   perspective: 1000px;
