@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "اطلاعات کارکنان و مدیران | صندوق بیمه کشاورزی",
-    description: "در این صفحه می‌توانید با ما در ارتباط باشید.",
+
 };
 export default function Index() {
     const data = [
