@@ -116,7 +116,9 @@ export default function Index({ menuClass }: any) {
             <nav className="menuBox z-[9998] flex" style={{ backgroundColor: menuClass }}>
                 <div className="wrapper relative bg-[#e9aa1e] w-[80%] h-[80px] items-center xl:flex xl:px-[20px] 2xl:px-[50px]">
                     <div className="w-[100px] flex flex-col items-center">
-                        <Image width={100} height={100} className="w-[50px]" src="/assets/img/logo.png" alt="logo" />
+                        <Link href="/">
+                            <Image width={100} height={100} className="w-[50px]" src="/assets/img/logo.png" alt="logo" />
+                        </Link>
                         <span className="text-[10px] font-semibold">صندوق بیمه کشاورزی</span>
                     </div>
 

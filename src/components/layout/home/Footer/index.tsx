@@ -98,7 +98,7 @@ export default function Index() {
 
                         {/* Useful Links 2 */}
                         <div className="flex relative flex-col gap-4">
-                            <div className="absolute top-[-20] xl:top-[-100px] left-0 xl:right-0 flex items-center gap-2">
+                            <div className="absolute top-[-20] xl:top-[-100px] left-0 xl:left-0 flex items-center gap-2">
                                 <Image width={100} height={100} src="/assets/img/landing/slogan.png" className="w-[60px] h-[60px] xl:w-[85px] xl:h-[85px]" alt="" />
                                 <Image width={100} height={100} src="/assets/img/landing/iran-flag.webp" className="w-[55px] h-[55px] xl:w-[80px] xl:h-[80px]" alt="" />
                             </div>
