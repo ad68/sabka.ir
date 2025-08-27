@@ -118,7 +118,7 @@ export default function Index() {
                     <div className="border-t border-gray-300 pt-4 text-sm text-gray-600">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-2 px-4">
                             <span>© ۲۰۲۵ کلیه حقوق متعلق به صندوق بیمه کشاورزی می‌باشد</span>
-                            <span>طراحی و توسعه توسط شرکت سامانه نوآوری ایرانیان پوشش (سناپ)</span>
+                            <span>طراحی و توسعه توسط شرکت دانش بنیان سناپ</span>
                         </div>
                     </div>
                 </div>
