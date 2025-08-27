@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import { UserIcon } from "@/assets/icons/UserIcon";
-import { CloudSnowIcon, MenuIcon, XCircleIcon } from "lucide-react";
+import { MenuIcon, XCircleIcon } from "lucide-react";
 import Link from "next/link";
 import Collapse from './components/Collapse'
 import Image from "next/image";
@@ -22,7 +22,23 @@ export default function Index() {
             children: [
                 {
                     href: "#",
-                    title: "اطلاعات بیمه ای"
+                    title: "زراعی"
+                },
+                {
+                    href: "#",
+                    title: "باغی"
+                },
+                {
+                    href: "#",
+                    title: "دام طیور آبزیان"
+                },
+                {
+                    href: "#",
+                    title: " عوامل تولید"
+                },
+                {
+                    href: "#",
+                    title: "سایر"
                 },
                 {
                     href: "#",

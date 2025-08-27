@@ -1,5 +1,5 @@
 'use client'
-import { ChevronDown, ChevronLeft } from "lucide-react";
+import { ChevronDown, ChevronsLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 /* import { useEffect } from "react"; */
@@ -23,7 +23,23 @@ export default function Index({ menuClass }: any) {
             children: [
                 {
                     href: "#",
-                    title: "اطلاعات بیمه ای"
+                    title: "زراعی"
+                },
+                {
+                    href: "#",
+                    title: "باغی"
+                },
+                {
+                    href: "#",
+                    title: "دام طیور آبزیان"
+                },
+                {
+                    href: "#",
+                    title: " عوامل تولید (سرمایه، تنه درختان، ماشین آلات، تاسیسات، ابنیه) "
+                },
+                {
+                    href: "#",
+                    title: "سایر ( منابع طبیعی، گیاهان دارویی، سبزیجات و صیفی جات، محصولات گلخانه ای، گلهای زینتی)"
                 },
                 {
                     href: "#",
@@ -139,7 +155,7 @@ export default function Index({ menuClass }: any) {
                                                 {item?.children.map((item: any, index: number) => (
                                                     <li key={index} className="hover:bg-[#7BB28033] transition-all px-[8px] py-[15px] rounded-md">
                                                         <Link className="text-sm flex items-center gap-2" href={item.href}>
-                                                            <ChevronLeft className="w-[15px]" />
+                                                            <ChevronsLeft className="w-[15px] text-secondary" />
                                                             {item.title}</Link>
                                                     </li>
                                                 ))}
