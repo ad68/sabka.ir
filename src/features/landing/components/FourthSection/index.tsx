@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 
 import { LeafIcon } from "@/assets/icons/LeafIcon";
@@ -40,28 +40,28 @@ export default function Index() {
     const [selectedItem, setSelectedItem] = useState(tabSection[0]);
     const [activeTab, setActiveTab] = useState(0);
     const isMobile = useIsMobile();
-    const scrollRef = useRef<HTMLDivElement>(null);
-    const isDragging = useRef(false);
-    const startX = useRef(0);
-    const scrollLeft = useRef(0);
+    /*  const scrollRef = useRef<HTMLDivElement>(null);
+     const isDragging = useRef(false);
+     const startX = useRef(0);
+     const scrollLeft = useRef(0); */
 
-    const onMouseDown = (e: React.MouseEvent) => {
-        if (!scrollRef.current) return;
-        isDragging.current = true;
-        startX.current = e.pageX - scrollRef.current.offsetLeft;
-        scrollLeft.current = scrollRef.current.scrollLeft;
-    };
-
-    const onMouseLeave = () => (isDragging.current = false);
-    const onMouseUp = () => (isDragging.current = false);
-
-    const onMouseMove = (e: React.MouseEvent) => {
-        if (!isDragging.current || !scrollRef.current) return;
-        e.preventDefault();
-        const x = e.pageX - scrollRef.current.offsetLeft;
-        const walk = (x - startX.current) * 1; // scroll speed
-        scrollRef.current.scrollLeft = scrollLeft.current - walk;
-    };
+    /*   const onMouseDown = (e: React.MouseEvent) => {
+          if (!scrollRef.current) return;
+          isDragging.current = true;
+          startX.current = e.pageX - scrollRef.current.offsetLeft;
+          scrollLeft.current = scrollRef.current.scrollLeft;
+      };
+  
+      const onMouseLeave = () => (isDragging.current = false);
+      const onMouseUp = () => (isDragging.current = false);
+  
+      const onMouseMove = (e: React.MouseEvent) => {
+          if (!isDragging.current || !scrollRef.current) return;
+          e.preventDefault();
+          const x = e.pageX - scrollRef.current.offsetLeft;
+          const walk = (x - startX.current) * 1; // scroll speed
+          scrollRef.current.scrollLeft = scrollLeft.current - walk;
+      }; */
 
     return (
         <section className="w-full mt-[80px] relative">
@@ -84,16 +84,16 @@ export default function Index() {
                     </div>
                 </div>
 
-                <div className="w-full mx-auto p-6 flex flex-col justify-center items-center gap-6">
+                <div className="w-full z-50 relative mx-auto p-6 flex flex-col justify-center items-center gap-6">
                     {isMobile ? (
-                        <section className="bg-[#F5F5F5] w-full h-auto p-2">
+                        <section className="bg-[#F5F5F5] w-full h-auto p-2 overflow-scroll">
                             <div
-                                ref={scrollRef}
-                                className="flex gap-2 overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing"
-                                onMouseDown={onMouseDown}
-                                onMouseLeave={onMouseLeave}
-                                onMouseUp={onMouseUp}
-                                onMouseMove={onMouseMove}
+                                /* ref={scrollRef} */
+                                className="flex gap-2 w-[600px]"
+                            /*  onMouseDown={onMouseDown}
+                             onMouseLeave={onMouseLeave}
+                             onMouseUp={onMouseUp}
+                             onMouseMove={onMouseMove} */
                             >
                                 {tabSection.map((item, idx) => {
                                     const Icon = item.icon;
@@ -124,11 +124,11 @@ export default function Index() {
                                 return (
                                     <li
                                         onClick={() => {
-                                            setActiveTab(idx);
-                                            setSelectedItem(tabItem);
+                                            alert(idx)
+                                            /*  setActiveTab(idx);
+                                             setSelectedItem(tabItem); */
                                         }}
-                                        className={`relative flex group flex-row gap-1 justify-center items-center p-5 w-full rounded-md h-[40px] cursor-pointer ${activeTab === idx ? "bg-[#35663A] text-white" : "bg-white"
-                                            }`}
+                                        className={`relative flex group flex-row gap-1 justify-center items-center p-5 w-full rounded-md h-[40px] cursor-pointer ${activeTab === idx ? "bg-[#35663A] text-white" : "bg-white"}`}
                                         key={tabItem.key}
                                     >
                                         <Icon
@@ -153,7 +153,7 @@ export default function Index() {
                     </div>
                 </div>
 
-                <div className="flex justify-center items-center">
+                <div className="flex relative z-50 justify-center items-center">
                     <Link href="/news" className="bg-[#35663A] hover:shadow-xl hover:bg-[#35663ac7]  transition-all flex justify-center items-center rounded-2xl text-white h-[40px] px-3 text-center">
                         مشاهده بیشتر
                     </Link>
