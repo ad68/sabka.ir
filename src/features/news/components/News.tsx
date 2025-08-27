@@ -8,8 +8,8 @@ export default function Index() {
     return <section className="w-[1140px] mb-20 h-auto relative  m-auto  rounded-xl mt-10 min-h-10 max-w-full">
         <h1 className="text-primary text-[32px] font-bold">آخرین اخبار</h1>
         {news.map((item: NewsDetail, index: number) => (<Link href={`/news/${item.id}`} key={index} className="bg-white relative  text-[#284D2C] hover:shadow-xl transition-all duration-300 rounded-[10px] block  mt-[26] px-[20] py-[18] w-full">
-            <div className="flex gap-4 items-center">
-                <Image src={item.imgUrl} className="float-left rounded-md w-[150px] h-auto" width={400} height={300} alt="" />
+            <div className="flex flex-col xl:flex-row gap-4 items-center">
+                <Image src={item.imgUrl} className="float-left rounded-md xl:w-[150px] h-auto" width={400} height={300} alt="" />
                 <div>
                     <p className="text-[14px]">{item.miniTitle}</p>
                     <p className="text-[24px] font-semibold"> {item.title}</p>
