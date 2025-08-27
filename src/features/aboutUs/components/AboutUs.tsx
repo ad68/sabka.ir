@@ -10,7 +10,7 @@ import NineSection from './NineSection';
 export default function Index() {
     return (
         <section className='w-full'>
-            <FirstSection />
+            {/*   <FirstSection /> */}
             <SecondSection />
             <ThirdSection />
             <FourthSection />

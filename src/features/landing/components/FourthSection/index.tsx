@@ -18,18 +18,19 @@ import LeafRightBg from '@/assets/img/landing/LeafRightBg.png';
 import FourthSectionItem from "./components/FourthSectionItem";
 import { useIsMobile } from "@/features/products/hooks/useIsMobile";
 import Link from "next/link";
+import { news } from "@/constant/global";
 
-const newsChildren = [
+/* const newsChildren = [
     { key: 1, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec1, link: '' },
     { key: 2, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec2, link: '' },
     { key: 3, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec3, link: '' },
     { key: 4, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec3, link: '' },
     { key: 5, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec5, link: '' },
     { key: 6, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec6, link: '' },
-];
+]; */
 
 const tabSection = [
-    { key: 1, title: 'اخبار', icon: NewsIcon, children: newsChildren },
+    { key: 1, title: 'اخبار', icon: NewsIcon, children: news },
     { key: 2, title: 'تصاویر', icon: ImageIcon, children: [] },
     { key: 3, title: 'فیلم ها', icon: FilmIcon, children: [] },
     { key: 4, title: 'نشریات خبری', icon: MagazineIcon, children: [] },
@@ -146,7 +147,7 @@ export default function Index() {
                     )}
 
                     <div className="w-full mx-auto grid grid-cols-2 xl:grid-cols-3 gap-3 md:gap-4">
-                        {selectedItem.children.map((child, index) => (
+                        {selectedItem.children.slice(0, 6).map((child, index) => (
                             <FourthSectionItem {...child} key={index} />
                         ))}
                     </div>

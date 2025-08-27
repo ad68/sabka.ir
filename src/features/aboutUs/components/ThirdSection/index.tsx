@@ -3,11 +3,11 @@ import ThirdSectionBg from "@/assets/img/about/ThirdSectionbg.png";
 
 export default function Index() {
     return (
-        <section className='w-full relative flex flex-col xl:flex-row  gap-[57px] justify-center items-center px-[20px] py-[60px] md:p-20 xl:h-[736px]'
+        <section className='w-full relative flex flex-col xl:flex-row  gap-[57px] justify-center items-center px-[20px] py-[60px] '
             style={{ backgroundImage: `url(${ThirdSectionBg.src})` }}
         >
             <section className="w-full xl:w-[525px]">
-                <h3 className=' text-2xl font-medium leading-snug xl:text-[36px] xl:font-bold text-[#fff] '>وظايف و حدود عمليات صندوق بيمه كشاورزی</h3>
+                <h3 className='font-medium leading-snug text-2xl xl:text-4xl xl:font-bold text-[#fff] '>وظايف و حدود عمليات صندوق بيمه كشاورزی</h3>
                 <article className="text-white font-medium text-justify mt-[17px]">
                     <p>
                         ماده واحده قانون بیمه کشاورزی مصوب 87/10/22

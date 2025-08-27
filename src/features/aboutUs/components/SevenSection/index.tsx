@@ -16,7 +16,7 @@ export default function Index() {
     return (
         <section className="w-full max-w-[1440] xl:h-[691px] m-auto flex flex-col justify-center items-center lg:flex-row xl:justify-between xl:items-center mb-[63px]">
             <section style={{ backgroundImage: `url(${bg.src})` }} className="max-w-[821px] order-2 xl:order-1 bg-no-repeat px-[20px]  xl:px-[75px] py-[47px] bg-[#F5F5F5]  h-full text-justify">
-                <h2 className="text-[#284D2C] text-[24px] xl:max-w-md font-medium xl:font-bold 2xl:text-4xl 2xl:max-w-xl">
+                <h2 className="text-[#284D2C] text-2xl xl:max-w-md font-medium xl:font-bold xl:text-4xl 2xl:max-w-xl">
                     مفاد منشور اخلاقی کارکنان صندوق بیمه کشاورزی
                 </h2>
                 <section className="text-[#808080] mt-[25px] text-[13px] xl:text-[16px] font-medium">

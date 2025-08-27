@@ -22,7 +22,7 @@ export default function Index() {
     return (
         <section className='w-full px-[20px] xl:px-0 flex flex-col justify-center items-center mt-20 2xl:mt-24'>
             <section className='flex flex-col justify-center items-center gap-10'>
-                <h3 className='text-[24px] font-medium xl:font-bold xl:text-[36px]  max-w-2xl text-[#284D2C] text-center '>سایر وظایف و حدود عمليات صندوق بر مبنای اساسنامه قانونی به شرح زير است:</h3>
+                <h3 className='text-2xl font-medium xl:font-bold xl:text-4xl  max-w-2xl text-[#284D2C] text-center '>سایر وظایف و حدود عمليات صندوق بر مبنای اساسنامه قانونی به شرح زير است:</h3>
                 <p className='flex  md:flex-row justify-center px-[10px] py-[18px] bg-white items-center md:items-start gap-2 max-w-2xl text-[#284D2C] mb-20'>
                     <span className='flex flex-col gap-2 text-[18px] font-bold'>
                         تبصره
@@ -41,7 +41,7 @@ export default function Index() {
                             {idx < 3 && (
                                 <section className='flex flex-row gap-[23px] xl:gap-2 text-[14px] 2xl:text-[20px]' >
                                     <CounterItem val={'0' + (idx + 1)} />
-                                    <p className='max-w-xs w-[85%] xl:w-auto text-sm text-[#558C5A] xl:text-[16px]'>{item}</p>
+                                    <p className='max-w-xs w-[85%] xl:w-auto text-sm text-justify text-[#558C5A] xl:text-[16px]'>{item}</p>
                                 </section>
                             )
                             }
@@ -58,7 +58,7 @@ export default function Index() {
                             {idx > 2 && (
                                 <section className='flex gap-[23px] flex-row xl:gap-2 text-[14px] 2xl:text-[20px]' >
                                     <CounterItem val={'0' + (idx + 1)} />
-                                    <p className='max-w-xs w-[85%] xl:w-auto text-sm text-[#558C5A] xl:text-[16px]'>{item}</p>
+                                    <p className='max-w-xs w-[85%] text-justify xl:w-auto text-sm text-[#558C5A] xl:text-[16px]'>{item}</p>
                                 </section>
                             )
                             }

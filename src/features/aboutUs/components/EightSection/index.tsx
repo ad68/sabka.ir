@@ -17,7 +17,7 @@ export default function Index() {
                 <Image src='/assets/img/about/EightSection.png' className="w-full h-full" alt='' width={700} height={700} />
             </section>
             <section className='xl:w-[821px] h-full px-[20px] xl:px-[85px] py-[112px] bg-[#F5F5F5]'>
-                <h2 className='text-[#284D2C] text-xl md:text-[36px]  max-w-md 2xl:max-w-full font-bold'>نحوه رفتار و برخورد با ارباب رجوع و همکاران</h2>
+                <h2 className='text-[#284D2C] text-2xl lg:text-4xl  max-w-md 2xl:max-w-full font-bold'>نحوه رفتار و برخورد با ارباب رجوع و همکاران</h2>
                 <section className='text-[#808080] mt-[25px] text-[13px] xl:text-[16px] leading-relaxed'>
                     {items.map((item, index) => {
                         return (
