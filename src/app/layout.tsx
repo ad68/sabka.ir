@@ -8,12 +8,9 @@ import Header from '@/components/layout/home/Header'
 import Footer from '@/components/layout/home/Footer'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Geist } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+
+
 export const metadata: Metadata = {
   title: "صندوق بیمه کشاورزی",
   description: "صندوق بیمه کشاورزی",
@@ -83,7 +80,7 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body
-        className={`${iranYekan.variable}  ${geistSans.variable}  antialiased`}
+        className={`${iranYekan.variable}   antialiased`}
       >
         <Providers>
           <Header />

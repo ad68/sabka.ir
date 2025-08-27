@@ -73,9 +73,23 @@ export default function Index({ menuClass }: any) {
                 { title: "اطلاعات مدیران و کارکنان", href: "/employee-info" },
 
                 {
+                    title: "اطلاعات و صورت های مالی", href: "/finance-data"
+                },
+                {
                     title: "آرای قطعی مراجع قضایی", href: "/legal-cases"
                 },
-
+                {
+                    title: "قراردادها", href: "/contracts"
+                },
+                {
+                    title: "تعرفه ها", href: "https://cs.sabka.ir/_Public/Services/Plans/Filter.aspx"
+                },
+                {
+                    title: "فرصت های اشتغال", href: "/employment"
+                },
+                {
+                    title: "فرایند اخذ مجوز ها و پروانه فعالیت", href: "https://mojavez.ir/"
+                },
             ]
         },
         {

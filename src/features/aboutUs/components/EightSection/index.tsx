@@ -11,17 +11,17 @@ const items = [
 ]
 export default function Index() {
     return (
-        <section className=' max-w-[1440] xl:h-[691px]  pb-[70px] xl:pb-0 m-auto relative flex flex-col justify-between md:flex-row items-center'>
-            <Image src={Wheat.src} alt='' width={257} height={200} className='object-contain absolute right-0 xl:left-0 bottom-0 z-0' />
-            <section className="xl:w-[619px] h-full relative ">
+        <section className=' max-w-[1440] pb-[110px]  m-auto relative flex flex-col justify-between md:flex-row items-center'>
+            {/*  <Image src={Wheat.src} alt='' width={257} height={200} className='object-contain absolute right-0 xl:left-0 bottom-0 z-0' /> */}
+            <section className="h-full relative ">
                 <Image src='/assets/img/about/EightSection.png' className="w-full h-full" alt='' width={700} height={700} />
             </section>
-            <section className='xl:w-[821px] h-full px-[20px] xl:px-[85px] py-[112px] bg-[#F5F5F5]'>
-                <h2 className='text-[#284D2C] text-2xl lg:text-4xl  max-w-md 2xl:max-w-full font-bold'>نحوه رفتار و برخورد با ارباب رجوع و همکاران</h2>
-                <section className='text-[#808080] mt-[25px] text-[13px] xl:text-[16px] leading-relaxed'>
+            <section className='xl:w-[976] h-full px-[20px] xl:px-[85px] py-[100px] bg-[#F5F5F5]'>
+                <h2 className='text-[#284D2C] text-2xl   max-w-md 2xl:max-w-full font-bold'>نحوه رفتار و برخورد با ارباب رجوع و همکاران</h2>
+                <section className=' mt-[25px] text-[13px] xl:text-[16px] leading-relaxed'>
                     {items.map((item, index) => {
                         return (
-                            <p key={index}>
+                            <p key={index} className="text-justify">
                                 {index + 1}.{item}
                             </p>
                         )
