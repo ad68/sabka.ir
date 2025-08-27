@@ -8,11 +8,11 @@ import { ImageIcon } from "@/assets/icons/ImageIcon";
 import { FilmIcon } from "@/assets/icons/FilmIcon";
 import { MagazineIcon } from "@/assets/icons/MagazineIcon";
 
-import ForthSec1 from "@/assets/img/landing/FourthSec1.png";
+/* import ForthSec1 from "@/assets/img/landing/FourthSec1.png";
 import ForthSec2 from "@/assets/img/landing/FourthSec2.png";
 import ForthSec3 from "@/assets/img/landing/FourthSec3.png";
 import ForthSec5 from "@/assets/img/landing/FourthSec5.png";
-import ForthSec6 from "@/assets/img/landing/FourthSec6.png";
+import ForthSec6 from "@/assets/img/landing/FourthSec6.png"; */
 
 import LeafRightBg from '@/assets/img/landing/LeafRightBg.png';
 import FourthSectionItem from "./components/FourthSectionItem";

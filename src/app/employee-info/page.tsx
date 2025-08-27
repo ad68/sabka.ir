@@ -1,3 +1,8 @@
+import { Metadata } from "next";
+export const metadata: Metadata = {
+    title: "اطلاعات کارکنان و مدیران | صندوق بیمه کشاورزی",
+    description: "در این صفحه می‌توانید با ما در ارتباط باشید.",
+};
 export default function Index() {
     const data = [
         { id: 1, firstName: 'مسعود', lastName: 'اولادي', degree: 'فوق ليسانس-كشاورزي اكولوژيك', experience: 34, employmentType: 'آزمون استخدامی', adminProcess: 'قانون خدمات کشوری', salary: 'براساس ماده 27 قانون اساسنامه صندوق بیمه کشاورزی ، صندوق درخصوص مباحث اداری و استخدامی تابع قوانین و مقررات بانک کشاورزی است و انتشار این ستون برعهده آن بانک قراردارد' },

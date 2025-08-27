@@ -9,7 +9,7 @@ import Footer from '@/components/layout/home/Footer'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Geist } from "next/font/google";
-import useRouteListener from "@/hooks/useRouteListener";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

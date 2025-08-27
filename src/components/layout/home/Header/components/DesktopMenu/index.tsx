@@ -59,16 +59,22 @@ export default function Index({ menuClass }: any) {
         },
         {
             title: "قانون شفافیت قوای یگانه",
-            href: "#",
-        },
-        {
-            title: "ویژه همکاران",
             children: [
                 { title: "سامانه جامع", href: "https://cs.sabka.ir/Login.aspx" },
                 { title: "اپلیکیشن ارزیابان", href: "https://bakapp.ir" },
                 { title: "امداد رایانه", href: "http://itreq.sbkiran.ir/" },
                 { title: "پست الکترونیک", href: "http://mail.sbkiran.ir/" },
                 { title: "سیمای مهر", href: "https://didgah.bki.ir/" },
+            ]
+        },
+        {
+            title: "ویژه همکاران",
+            children: [
+                { title: "اطلاعات مدیران و کارکنان", href: "/employee-info" },
+
+                {
+                    title: "آرای قطعی مراجع قضایی", href: "/legal-cases"
+                },
 
             ]
         },
