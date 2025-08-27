@@ -36,7 +36,7 @@ export default function Index() {
     return (
         <section
             /*  ref={scrollRef} */
-            className="max-w-6xl m-auto flex gap-4 justify-start items-center my-20 2xl:my-24
+            className="max-w-7xl m-auto flex gap-4 justify-center items-center my-20 2xl:my-24
                  overflow-x-auto no-scrollbar cursor-grab active:cursor-grabbing px-4"
         /*  onMouseDown={onMouseDown}
          onMouseLeave={onMouseLeave}
@@ -49,7 +49,7 @@ export default function Index() {
                     className="flex-shrink-0 rounded-3xl overflow-hidden shadow-md"
                 >
                     <Image
-                        className="rounded-3xl object-cover"
+                        className="rounded-3xl object-cover pointer-events-none"
                         src={image}
                         alt=""
                         width={index === 0 || index === 3 ? 273 : 287}

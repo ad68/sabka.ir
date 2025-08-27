@@ -2,16 +2,14 @@
 import Leaves from "@/assets/img/landing/Leaves.png";
 import NewsItems from "./components/NewsItems";
 import Image from "next/image";
-
-
 export default function Index() {
     return (
         <section
             className='relative w-full z-[-10px]'
         >
             <div className="w-full flex justify-center overflow-hidden">
-                <Image width={1920} height={700} className="w-[full] hidden xl:block h-auto" src="/assets/img/landing/FirstSectionBg.png" alt="" />
-                <Image width={1920} height={700} className="w-[full]  block xl:hidden h-auto" src="/assets/img/landing/FirstSectionBgMobile.png" alt="" />
+                <Image width={1920} height={700} className="w-[full] hidden xl:block h-auto" src="/assets/img/landing/firstSectionBg.png" alt="" />
+                <Image width={1920} height={700} className="w-[full]  block xl:hidden h-auto" src="/assets/img/landing/firstSectionBgMobile.png" alt="" />
             </div>
             <section className='absolute top-[50px] xl:top-0 left-0 w-full xl:mt-[24px] 2xl:mt-[100px] flex flex-col justify-center items-center xl:px-[200px] md:px-28  text-center max-w-[900px] xl:max-w-full mx-auto'>
                 <div className="w-full xl:w-[1136px] max-w-full relative flex flex-col justify-center items-center">

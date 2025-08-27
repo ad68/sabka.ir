@@ -14,19 +14,19 @@ import Link from "next/link";
 import { ArrowRTLIcon } from "@/assets/icons/ArrowRTL";
 import TwoLeavesBg from '@/assets/img/landing/TwoLeavesBg.png';
 const items = [
-    { title: 'درگاه ملی مجوزها', icon: <CertificateIcon className="text-[#e9aa1e]" />, link: '' },
-    { title: 'فصل نامه بیمه کشاورزی', icon: <CalendarIcon className="text-[#e9aa1e]" />, link: '' },
-    { title: 'صدور بیمه نامه', icon: <InsuranceLetterIcon className="text-[#e9aa1e]" />, link: '' },
+    { title: 'درگاه ملی مجوزها', icon: <CertificateIcon className="text-[#e9aa1e]" />, link: 'https://mojavez.ir/' },
+    { title: 'صدور بیمه نامه', icon: <InsuranceLetterIcon className="text-[#e9aa1e]" />, link: 'https://cs.sabka.ir/Login.aspx' },
+    { title: 'فصل نامه بیمه کشاورزی', icon: <CalendarIcon className="text-[#e9aa1e]" />, link: 'http://journal.sbkiran.ir/page/44/%D8%A2%D8%B1%D8%B4%DB%8C%D9%88-%D9%85%D8%AC%D9%84%D9%87-%D9%88-%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA' },
     { title: 'آیین نامه ها و دستورالعمل ها', icon: <RulesIcon className="text-[#e9aa1e]" />, link: '' },
-    { title: 'استعلام بیمه نامه', icon: <InquiryIcon className="text-[#e9aa1e]" />, link: '' },
+    { title: 'استعلام بیمه نامه', icon: <InquiryIcon className="text-[#e9aa1e]" />, link: 'https://cs.sabka.ir/_Public/Services/PolicyInquery.aspx' },
     { title: 'میز ارتباط مردمی', icon: <ServiceDeskIcon className="text-[#e9aa1e]" />, link: '' },
     { title: 'رسیدگی و شکایات', icon: <ComplainIcon className="text-[#e9aa1e]" />, link: '' },
-    { title: 'پورتال من', icon: <PortalIcon className="text-[#e9aa1e]" />, link: '' },
+    { title: 'پورتال من', icon: <PortalIcon className="text-[#e9aa1e]" />, link: 'https://cs.sabka.ir/Login.aspx' },
 ]
 export default function Index() {
     return (
         <section className="w-full relative mt-[150px] xl:mt-[180px]">
-            <Image src={TwoLeavesBg} className="hidden xl:block absolute right-0 w-[200px] xl:w-[300px]  xl:top-[-300px]" alt="" />
+            <Image src={TwoLeavesBg} className="hidden xl:block absolute right-0 w-[200px] xl:w-[300px] xl:top-[-300px]" alt="" />
             <div
                 className='max-w-6xl m-auto flex flex-row  gap-5 xl:gap-[36px] justify-center items-center px-[20px] xl:px-0'
             >

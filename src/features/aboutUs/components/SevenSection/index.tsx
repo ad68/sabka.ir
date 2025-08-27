@@ -14,8 +14,8 @@ const items = [
 
 export default function Index() {
     return (
-        <section className="w-full max-w-[1440]  m-auto flex flex-col justify-center items-center lg:flex-row xl:justify-between xl:items-center mb-[63px]">
-            <section style={{ backgroundImage: `url(${bg.src})` }} className="max-w-[900px] order-2 xl:order-1 bg-no-repeat px-[20px]  xl:px-[75px] py-[47px] bg-[#F5F5F5]  h-full text-justify">
+        <section className="w-full max-w-6xl m-auto flex flex-col justify-center items-center lg:flex-row xl:justify-between xl:items-center mb-[63px]">
+            <section style={{ backgroundImage: `url(${bg.src})` }} className="max-w-[800px] order-2 xl:order-1 bg-no-repeat px-[20px]  xl:px-[75px] py-[47px] bg-[#F5F5F5]  h-full text-justify">
                 <h2 className="text-[#284D2C] text-2xl xl:max-w-md font-medium xl:font-bold xl:text-2xl 2xl:max-w-xl">
                     مفاد منشور اخلاقی کارکنان صندوق بیمه کشاورزی
                 </h2>
@@ -27,9 +27,8 @@ export default function Index() {
                     ))}
                 </section>
             </section>
-
-            <section className="w-auto xl:w-[550px] h-full relative order-1 xl:order-2">
-                <Image src='/assets/img/about/SevenSection.jpg' className="w-full h-full " alt='' width={700} height={700} />
+            <section className="w-auto xl:w-[550px] flex justify-center items-center xl:mr-[-50px] px-5 xl:px-0 relative order-1 xl:order-2">
+                <Image src='/assets/img/about/SevenSection.jpg' className="rounded-xl" alt='' width={700} height={700} />
             </section>
         </section>
     );

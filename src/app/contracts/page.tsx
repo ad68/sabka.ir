@@ -1,3 +1,4 @@
+import { numberWithCommas } from '@/utils';
 import { NextPage } from 'next'
 const data = [
     {
@@ -83,7 +84,7 @@ const data = [
 ];
 
 const Index: NextPage = () => {
-    return <section className='max-w-6xl m-auto mb-5'>
+    return <section className='max-w-6xl m-auto mb-5 overflow-auto'>
         <h1 className="font-bold text-center text-xl text-primary mt-5"> فهرست قراردادهای منعقده  صندوق بیمه کشاورزی در سال1403 </h1>
         <table className="min-w-full text-sm text-right mt-5">
             <thead className="bg-gray-100 sticky top-0 text-center">
@@ -94,7 +95,6 @@ const Index: NextPage = () => {
                     <th className="px-3 py-2 font-medium border" rowSpan={2}>طرف قرارداد</th>
                     <th className="px-3 py-2 font-medium border" rowSpan={2}>موضوع قرارداد</th>
                     <th className="px-3 py-2 font-medium border" rowSpan={2}>مبلغ (ریال)</th>
-                    <th className="px-3 py-2 font-medium border" rowSpan={2}>فرآیند اداری</th>
                     <th className="px-3 py-2 font-medium border" colSpan={2}>
                         مدت قرارداد
                     </th>
@@ -119,12 +119,24 @@ const Index: NextPage = () => {
                         <td className="px-3 py-2">{row.date}</td>
                         <td className="px-3 py-2">{row.company}</td>
                         <td className="px-3 py-2">{row.subject}</td>
-                        <td className="px-3 py-2">{row.amount}</td>
+                        <td className="px-3 py-2">{numberWithCommas(row.amount)}</td>
+                        <td className="px-3 py-2">{row.start}</td>
                         <td className="px-3 py-2">{row.end}</td>
                         <td className="px-3 py-2">{row.law}</td>
                     </tr>
                 ))}
             </tbody>
+            <tfoot>
+                <tr className='bg-slate-100'>
+                    <td colSpan={5} className=' p-4 border font-bold text-xl'>
+                        جمع کل
+                    </td>
+                    <td colSpan={4} className=' border p-4 font-bold text-xl'>
+                        {numberWithCommas("47,527,562,500")}
+                        <span className='mr-1'>ریال</span>
+                    </td>
+                </tr>
+            </tfoot>
         </table>
     </section>
 }
