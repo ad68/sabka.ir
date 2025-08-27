@@ -54,15 +54,15 @@ export default function Index() {
                     <div className='xl:max-w-2xl 2xl:max-w-4xl mx-auto flex flex-row justify-center items-center md:justify-start md:items-start xl:justify-center xl:items-center flex-wrap gap-3 lg:gap-6'>
                         {items.map((item, index) => {
                             return (
-                                <div className='cursor-pointer group flex flex-row justify-between h-[70px] items-center min-w-full xl:min-w-[340px] hover:shadow-lg transition-all duration-500  border-[1px]  border-[#A7D9AC] p-2 rounded-xl' key={index}>
+                                <Link href={item.link} className='cursor-pointer group flex flex-row justify-between h-[70px] items-center min-w-full xl:min-w-[340px] hover:shadow-lg transition-all duration-500  border-[1px]  border-[#A7D9AC] p-2 rounded-xl' key={index}>
                                     <div className='flex flex-row gap-1 justify-start items-center'>
                                         <span className='font-bold text-sm'>{item.icon}</span>
                                         <span className='font-bold text-sm'>{item.title}</span>
                                     </div>
-                                    <Link href={item.link} className='hidden md:flex w-[38px] h-[38px] p-2  justify-center items-center rounded-md bg-[#35663A] text-white group-hover:bg-[#E9AA1E] transition-all duration-500 cursor-pointer'>
+                                    <div className='hidden md:flex w-[38px] h-[38px] p-2  justify-center items-center rounded-md bg-[#35663A] text-white group-hover:bg-[#E9AA1E] transition-all duration-500 cursor-pointer'>
                                         <ArrowRTLIcon className="w-[10px]" />
-                                    </Link>
-                                </div>
+                                    </div>
+                                </Link>
                             )
                         })}
                     </div>

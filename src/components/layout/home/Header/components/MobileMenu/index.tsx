@@ -1,10 +1,11 @@
 'use client'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { UserIcon } from "@/assets/icons/UserIcon";
 import { MenuIcon } from "lucide-react";
 import Link from "next/link";
 import Collapse from './components/Collapse'
 import Image from "next/image";
+import useRouteListener from "@/hooks/useRouteListener";
 export default function Index() {
     const [isOpenMenu, setIsOpenMenu] = useState(false)
     const menus: any = [
@@ -95,12 +96,18 @@ export default function Index() {
             href: "/contact-us",
         },
     ]
+    const [routeStatus] = useRouteListener()
+    useEffect(() => {
+        setIsOpenMenu(false)
+    }, [routeStatus])
     return <>
         <div className='flex h-full justify-between items-center px-[10]'>
             <div className="w-[78px] h-[40px] border flex justify-center items-center rounded-lg border-primary">
                 <MenuIcon className="text-primary" onClick={() => setIsOpenMenu(true)} />
             </div>
-            <Image width={100} height={100} className="w-[40px]" src="/assets/img/logo.png" alt="logo" />
+            <Link href="/">
+                <Image width={100} height={100} className="w-[40px]" src="/assets/img/logo.png" alt="logo" />
+            </Link>
             <div className="flex gap-1">
                 <button className="flex h-[40px] items-center justify-center bg-[#35663A] text-white px-4 py-[10px] rounded-lg text-sm font-semibold">
                     <UserIcon />
@@ -109,17 +116,18 @@ export default function Index() {
             </div>
         </div>
         {isOpenMenu && <div onClick={() => setIsOpenMenu(false)} className="bg-transparent fixed top-0 left-0 w-full h-full z-50"></div>}
-        <aside className={`fixed shadow-2xl h-[100%] top-0 ${isOpenMenu ? `right-0` : `right-[-100%]`} pt-[20px] transition-all duration-500 ease-in-out bg-white z-[200] w-[80%]`}>
-            <ul className="flex flex-col gap-4">
-                {menus.map((item: any, index: number) => (<li className="mr-3 border-b border-b-slate-100 pb-2 h-full flex items-center  2xl:px-2" key={index}>
-                    {item.href && <Link className=" xl:text-xs 2xl:text-[14px] text-black" href={item.href} >
+        <aside className={`fixed shadow-2xl overflow-y-scroll h-[100%] top-0 ${isOpenMenu ? `right-0` : `right-[-100%]`} pt-[20px] transition-all duration-500 ease-in-out bg-white z-[200] w-[80%]`}>
+            {isOpenMenu && <ul className="flex flex-col gap-4">
+                {menus.map((item: any, index: number) => (<li className="mr-3 border-b border-b-slate-100 pb-3 h-full flex items-center  2xl:px-2" key={index}>
+                    {item.href && <Link className="w-full xl:text-xs 2xl:text-[14px] text-black" href={item.href} >
                         {item.title}
                     </Link>}
                     {item.children &&
                         <Collapse title={item.title} subMenus={item.children} />
                     }
                 </li>))}
-            </ul>
+            </ul>}
+
 
         </aside>
     </>

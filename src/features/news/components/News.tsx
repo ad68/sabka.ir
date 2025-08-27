@@ -5,7 +5,7 @@ import { Calendar1Icon, EyeIcon, TimerIcon } from "lucide-react";
 import { news } from "@/constant/global";
 import { NewsDetail } from "@/features/newsDetail/types";
 export default function Index() {
-    return <section className="w-[1140px] mb-20 h-auto relative  m-auto  rounded-xl mt-10 min-h-10 max-w-full">
+    return <section className="w-[1140px] mb-20 h-auto relative  m-auto px-[20] xl:px-0 rounded-xl mt-10 min-h-10 max-w-full">
         <h1 className="text-primary text-[32px] font-bold">آخرین اخبار</h1>
         {news.map((item: NewsDetail, index: number) => (<Link href={`/news/${item.id}`} key={index} className="bg-white relative  text-[#284D2C] hover:shadow-xl transition-all duration-300 rounded-[10px] block  mt-[26] px-[20] py-[18] w-full">
             <div className="flex flex-col xl:flex-row gap-4 items-center">

@@ -8,7 +8,7 @@ import useNewsDetail from "../hook/useNewsDetail";
 export default function Index() {
     const { val, setVal, currentNews } = useNewsDetail()
     return (
-        <section className="w-[1140px] mb-20 h-auto relative  m-auto  rounded-xl mt-10 min-h-10 max-w-full">
+        <section className="xl:w-[1140px] mb-20 h-auto relative  m-auto  rounded-xl mt-10 min-h-10 max-w-full">
             <div className="w-full h-[60px]">
                 <Image src="/assets/img/news/news-header.png" className="absolute  rounded-lg  z-0 top-0 w-full h-[60px]" width={1400} height={300} alt="" />
                 <div className="w-full h-full px-[81px] z-30 relative flex  justify-between items-center">
