@@ -124,9 +124,9 @@ export default function Index() {
                                 return (
                                     <li
                                         onClick={() => {
-                                            alert(idx)
-                                            /*  setActiveTab(idx);
-                                             setSelectedItem(tabItem); */
+                                            /* alert(idx) */
+                                            setActiveTab(idx);
+                                            setSelectedItem(tabItem);
                                         }}
                                         className={`relative flex group flex-row gap-1 justify-center items-center p-5 w-full rounded-md h-[40px] cursor-pointer ${activeTab === idx ? "bg-[#35663A] text-white" : "bg-white"}`}
                                         key={tabItem.key}

@@ -20,33 +20,30 @@ export default function Index({ menuClass }: any) {
         },
         {
             title: "خدمات",
+            big: true,
             children: [
+                { title: "بیمه محصولات زراعی", subMenus: [] },
+                { title: "بیمه محصولات باغی", subMenus: [] },
+                { title: "بیمه دام و طیور و آبزیان", subMenus: [] },
                 {
-                    href: "#",
-                    title: "زراعی"
+                    title: "عوامل تولید", subMenus: [
+                        { title: "سرمایه", href: "#" },
+                        { title: "تنه درختان", href: "#" },
+                        { title: "ماشین آلات", href: "#" },
+                        { title: "تاسیسات", href: "#" },
+                        { title: "ابنیه", href: "#" },
+                    ]
                 },
                 {
-                    href: "#",
-                    title: "باغی"
+                    title: "سایر", subMenus: [
+                        { title: "منابع طبیعی", href: "#" },
+                        { title: "گیاهان دارویی", href: "#" },
+                        { title: "سبزیجات", href: "#" },
+                        { title: "صیفی جات", href: "#" },
+                        { title: "محصولات گلخانه ای", href: "#" },
+                        { title: "گلهای زینتی", href: "#" },
+                    ]
                 },
-                {
-                    href: "#",
-                    title: "دام طیور آبزیان"
-                },
-                {
-                    href: "#",
-                    title: " عوامل تولید (سرمایه، تنه درختان، ماشین آلات، تاسیسات، ابنیه) "
-                },
-                {
-                    href: "#",
-                    title: "سایر ( منابع طبیعی، گیاهان دارویی، سبزیجات و صیفی جات، محصولات گلخانه ای، گلهای زینتی)"
-                },
-                {
-                    href: "#",
-                    title: "فرآیند خرید بیمه نامه و ثبت درخواست خسارت"
-                },
-
-
             ]
         },
         {
@@ -74,7 +71,7 @@ export default function Index({ menuClass }: any) {
             ]
         },
         {
-            title: "قانون شفافیت قوای یگانه",
+            title: "ویژه همکاران",
             children: [
                 { title: "سامانه جامع", href: "https://cs.sabka.ir/Login.aspx" },
                 { title: "اپلیکیشن ارزیابان", href: "https://bakapp.ir" },
@@ -84,7 +81,8 @@ export default function Index({ menuClass }: any) {
             ]
         },
         {
-            title: "ویژه همکاران",
+
+            title: "قانون شفافیت قوای یگانه",
             children: [
                 { title: "اطلاعات مدیران و کارکنان", href: "/employee-info" },
 
@@ -139,11 +137,33 @@ export default function Index({ menuClass }: any) {
                     </div>
 
                     <ul className="nav-links items-center xl:mr-0 2xl:mr-[70px]">
-                        {menus.map((item: any, index: number) => (<li className="mr-3 h-full flex items-center 2xl:px-2" key={index}>
+                        {menus.map((item: any, index: number) => (<li className="mr-3 h-full flex items-center relative 2xl:px-2" key={index}>
                             {item.href && <Link className=" xl:text-xs 2xl:text-[14px] font-bold text-black" href={item.href} >
                                 {item.title}
                             </Link>}
-                            {item.children &&
+                            {item.children && !item.big &&
+                                <>
+                                    <button className="flex gap-1 items-center font-bold xl:text-xs 2xl:text-[14px] text-black">
+                                        {item.title}
+                                        <ChevronDown className="w-[15px]" />
+                                    </button>
+                                    <div className="mega-box">
+                                        <div className="content overflow-hidden relative rounded-xl">
+                                            <ul className="flex flex-col gap-2">
+                                                {item?.children.map((item: any, index: number) => (
+                                                    <li key={index} className="hover:bg-[#7BB28033] transition-all px-[8px] py-[15px] rounded-md">
+                                                        <Link className="text-sm flex items-center gap-2" href={item.href}>
+                                                            <ChevronsLeft className="w-[15px] text-secondary" />
+                                                            {item.title}</Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </>
+                            }
+                            {item.children && item.big &&
                                 <>
                                     <button className="flex gap-1 items-center font-bold xl:text-xs 2xl:text-[14px] text-black">
                                         {item.title}

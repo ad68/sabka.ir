@@ -138,7 +138,7 @@ li {
   cursor: pointer;
 }
 .clip-ellipse {
-  clippath: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
 }
 
 nav.menuBox {
@@ -178,9 +178,10 @@ nav.menuBox {
   border-radius: 0px;
 }
 .mega-box {
-  position: fixed;
-  width: 80%;
-  right: 0;
+  position: absolute;
+  /* width: 80%; */
+  width: 350px;
+  right: -30px;
   padding: 0 30px;
   top: 95px;
   opacity: 0;
