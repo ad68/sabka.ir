@@ -4,114 +4,13 @@ import { UserIcon } from "@/assets/icons/UserIcon";
 import { MenuIcon, XCircleIcon } from "lucide-react";
 import Link from "next/link";
 import Collapse from './components/Collapse'
+import Collapse2Level from './components/Collapse2Level'
 import Image from "next/image";
 import useRouteListener from "@/hooks/useRouteListener";
+import { menus } from "@/constant/global";
 export default function Index() {
     const [isOpenMenu, setIsOpenMenu] = useState(false)
-    const menus: any = [
-        {
-            title: "خانه",
-            href: "/",
-        },
-        {
-            title: "درباره ما",
-            href: "/about-us"
-        },
-        {
-            title: "خدمات",
-            children: [
-                {
-                    href: "#",
-                    title: "زراعی"
-                },
-                {
-                    href: "#",
-                    title: "باغی"
-                },
-                {
-                    href: "#",
-                    title: "دام طیور آبزیان"
-                },
-                {
-                    href: "#",
-                    title: " عوامل تولید"
-                },
-                {
-                    href: "#",
-                    title: "سایر"
-                },
-                {
-                    href: "#",
-                    title: "فرآیند خرید بیمه نامه و ثبت درخواست خسارت"
-                },
 
-
-            ]
-        },
-        {
-            title: "اخبار",
-            children: [
-                { title: "اخبار و اطلاعیه", href: "/news" },
-                { title: "گزیده اخبار", href: "#" },
-                { title: "اخبار استان ها", href: "#" },
-                { title: "اطلاعیه ها", href: "#" },
-                { title: "قوانین و مقررات", href: "#" },
-            ]
-
-        },
-        {
-            title: "سامانه جامع",
-            href: "#",
-        },
-        {
-            title: "چندرسانه ای",
-            children: [
-
-                { title: "گالری تصاویر", href: "#" },
-                { title: "گالری فیلم", href: "#" },
-
-            ]
-        },
-        {
-            title: "قانون شفافیت قوای یگانه",
-            children: [
-                { title: "سامانه جامع", href: "https://cs.sabka.ir/Login.aspx" },
-                { title: "اپلیکیشن ارزیابان", href: "https://bakapp.ir" },
-                { title: "امداد رایانه", href: "http://itreq.sbkiran.ir/" },
-                { title: "پست الکترونیک", href: "http://mail.sbkiran.ir/" },
-                { title: "سیمای مهر", href: "https://didgah.bki.ir/" },
-            ]
-        },
-        {
-            title: "ویژه همکاران",
-            children: [
-                { title: "اطلاعات مدیران و کارکنان", href: "/employee-info" },
-
-                {
-                    title: "اطلاعات و صورت های مالی", href: "/finance-data"
-                },
-                {
-                    title: "آرای قطعی مراجع قضایی", href: "/legal-cases"
-                },
-                {
-                    title: "قراردادها", href: "/contracts"
-                },
-                {
-                    title: "تعرفه ها", href: "https://cs.sabka.ir/_Public/Services/Plans/Filter.aspx"
-                },
-                {
-                    title: "فرصت های اشتغال", href: "/employment"
-                },
-                {
-                    title: "فرایند اخذ مجوز ها و پروانه فعالیت", href: "https://mojavez.ir/"
-                },
-            ]
-        },
-        {
-            title: "ارتباط با ما",
-            href: "/contact-us",
-        },
-    ]
     const [routeStatus] = useRouteListener()
     useEffect(() => {
         setIsOpenMenu(false)
@@ -143,8 +42,11 @@ export default function Index() {
                     {item.href && <Link className="w-full xl:text-xs 2xl:text-[14px] text-black" href={item.href} >
                         {item.title}
                     </Link>}
-                    {item.children &&
+                    {item.children && !item.big &&
                         <Collapse title={item.title} subMenus={item.children} />
+                    }
+                    {item.children && item.big &&
+                        <Collapse2Level title={item.title} subMenus1={item.children} />
                     }
                 </li>))}
             </ul>}
