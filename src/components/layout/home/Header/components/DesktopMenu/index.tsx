@@ -174,13 +174,13 @@ export default function Index({ menuClass }: any) {
                                                 {item.children.map((item: any, index: number) => (<div key={index} className="flex flex-col gap-2">
                                                     <span className="font-bold text-sm">{item.title}</span>
                                                     <span className="block h-1 bg-primary w-[30px]"></span>
-                                                    <div key={index} className="flex flex-col gap-2 w-[200px]">
+                                                    <div className="flex flex-col gap-2 w-[200px]">
                                                         {
-                                                            item.subMenus.map((item: any, index: number) => (<>
+                                                            item.subMenus.map((item: any, index: number) => (
                                                                 <Link key={index} className="text-sm font-light hover:bg-[#7BB28033]  transition-all rounded-sm flex items-center gap-1" href={item.href}>
                                                                     <ChevronsLeft className="w-[15px] text-secondary" />
                                                                     {item.title}</Link >
-                                                            </>))
+                                                            ))
                                                         }
                                                     </div>
                                                 </div>
