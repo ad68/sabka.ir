@@ -5,6 +5,7 @@ import Leaf from '@/assets/img/contactUs/leaf.png'
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import useNewsDetail from "../hook/useNewsDetail";
+import CustomGallery from "@/components/kit/Gallery";
 export default function Index() {
     const { val, setVal, currentNews } = useNewsDetail()
     return (
@@ -30,10 +31,11 @@ export default function Index() {
                         <h2 className="text-lg">
                             {currentNews?.miniTitle}
                         </h2>
-                        {currentNews && <Image src={currentNews.imgUrl} className="float-left mr-10 rounded-lg w-[400px] h-auto" width={400} height={300} alt="" />}
+                        {currentNews && currentNews.images.length === 0 && <Image src={currentNews.imgUrl} className="float-left mr-10 rounded-lg w-[500px] h-auto" width={400} height={300} alt="" />}
+                        {currentNews && currentNews.images.length > 0 && <div className="float-left mr-10 rounded-lg w-[500px] h-auto"><CustomGallery slides={currentNews.images} /></div>}
                         <div className="text-justify mt-[27px]">
                             <h1 className="font-bold text-[#284D2C] text-[32px]">{currentNews?.title}</h1>
-                            {currentNews?.summary !== "" && <p className="bg-white relative text-[#284D2C] rounded-[10px] mt-[26] px-[34] py-[18] w-[700px] ml-10 p-4">
+                            {currentNews?.summary !== "" && <p className="bg-white relative text-[#284D2C] rounded-[10px] mt-[26] px-[34] py-[18] w-[600px] ml-10 p-4">
                                 {currentNews?.summary}
                                 <Image className="absolute bottom-0 left-[20px] w-[27px] h-[22px]" src={Leaf} alt="" />
                             </p>}
