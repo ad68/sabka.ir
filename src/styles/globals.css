@@ -182,7 +182,7 @@ nav.menuBox {
   /* width: 80%; */
   width: 350px;
   right: -30px;
-  padding: 0 30px;
+  padding: 0 10px;
   top: 95px;
   opacity: 0;
   visibility: hidden;
@@ -199,7 +199,7 @@ nav.menuBox {
 }
 .mega-box .content {
   background: white;
-  padding: 25px 20px;
+  padding: 15px 15px;
   border: 1px solid silver;
 }
 

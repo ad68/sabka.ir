@@ -149,9 +149,9 @@ export default function Index({ menuClass }: any) {
                                     </button>
                                     <div className="mega-box">
                                         <div className="content overflow-hidden relative rounded-xl">
-                                            <ul className="flex flex-col gap-2">
+                                            <ul className="flex flex-col justify-center gap-1">
                                                 {item?.children.map((item: any, index: number) => (
-                                                    <li key={index} className="hover:bg-[#7BB28033] transition-all px-[8px] py-[15px] rounded-md">
+                                                    <li key={index} className="hover:bg-[#7BB28033] transition-all px-[4px] py-[4px] rounded-md">
                                                         <Link className="text-sm flex items-center gap-2" href={item.href}>
                                                             <ChevronsLeft className="w-[15px] text-secondary" />
                                                             {item.title}</Link>
@@ -168,28 +168,25 @@ export default function Index({ menuClass }: any) {
                                         {item.title}
                                         <ChevronDown className="w-[15px]" />
                                     </button>
-                                    <div className="mega-box big h-[700px]">
+                                    <div className="mega-box big">
                                         <div className="content overflow-hidden relative rounded-xl">
                                             <div className="flex gap-2">
-                                                {item.children.map((item: any, index: number) => (
-                                                    <div className="flex flex-col w-[200px] bg-slate-300">
+                                                {item.children.map((item: any, index: number) => (<div key={index} className="flex flex-col gap-2">
+                                                    <span className="font-bold text-sm">{item.title}</span>
+                                                    <span className="block h-1 bg-primary w-[30px]"></span>
+                                                    <div key={index} className="flex flex-col gap-2 w-[200px]">
                                                         {
                                                             item.subMenus.map((item: any, index: number) => (<>
-                                                                <Link key={index} href={item.href}>{item.title}</Link >
+                                                                <Link key={index} className="text-sm font-light hover:bg-[#7BB28033]  transition-all rounded-sm flex items-center gap-1" href={item.href}>
+                                                                    <ChevronsLeft className="w-[15px] text-secondary" />
+                                                                    {item.title}</Link >
                                                             </>))
                                                         }
-                                                    </div >
+                                                    </div>
+                                                </div>
                                                 ))}
                                             </div>
-                                            {/* <ul className="flex flex-col gap-2">
-                                                  {item?.children.map((item: any, index: number) => (
-                                                    <li key={index} className="hover:bg-[#7BB28033] transition-all px-[8px] py-[15px] rounded-md">
-                                                        <Link className="text-sm flex items-center gap-2" href={item.href}>
-                                                            <ChevronsLeft className="w-[15px] text-secondary" />
-                                                            {item.title}</Link>
-                                                    </li>
-                                                ))}
-                                            </ul> */}
+
                                         </div>
                                     </div>
                                 </>
