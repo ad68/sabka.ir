@@ -158,7 +158,6 @@ export default function Index({ menuClass }: any) {
                                                     </li>
                                                 ))}
                                             </ul>
-
                                         </div>
                                     </div>
                                 </>
@@ -169,18 +168,28 @@ export default function Index({ menuClass }: any) {
                                         {item.title}
                                         <ChevronDown className="w-[15px]" />
                                     </button>
-                                    <div className="mega-box">
+                                    <div className="mega-box big h-[700px]">
                                         <div className="content overflow-hidden relative rounded-xl">
-                                            <ul className="flex flex-col gap-2">
-                                                {item?.children.map((item: any, index: number) => (
+                                            <div className="flex gap-2">
+                                                {item.children.map((item: any, index: number) => (
+                                                    <div className="flex flex-col w-[200px] bg-slate-300">
+                                                        {
+                                                            item.subMenus.map((item: any, index: number) => (<>
+                                                                <Link key={index} href={item.href}>{item.title}</Link >
+                                                            </>))
+                                                        }
+                                                    </div >
+                                                ))}
+                                            </div>
+                                            {/* <ul className="flex flex-col gap-2">
+                                                  {item?.children.map((item: any, index: number) => (
                                                     <li key={index} className="hover:bg-[#7BB28033] transition-all px-[8px] py-[15px] rounded-md">
                                                         <Link className="text-sm flex items-center gap-2" href={item.href}>
                                                             <ChevronsLeft className="w-[15px] text-secondary" />
                                                             {item.title}</Link>
                                                     </li>
                                                 ))}
-                                            </ul>
-
+                                            </ul> */}
                                         </div>
                                     </div>
                                 </>
