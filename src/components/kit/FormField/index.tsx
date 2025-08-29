@@ -10,6 +10,6 @@ export default function FormField({ title, isError, errorMessage, children, icon
     return <div className=" pb-3 relative">
         <span className="text-sm flex items-center gap-1 font-bold text-primary">{icon ? icon : ""}{title}</span>
         {children}
-        {!!isError && <p className="text-red-500 w-full absolute bottom-[-10] left-0 text-xs mt-1">{errorMessage}</p>}
+        {!!isError && <p className="text-red-500 w-full absolute bottom-[-10px] left-0 text-xs mt-1">{errorMessage}</p>}
     </div>
 }

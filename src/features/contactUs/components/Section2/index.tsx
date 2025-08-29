@@ -4,7 +4,7 @@ import Image from "next/image";
 import ListItem from './components/ListItem'
 export default function Index() {
     return <div className="w-full py-[96px] m-auto rounded-2xl mt-[30px] overflow-hidden  max-w-[1440px] bg-[#e9aa1e] relative flex justify-center items-center">
-        <div className="absolute flex justify-center top-[-50]">
+        <div className="absolute flex justify-center top-[-50px]">
             <div className="w-[100px] h-[100px] flex justify-center items-end bg-[#fafafa] rounded-full">
                 <ArrowDown className="mb-[20px]" />
             </div>

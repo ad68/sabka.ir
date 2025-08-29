@@ -8,7 +8,6 @@ export default function Index({ title, id, imgUrl }: any) {
     const isMobile = useIsMobile();
     return (
         <>
-
             {isMobile ? (
                 <Link href={`/news/` + id}>
                     <section className='group flex flex-col items-center justify-center w-full h-[200px]  rounded-2xl bg-white hover:bg-[#7BB28033] group  transition-all duration-500 cursor-pointer'>
@@ -17,12 +16,12 @@ export default function Index({ title, id, imgUrl }: any) {
                         </section>
                         <section className='relative w-[151px] mx-auto h-[100px] bg-cover' style={{ backgroundImage: imgUrl }}>
                             <Image src={imgUrl} alt={title} className="mt-[16px]" fill />
-                            <Link href={`/news/${id}`} className='absolute left-[-2] top-0 border-white border-2 w-[30px] rounded-br-lg h-[30px] p-2 flex justify-center items-center rounded-md bg-[#35663A] text-white group-hover:bg-[#E9AA1E]  transition-all duration-500 cursor-pointer'>
+                            <div className='absolute left-[-2px] top-0 border-white border-2 w-[30px] rounded-br-lg h-[30px] p-2 flex justify-center items-center rounded-md bg-[#35663A] text-white group-hover:bg-[#E9AA1E]  transition-all duration-500 cursor-pointer'>
                                 <ArrowRTLIcon />
-                            </Link>
+                            </div>
                         </section>
                     </section>
-                </Link>
+                </Link >
             ) : (
                 <Link href={`/news/` + id}>
                     <section className='group flex flex-col items-center justify-center p-2 w-[300px] h-[300px] xl:w-[365px] xl:h-[365px] rounded-2xl bg-white hover:bg-[#7BB28033] group  transition-all duration-500 cursor-pointer'>
