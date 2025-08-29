@@ -10,7 +10,6 @@ import { UserIcon } from "@/assets/icons/UserIcon";
 import { menus } from "@/constant/global";
 
 export default function Index({ menuClass }: any) {
-
     /*  useEffect(() => {
           window.addEventListener("scroll", listenScrollEvent);
      
@@ -35,7 +34,6 @@ export default function Index({ menuClass }: any) {
                         </Link>
                         <span className="text-[10px] font-semibold">صندوق بیمه کشاورزی</span>
                     </div>
-
                     <ul className="nav-links items-center xl:mr-0 2xl:mr-[70px]">
                         {menus.map((item: any, index: number) => (<li className="mr-3 h-full flex items-center relative 2xl:px-2" key={index}>
                             {item.href && <Link className=" xl:text-xs 2xl:text-[14px] font-bold text-black" href={item.href} >
