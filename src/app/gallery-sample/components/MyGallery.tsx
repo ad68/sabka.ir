@@ -1,6 +1,6 @@
 'use client'
 
-import CustomGallery from "@/components/kit/Gallery"
+import CustomGallery from "@/components/kit/CustomGallery"
 
 export default function Index() {
     const images = [
