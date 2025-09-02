@@ -16,7 +16,7 @@ export default function Index() {
         setIsOpenMenu(false)
     }, [routeStatus])
     return <>
-        <div className='flex h-full justify-between items-center px-[10]'>
+        <div className='flex h-full justify-between items-center px-[10px]'>
             <div onClick={() => setIsOpenMenu(true)} className="w-[78px] h-[40px] border flex justify-center items-center rounded-lg border-primary">
                 <MenuIcon className="text-primary" />
             </div>

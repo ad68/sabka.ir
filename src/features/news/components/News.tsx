@@ -5,9 +5,9 @@ import { Calendar1Icon, EyeIcon, TimerIcon } from "lucide-react";
 import { news } from "@/constant/global";
 import { NewsDetail } from "@/features/newsDetail/types";
 export default function Index() {
-    return <section className="w-[1140px] mb-20 h-auto relative  m-auto px-[20] xl:px-0 rounded-xl mt-10 min-h-10 max-w-full">
+    return <section className="w-[1140px] mb-20 h-auto relative  m-auto px-[20px] xl:px-0 rounded-xl mt-10 min-h-10 max-w-full">
         <h1 className="text-primary text-[32px] font-bold">آخرین اخبار</h1>
-        {news.map((item: NewsDetail, index: number) => (<Link href={`/news/${item.id}`} key={index} className="bg-white relative  text-[#284D2C] hover:shadow-xl transition-all duration-300 rounded-[10px] block  mt-[26] px-[20] py-[18] w-full">
+        {news.map((item: NewsDetail, index: number) => (<Link href={`/news/${item.id}`} key={index} className="bg-white relative  text-[#284D2C] hover:shadow-xl transition-all duration-300 rounded-[10px] block  mt-[26px] px-[20px] py-[18px] w-full">
             <div className="flex flex-col xl:flex-row gap-4 items-center">
                 <Image src={item.imgUrl} className="float-left rounded-md xl:w-[150px] h-auto" width={400} height={300} alt="" />
                 <div>
@@ -31,7 +31,7 @@ export default function Index() {
                     </div>
                 </div>
             </footer>
-            <Image className="absolute top-[-10] left-[10px] w-[27px] h-[22px]" src={Leaf} alt="" />
+            <Image className="absolute top-[-10px] left-[10px] w-[27px] h-[22px]" src={Leaf} alt="" />
         </Link>))}
     </section>
 }

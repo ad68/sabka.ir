@@ -20,7 +20,7 @@ export default function Index() {
                     سوالی دارید؟ با ما تماس بگیرید
                 </h2>
             </div>
-            <FormField icon={<User2Icon className="w-[18]" />} isError={errors.firstName} errorMessage={errors?.firstName?.message} title="نام">
+            <FormField icon={<User2Icon className="w-[18px]" />} isError={errors.firstName} errorMessage={errors?.firstName?.message} title="نام">
                 <Controller
                     name="firstName"
                     control={control}
@@ -29,7 +29,7 @@ export default function Index() {
                     )}
                 />
             </FormField>
-            <FormField icon={<User2Icon className="w-[18]" />} isError={errors.lastName} errorMessage={errors?.lastName?.message} title="نام خانوادگی">
+            <FormField icon={<User2Icon className="w-[18px]" />} isError={errors.lastName} errorMessage={errors?.lastName?.message} title="نام خانوادگی">
                 <Controller
                     name="lastName"
                     control={control}
@@ -38,7 +38,7 @@ export default function Index() {
                     )}
                 />
             </FormField>
-            <FormField icon={<PhoneIcon className="w-[18]" />} isError={errors.mobileNumber} errorMessage={errors?.mobileNumber?.message} title="شماره موبایل">
+            <FormField icon={<PhoneIcon className="w-[18px]" />} isError={errors.mobileNumber} errorMessage={errors?.mobileNumber?.message} title="شماره موبایل">
                 <Controller
                     name="mobileNumber"
                     control={control}
@@ -47,7 +47,7 @@ export default function Index() {
                     )}
                 />
             </FormField>
-            <FormField icon={<MailIcon className="w-[18]" />} isError={errors.email} errorMessage={errors?.email?.message} title="ایمیل">
+            <FormField icon={<MailIcon className="w-[18px]" />} isError={errors.email} errorMessage={errors?.email?.message} title="ایمیل">
                 <Controller
                     name="email"
                     control={control}
@@ -57,7 +57,7 @@ export default function Index() {
                 />
             </FormField>
             <div className="xl:col-span-2">
-                <FormField icon={<MailIcon className="w-[18]" />} isError={errors.description} errorMessage={errors?.description?.message} title="توضیحات">
+                <FormField icon={<MailIcon className="w-[18px]" />} isError={errors.description} errorMessage={errors?.description?.message} title="توضیحات">
                     <Controller
                         name="description"
                         control={control}
