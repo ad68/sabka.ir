@@ -467,7 +467,7 @@ export const menus: any = [
         children: [
 
             { title: "گالری تصاویر", href: "#" },
-            { title: "گالری فیلم", href: "#" },
+            { title: "گالری فیلم", href: "/videos" },
 
         ]
     },
