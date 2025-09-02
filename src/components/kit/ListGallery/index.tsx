@@ -4,32 +4,22 @@ import LightBox from "./components/LightBox";
 import "./style/style.css";
 import Image from "next/image";
 import More from "./icons/more.svg";
-//
-// ────────────────────────────────────────────────────────── I ──────────
-//   :::::: C O M P O N E N T : :  :   :    :     :        :          :
-// ────────────────────────────────────────────────────────────────────
-//
+
 
 export default function ListGallery({ slides }: any) {
-  // ─── Global Variable ────────────────────────────────────────────────────────────
 
-  // ─── States ─────────────────────────────────────────────────────────────────────
   const [activeSlide, setActiveSlide] = useState(0);
   const [lightBox, setLightBox] = useState(false);
-  // ─── Functions ──────────────────────────────────────────────────────────────────
+
   const closeLightBox = () => {
     setLightBox(false);
     setActiveSlide(0);
   };
-  // ─── Life Cycle ─────────────────────────────────────────────────────────────────
+
   useEffect(() => {
     console.log(activeSlide, "activeSlide")
   }, [activeSlide])
-  //
-  // ──────────────────────────────────────────────────── I ──────────
-  //   :::::: R E N D E R : :  :   :    :     :        :          :
-  // ──────────────────────────────────────────────────────────────
-  //
+
   return (
     <section dir="rtl" className="w-full">
       <section className=" relative w-full rounded-lg p-4">

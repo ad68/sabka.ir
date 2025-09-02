@@ -460,13 +460,13 @@ export const menus: any = [
     },
     {
         title: "سامانه جامع",
-        href: "#",
+        href: "https://cs.sabka.ir/Login.aspx",
     },
     {
         title: "چندرسانه ای",
         children: [
 
-            { title: "گالری تصاویر", href: "#" },
+            { title: "گالری تصاویر", href: "/photo-gallery" },
             { title: "گالری فیلم", href: "/videos" },
 
         ]
@@ -483,7 +483,7 @@ export const menus: any = [
     },
     {
 
-        title: "قانون شفافیت قوای یگانه",
+        title: "قانون شفافیت قوای سه کانه",
         children: [
             { title: "اطلاعات مدیران و کارکنان", href: "/employee-info" },
 
