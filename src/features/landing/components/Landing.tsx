@@ -18,9 +18,9 @@ export default function Index() {
             </section>
             <ThirdSection />
             <FourthSection />
-            <PerformanceSection />
+            {/*  <PerformanceSection /> */}
             {/*   <MostViewsSection /> */}
-            <Slider />
+            {/* <Slider /> */}
             <ElectronicServices />
             <MapSection />
             {/*   <RecentNewsSection /> */}

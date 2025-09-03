@@ -34,7 +34,7 @@ export default function Index() {
                                     کشاورزی، ستون خودکفایی ملی
                                     <LeafIcon className="w-5 h-5" />
                                 </span>
-                                <p className="text-xl font-bold">بیمه بانک کشاورزی</p>
+                                {/*  <p className="text-xl font-bold">بیمه بانک کشاورزی</p> */}
                             </div>
                         </div>
 
