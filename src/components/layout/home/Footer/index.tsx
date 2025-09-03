@@ -10,6 +10,10 @@ import Image from "next/image";
 import { news } from "@/constant/global";
 import { NewsDetail } from "@/features/newsDetail/types";
 import Link from "next/link";
+import { TelegramIcon } from "@/assets/icons/TelegramIcon";
+import { InstagramIcon } from "@/assets/icons/InstagramIcon";
+
+import { WhatsappIcon } from "@/assets/icons/WhatsappIcon";
 export default function Index() {
     return (
         <footer
@@ -50,13 +54,25 @@ export default function Index() {
                                 تهران - خیابان شهید دکتر حبیب الهی - خیابان یکم دریان نو (سروش یکم) - تقاطع زنجان شمالی - پلاک 58
                             </p>
                             <a href="tel:64009000" className="flex gap-2 items-center text-sm">
-                                <PhoneIcon className="w-5 h-5" />
+                                <PhoneIcon className="w-5 h-5 text-primary" />
                                 64009000
                             </a>
                             <p className="flex gap-2 items-center text-sm">
                                 <FaxIcon className="w-5 h-5" />
                                 66408715
                             </p>
+                            <div className="flex gap-2">
+                                <Link href="#">
+                                    <TelegramIcon className="text-primary" />
+                                </Link>
+                                <Link href="#">
+                                    <InstagramIcon className="text-primary" />
+                                </Link>
+                                <Link href="#">
+                                    <WhatsappIcon className="text-primary" />
+                                </Link>
+
+                            </div>
                         </div>
 
                         {/* Useful Links 1 */}
@@ -109,7 +125,6 @@ export default function Index() {
                                         <Link href={"/news/" + item.id}>{item.title}</Link>
                                     </li>
                                 ))}
-
                             </ul>
                         </div>
                     </section>

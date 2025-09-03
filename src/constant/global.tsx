@@ -471,16 +471,7 @@ export const menus: any = [
 
         ]
     },
-    {
-        title: "ویژه همکاران",
-        children: [
-            { title: "سامانه جامع", href: "https://cs.sabka.ir/Login.aspx" },
-            { title: "اپلیکیشن ارزیابان", href: "https://bakapp.ir" },
-            { title: "امداد رایانه", href: "http://itreq.sbkiran.ir/" },
-            { title: "پست الکترونیک", href: "http://mail.sbkiran.ir/" },
-            { title: "سیمای مهر", href: "https://didgah.bki.ir/" },
-        ]
-    },
+
     {
 
         title: "قانون شفافیت قوای سه کانه",
@@ -505,6 +496,16 @@ export const menus: any = [
             {
                 title: "فرایند اخذ مجوز ها و پروانه فعالیت", href: "https://mojavez.ir/"
             },
+        ]
+    },
+    {
+        title: "ویژه همکاران",
+        children: [
+            { title: "سامانه جامع", href: "https://cs.sabka.ir/Login.aspx" },
+            { title: "اپلیکیشن ارزیابان", href: "https://bakapp.ir" },
+            { title: "امداد رایانه", href: "http://itreq.sbkiran.ir/" },
+            { title: "پست الکترونیک", href: "http://mail.sbkiran.ir/" },
+            { title: "سیمای مهر", href: "https://didgah.bki.ir/" },
         ]
     },
     {
