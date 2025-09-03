@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import LightBox from "./components/LightBox";
 import "./style/style.css";
 import Image from "next/image";
-import More from "./icons/more.svg";
 
 
 export default function ListGallery({ slides }: any) {

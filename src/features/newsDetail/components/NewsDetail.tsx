@@ -5,7 +5,7 @@ import Leaf from '@/assets/img/contactUs/leaf.png'
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import useNewsDetail from "../hook/useNewsDetail";
-import CustomGallery from "@/components/kit/Gallery";
+import CustomGallery from "@/components/kit/CustomGallery";
 export default function Index() {
     const { val, setVal, currentNews } = useNewsDetail()
     return (
