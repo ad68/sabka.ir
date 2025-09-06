@@ -474,8 +474,8 @@ const items = [
 export default function Index() {
     const [openItemIndex, setOpenItemIndex] = useState(0);
     return (
-        <section className='w-full gap-2 mb-[100px]'>
-            <p className='text-[#284D2C] text-xl md:text-3xl text-center max-w-4xl mx-auto font-bold md:text-right'>قوانین و مقررات بیمه کشاورزی</p>
+        <section className='w-full max-w-6xl m-auto rounded-2xl p-4 gap-2 mb-[100px] border border-primary bg-slate-100'>
+            <p className='text-[#284D2C] w-full text-xl md:text-3xl text-center max-w-4xl mx-auto font-bold py-3'>قوانین و مقررات بیمه کشاورزی</p>
             <ul className='w-full flex flex-col gap-2 mt-5 justify-center items-center max-w-4xl mx-auto '>
                 {items.map((item, i) => (
                     <li key={i} className="w-full cursor-pointer p-2 transition-transform duration-500 ease-in-out py-2" onClick={() => setOpenItemIndex(i === openItemIndex ? -1 : i)}>
