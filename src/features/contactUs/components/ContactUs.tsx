@@ -19,7 +19,7 @@ export default function Index() {
                 <div className="mt-[22px] grid xl:grid-cols-2 gap-[15px]">
                     <ListItem>تلفن : <a href={`tel: 64009000`}>64009000</a></ListItem>
                     <ListItem>دورنگار :  66557715</ListItem>
-                    <ListItem>سامانه پيام كوتاه :20004882</ListItem>
+                    <ListItem>سامانه پيام كوتاه :66557715</ListItem>
                     <ListItem>صندوق پستی :   3365-14155</ListItem>
                     <ListItem>پست الکترونیک 1 :
                         <a href={`mailto:info@sbkiran.ir`}>info@sbkiran.ir</a>

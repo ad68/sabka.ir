@@ -6,14 +6,15 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import useNewsDetail from "../hook/useNewsDetail";
 import CustomGallery from "@/components/kit/CustomGallery";
+import Link from "next/link";
 export default function Index() {
     const { val, setVal, currentNews } = useNewsDetail()
     return (
         <section className="xl:w-[1140px] mb-20 h-auto relative m-auto rounded-xl xl:mt-10 min-h-10 max-w-full">
-            <div className="w-full xl:h-[60px] bg-primary p-4 xl:p-0">
+            <div className="w-full rounded-xl overflow-hidden xl:h-[60px] bg-primary p-4 xl:p-0">
                 <Image src="/assets/img/news/news-header.png" className="absolute hidden xl:block rounded-lg  z-0 top-0 w-full xl:h-[60px]" width={1400} height={300} alt="" />
                 <div className="w-full h-full px-[81px] z-30 relative flex flex-col xl:flex-row  justify-between items-center">
-                    <Image src="/assets/img/news/hand.png" className="w-[45px] h-[45px] hidden xl:block" width={111} height={111} alt="" />
+
                     <span className="text-white text-lg font-medium">تعداد بازدید :{currentNews?.view}</span>
                     <span className="text-white text-lg font-medium">تاريخ :{currentNews?.date}</span>
                     <span className="text-white text-lg font-medium">ساعت : {currentNews?.time}</span>
@@ -50,21 +51,23 @@ export default function Index() {
             </article>
             <footer className="mt-[56px] flex flex-col xl:flex-row items-center justify-between">
                 <div className="flex items-center gap-[17px]">
-                    <Rating style={{ maxWidth: 110 }} value={val} onChange={setVal} />
+                    {/*  <Rating style={{ maxWidth: 110 }} value={val} onChange={setVal} /> */}
                     <span className="text-lg font-medium">امتیاز : 1.00 </span>
                     <span className="text-lg font-medium">مجموع : 1 </span>
                 </div>
                 <div className="flex gap-[12px]">
-                    <button className="bg-primary hover:shadow-xl hover:bg-[#35663ac7]  transition-all w-[150px] h-[40px] text-white font-medium rounded-[8px] flex justify-center items-center gap-[8px]">
+                    {/*   <button className="bg-primary hover:shadow-xl hover:bg-[#35663ac7]  transition-all w-[150px] h-[40px] text-white font-medium rounded-[8px] flex justify-center items-center gap-[8px]">
                         <DownloadCloud className="w-[20px]" />
                         دانلود ضمیمه
-                    </button>
+                    </button> */}
                     <button className="bg-primary hover:shadow-xl hover:bg-[#35663ac7]  transition-all w-[52px] h-[40px] text-white font-medium rounded-[8px] flex justify-center items-center gap-[8px]">
                         <PrinterIcon className="w-[20px]" />
                     </button>
-                    <button className="bg-primary hover:shadow-xl hover:bg-[#35663ac7]  transition-all w-[52px] h-[40px] text-white font-medium rounded-[8px] flex justify-center items-center gap-[8px]">
-                        <Undo2Icon className="w-[20px]" />
-                    </button>
+                    <Link href="/news">
+                        <button className="bg-primary hover:shadow-xl hover:bg-[#35663ac7]  transition-all w-[52px] h-[40px] text-white font-medium rounded-[8px] flex justify-center items-center gap-[8px]">
+                            <Undo2Icon className="w-[20px]" />
+                        </button>
+                    </Link>
                 </div>
             </footer>
         </section>

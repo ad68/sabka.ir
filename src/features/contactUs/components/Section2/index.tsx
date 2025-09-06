@@ -18,7 +18,7 @@ export default function Index() {
                         <div className="mt-[22px] flex flex-col gap-[15px]">
                             <ListItem>تلفن :  64009000</ListItem>
                             <ListItem>دورنگار :  66557715</ListItem>
-                            <ListItem>سامانه پيام كوتاه :20004882</ListItem>
+                            <ListItem>سامانه پيام كوتاه :66557715</ListItem>
                             <ListItem>پست الکترونیک :<br />
                                 info@sbkiran.ir - bimeh-keshavarzi@sbkiran.ir</ListItem>
                             <ListItem>کد دستوری ثبت اعلان خسارت : #64009*6655*</ListItem>

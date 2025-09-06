@@ -6,7 +6,7 @@ import Link from "next/link";
 import { EmailIcon } from "@/assets/icons/EmailIcon";
 import { PhoneIcon } from "@/assets/icons/PhoneIcon";
 import { IranFlag } from "@/assets/icons/IranFlag";
-import { UserIcon } from "@/assets/icons/UserIcon";
+
 import { menus } from "@/constant/global";
 
 export default function Index({ menuClass }: any) {
@@ -27,14 +27,16 @@ export default function Index({ menuClass }: any) {
     return (
         <>
             <nav className="menuBox z-[9998] flex" style={{ backgroundColor: menuClass }}>
-                <div className="wrapper relative bg-[#e9aa1e] w-[80%] h-[80px] items-center xl:flex xl:px-[20px] 2xl:px-[50px]">
+                <div className="wrapper relative bg-[#e9aa1e] w-[80%]   h-[80px] items-center xl:flex xl:px-[20px] 2xl:px-[50px]">
+                    <Image alt="" width={200} height={200} quality={100} className="w-[400px] h-[81px]  right-[165px] opacity-[0.08] z-0 absolute top-0" src="/assets/img/landing/pattern.png" />
+
                     <div className="w-[100px] flex flex-col items-center">
-                        <Link href="/">
-                            <Image width={100} height={100} className="w-[50px]" src="/assets/img/logo.png" alt="logo" />
+                        <Link href="/" className="w-[130px] relative z-10 shadow-xl rounded-b-full px-6 py-10 mt-[80px] flex justify-center border-[3px] border-primary items-center bg-white">
+                            <Image width={100} height={100} className="w-full " src="/assets/img/sandoogh-logo.png" alt="logo" />
                         </Link>
-                        <span className="text-[10px] font-semibold">صندوق بیمه کشاورزی</span>
+                        {/* <span className="text-[10px] font-semibold">صندوق بیمه کشاورزی</span> */}
                     </div>
-                    <ul className="nav-links items-center xl:mr-0 2xl:mr-[70px]">
+                    <ul className="nav-links items-center xl:mr-[20px] 2xl:mr-[70px]">
                         {menus.map((item: any, index: number) => (<li className="mr-3 h-full flex items-center relative 2xl:px-2" key={index}>
                             {item.href && <Link className=" xl:text-xs 2xl:text-[14px] font-bold text-black" href={item.href} >
                                 {item.title}
@@ -94,11 +96,11 @@ export default function Index({ menuClass }: any) {
                 </div>
                 <div className="tri mr-[-1px]"></div>
                 <div className="flex items-center space-x-4">
-                    <a href="sms:20004882" className="flex flex-row items-center gap-1 text-xs px-2 justify-center border-l-[1px] border-l-black">
-                        <span className="font-bold text-[14px]">20004882</span>
+                    <a className="flex flex-row items-center gap-1 text-xs px-2 justify-center border-l-[1px] border-l-black">
+                        <span className="font-bold text-[14px]">66557715</span>
                         <EmailIcon className='text-primary w-[20px] h-[20px]' />
                     </a>
-                    <a href="tel:64009000" className="flex flex-row items-center gap-1 font-bold text-[14px] justify-center px-2">
+                    <a href="tel:02164009000" className="flex flex-row items-center gap-1 font-bold text-[14px] justify-center px-2">
                         <span>64009000</span>
                         <PhoneIcon className='w-[20px] h-[20px] text-primary' />
                     </a>
@@ -106,10 +108,10 @@ export default function Index({ menuClass }: any) {
                         <IranFlag />
                         <span>فا</span>
                     </button>
-                    <button className="flex h-[40px] items-center justify-center bg-[#35663A] text-white px-4 py-[10px] rounded-lg text-sm font-semibold">
+                    {/*   <button className="flex h-[40px] items-center justify-center bg-[#35663A] text-white px-4 py-[10px] rounded-lg text-sm font-semibold">
                         <UserIcon />
                         <span>ورود</span>
-                    </button>
+                    </button> */}
                 </div>
             </nav>
         </>

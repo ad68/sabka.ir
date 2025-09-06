@@ -448,13 +448,13 @@ export const menus: any = [
         ]
     },
     {
-        title: "اخبار",
+        title: "اخبار و اطلاعیه ها",
         children: [
-            { title: "اخبار و اطلاعیه", href: "/news" },
-            { title: "گزیده اخبار", href: "#" },
+
+            { title: "گزیده اخبار", href: "/news" },
             { title: "اخبار استان ها", href: "#" },
             { title: "اطلاعیه ها", href: "#" },
-            { title: "قوانین و مقررات", href: "#" },
+            { title: "نشریه ها", href: "#" },
         ]
 
     },
@@ -466,15 +466,15 @@ export const menus: any = [
         title: "چندرسانه ای",
         children: [
 
-            { title: "گالری تصاویر", href: "/photo-gallery" },
-            { title: "گالری فیلم", href: "/videos" },
+            { title: "آلبوم تصاویر", href: "/photo-gallery" },
+            { title: "آلبوم فیلم ها", href: "/videos" },
 
         ]
     },
 
     {
 
-        title: "قانون شفافیت قوای سه کانه",
+        title: "قانون شفافیت قوای سه گانه",
         children: [
             { title: "اطلاعات مدیران و کارکنان", href: "/employee-info" },
 
@@ -499,7 +499,7 @@ export const menus: any = [
         ]
     },
     {
-        title: "ویژه همکاران",
+        title: "سامانه ها",
         children: [
             { title: "سامانه جامع", href: "https://cs.sabka.ir/Login.aspx" },
             { title: "اپلیکیشن ارزیابان", href: "https://bakapp.ir" },
