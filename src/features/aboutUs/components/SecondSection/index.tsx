@@ -1,10 +1,14 @@
+'use client'
 import Image from "next/image";
 import rightBg from "@/assets/img/landing/third-right-bg.png";
 import leftBg from "@/assets/img/landing/third-left-bg.png";
+import useAboutUs from "../../hooks/useAboutUs";
 
-export default function Index() {
+
+export default function Index({ ref }: any) {
+
     return (
-        <section className='w-full relative flex flex-col md:flex-row gap-2 justify-center items-center p-6 py-[60px]  '>
+        <section ref={ref} className='w-full relative flex flex-col md:flex-row gap-2 justify-center items-center p-6 py-[60px]  '>
             <div className="order-2 xl:order-1">
                 <Image width={400} height={350} alt='' className='w-[100px] xl:w-auto h-auto absolute right-0 top-[-80px]' src={rightBg} />
                 <Image width={400} height={400} alt='' className='w-[100px] xl:w-auto h-auto absolute left-0 top-[-80px]' src={leftBg} />

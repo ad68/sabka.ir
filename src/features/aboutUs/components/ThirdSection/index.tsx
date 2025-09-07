@@ -1,9 +1,9 @@
 import Image from "next/image";
 import ThirdSectionBg from "@/assets/img/about/ThirdSectionbg.png";
 
-export default function Index() {
+export default function Index({ ref }: any) {
     return (
-        <section className='w-full relative flex flex-col xl:flex-row  gap-[57px] justify-center items-center px-[20px] py-[60px] '
+        <section ref={ref} className='w-full relative flex flex-col xl:flex-row  gap-[57px] justify-center items-center px-[20px] py-[60px] '
             style={{ backgroundImage: `url(${ThirdSectionBg.src})` }}
         >
             <section className="w-full xl:w-[525px]">

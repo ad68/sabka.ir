@@ -471,10 +471,10 @@ const items = [
     { title: 'آئین نامه اجرایی تبصره 8', detail: rule3, id: 3 },
     { title: 'آئین نامه بیمه کشاورزی', detail: rule4, id: 4 },
 ]
-export default function Index() {
+export default function Index({ ref }: any) {
     const [openItemIndex, setOpenItemIndex] = useState(0);
     return (
-        <section className='w-full max-w-6xl m-auto rounded-2xl p-4 gap-2 mb-[100px] border border-primary bg-slate-100'>
+        <section ref={ref} className='w-full max-w-6xl m-auto rounded-2xl p-4 gap-2 mt-[80px] mb-[100px] border border-primary bg-slate-100'>
             <p className='text-[#284D2C] w-full text-xl md:text-3xl text-center max-w-4xl mx-auto font-bold py-3'>قوانین و مقررات بیمه کشاورزی</p>
             <ul className='w-full flex flex-col gap-2 mt-5 justify-center items-center max-w-4xl mx-auto '>
                 {items.map((item, i) => (

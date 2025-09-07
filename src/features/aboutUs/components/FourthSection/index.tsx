@@ -18,9 +18,9 @@ export function CounterItem(props: { val: string }) {
     )
 }
 
-export default function Index() {
+export default function Index({ ref }: any) {
     return (
-        <section className='w-full px-[20px] xl:px-0 flex flex-col justify-center items-center mt-20 2xl:mt-24'>
+        <section ref={ref} className='w-full px-[20px] xl:px-0 flex flex-col justify-center items-center mt-20 2xl:mt-24'>
             <section className='flex flex-col justify-center items-center gap-10'>
                 <h3 className='text-2xl font-medium xl:font-bold xl:text-4xl  max-w-2xl text-[#284D2C] text-center '>سایر وظایف و حدود عمليات صندوق بر مبنای اساسنامه قانونی به شرح زير است:</h3>
                 <p className='flex  md:flex-row justify-center px-[10px] py-[18px] bg-white items-center md:items-start gap-2 max-w-2xl text-[#284D2C] mb-20'>

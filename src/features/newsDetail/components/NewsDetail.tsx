@@ -1,8 +1,7 @@
 'use client'
-import { DownloadCloud, Link2Icon, MinusIcon, Paperclip, PlusIcon, PrinterIcon, Undo2Icon } from "lucide-react"
+import { Link2Icon, MinusIcon, Paperclip, PlusIcon, PrinterIcon, Undo2Icon } from "lucide-react"
 import Image from "next/image"
 import Leaf from '@/assets/img/contactUs/leaf.png'
-import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import useNewsDetail from "../hook/useNewsDetail";
 import CustomGallery from "@/components/kit/CustomGallery";
@@ -14,10 +13,9 @@ export default function Index() {
             <div className="w-full rounded-xl overflow-hidden xl:h-[60px] bg-primary p-4 xl:p-0">
                 <Image src="/assets/img/news/news-header.png" className="absolute hidden xl:block rounded-lg  z-0 top-0 w-full xl:h-[60px]" width={1400} height={300} alt="" />
                 <div className="w-full h-full px-[81px] z-30 relative flex flex-col xl:flex-row  justify-between items-center">
-
-                    <span className="text-white text-lg font-medium">تعداد بازدید :{currentNews?.view}</span>
                     <span className="text-white text-lg font-medium">تاريخ :{currentNews?.date}</span>
                     <span className="text-white text-lg font-medium">ساعت : {currentNews?.time}</span>
+                    <span className="text-white text-lg font-medium">تعداد بازدید :{currentNews?.view}</span>
                     <div className="flex justify-between text-white gap-[20px]">
                         <PlusIcon className="cursor-pointer" />
                         <MinusIcon className="cursor-pointer" />
