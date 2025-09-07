@@ -1,6 +1,5 @@
 "use client";
 /* import { CurveArrowIconTwo } from "@/assets/icons/CurveArrowIconTwo"; */
-
 import { LeafIcon } from "@/assets/icons/LeafIcon";
 /* import { RightArrowIcon } from "@/assets/icons/RightArrowIcon"; */
 /* import EventItem from "@/features/landing/components/events/components/item/Item";

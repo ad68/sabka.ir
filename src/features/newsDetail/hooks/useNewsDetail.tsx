@@ -1,5 +1,5 @@
 'use client'
-import { useParams } from "next/navigation"
+import { useParams, usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 import { NewsDetail } from "../types"
 import { news } from "@/constant/global"
@@ -10,7 +10,7 @@ const useNewsDetail = () => {
     const [currentUrl, setCurrentUrl] = useState<string>()
     const [text, setText] = useState<string>()
     const [currentNews, setCurrentNews] = useState<NewsDetail>()
-
+    const pathName = usePathname()
 
     const sharePage = () => {
         if (typeof window === "undefined") return null;
@@ -31,13 +31,14 @@ const useNewsDetail = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [newsId])
     useEffect(() => {
-        console.log("currentNews", currentNews)
-    }, [currentNews])
+        console.log("pathName", pathName)
+    }, [pathName])
     return {
         currentNews,
         handlePrint,
         currentUrl,
-        text
+        text,
+        pathName
     }
 }
 export default useNewsDetail

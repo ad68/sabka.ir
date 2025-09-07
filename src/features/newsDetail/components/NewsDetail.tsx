@@ -1,9 +1,9 @@
 'use client'
-import { PrinterIcon, Undo2Icon } from "lucide-react"
+import { CopyIcon, PrinterIcon, Undo2Icon } from "lucide-react"
 import Image from "next/image"
 import Leaf from '@/assets/img/contactUs/leaf.png'
 import "@smastrom/react-rating/style.css";
-
+import CopyToClipboard from "react-copy-to-clipboard";
 import CustomGallery from "@/components/kit/CustomGallery";
 import Link from "next/link";
 import { PdfIcon } from "@/assets/icons/PdfIcon";
@@ -12,7 +12,8 @@ import { EitaaIcon } from "@/assets/icons/EitaaIcon";
 import { SoroushIcon } from "@/assets/icons/SoroushIcon";
 import useNewsDetail from "../hooks/useNewsDetail";
 export default function Index() {
-    const { currentNews, handlePrint, currentUrl, text } = useNewsDetail()
+    const { currentNews, handlePrint, currentUrl, text, pathName } = useNewsDetail()
+
     return (
         <section className="xl:w-[1140px] mb-20 h-auto relative m-auto rounded-xl xl:mt-10 min-h-10 max-w-full">
             <div className="w-full rounded-xl overflow-hidden xl:h-[60px] bg-primary p-4 xl:p-0">
@@ -55,8 +56,8 @@ export default function Index() {
                     </div>
                 </div>
             </article>
-            <footer className="mt-[56px] flex flex-col xl:flex-row items-center justify-between">
-                <div className="flex items-center gap-[17px]">
+            <footer className="mt-[56px] clear-both  flex flex-col xl:flex-row items-center justify-between">
+                <div className="items-center gap-[17px] hidden xl:flex">
                     <span>کلمات کلیدی:</span>
                     <section className="flex gap-2 justify-center">
                         <div className="px-3 py-2 rounded-lg bg-slate-200">سرمایه‌گذاری</div>
@@ -92,6 +93,18 @@ export default function Index() {
                     </Link>
                 </div>
             </footer>
+            <section>
+                <CopyToClipboard text={window.location.href} onCopy={() => console.log(true)}>
+                    <div className="flex justify-center m-auto mt-5 gap-2 border w-[300px] p-2 items-center">
+                        <input type="text" className="w-[280px]" value={window.location.href} onChange={() => { }} />
+                        <button className="flex gap-1" type="button">
+                            <CopyIcon />
+                            کپی
+                        </button>
+                    </div>
+
+                </CopyToClipboard>
+            </section>
         </section>
     )
 }
