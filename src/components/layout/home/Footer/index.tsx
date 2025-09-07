@@ -28,10 +28,10 @@ export default function Index() {
                     <section className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6">
                         {/* Logo + Slogan */}
                         <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 w-full md:w-1/3">
-                            <div className="w-[100px] flex flex-col items-center">
-                                <Image width={100} height={100} className="w-[70px]" src="/assets/img/logo.png" alt="logo" />
-                                <span className="text-[10px] font-semibold">صندوق بیمه کشاورزی</span>
-                            </div>
+                            <Link href="#" className="w-[100px] flex flex-col items-center">
+                                <Image width={100} height={100} className="w-[80px]" src="/assets/img/sandoogh-logo.png" alt="logo" />
+
+                            </Link>
                             <div className="flex flex-col items-center md:items-start gap-3 text-center md:text-right">
                                 <span className="flex flex-row gap-2 items-center">
                                     کشاورزی، ستون خودکفایی ملی
@@ -62,7 +62,7 @@ export default function Index() {
                             </a>
                             <p className="flex gap-2 items-center text-sm">
                                 <FaxIcon className="w-5 h-5" />
-                                66408715
+                                66557715
                             </p>
                             <div className="flex gap-2">
                                 <Link href="#">
@@ -135,7 +135,7 @@ export default function Index() {
                     {/* Bottom Section */}
                     <div className="border-t border-gray-300 pt-4 text-sm text-gray-600">
                         <div className="flex flex-col md:flex-row justify-between items-center gap-2 px-4">
-                            <span>© ۲۰۲۵ کلیه حقوق متعلق به صندوق بیمه کشاورزی می‌باشد</span>
+                            <span>کلیه حقوق این سایت متعلق به صندوق بیمه کشاورزی می باشد | اداره کل فناوری اطلاعات</span>
                             <span>طراحی و توسعه توسط شرکت دانش بنیان سناپ</span>
                         </div>
                     </div>

@@ -3,8 +3,9 @@ import Link from "next/link";
 import { ArrowRTLIcon } from "@/assets/icons/ArrowRTL";
 import Image from "next/image";
 import { useIsMobile } from "@/features/products/hooks/useIsMobile";
+import { Calendar1Icon } from "lucide-react";
 
-export default function Index({ title, id, imgUrl }: any) {
+export default function Index({ title, id, imgUrl, date }: any) {
     const isMobile = useIsMobile();
     return (
         <>
@@ -24,8 +25,11 @@ export default function Index({ title, id, imgUrl }: any) {
                 </Link >
             ) : (
                 <Link href={`/news/` + id}>
-                    <section className='group flex flex-col items-center justify-center p-2 w-[300px] h-[300px] xl:w-[365px] xl:h-[365px] rounded-2xl bg-white hover:bg-[#7BB28033] group  transition-all duration-500 cursor-pointer'>
-                        <section className='flex flex-row justify-between items-center p-4'>
+                    <section className='group flex flex-col items-center relative justify-center p-2 w-[300px] h-[300px] xl:w-[365px] xl:h-[365px] rounded-2xl bg-white hover:bg-[#7BB28033] group  transition-all duration-500 cursor-pointer'>
+                        <section className='flex flex-row justify-between items-center p-4 '>
+                            <span className="absolute top-2 text-sm left-6 flex items-center gap-1">
+                                <Calendar1Icon className="w-[16px] text-secondary" />
+                                <span>تاریخ : {date}</span></span>
                             <p className='w-[85%] font-bold text-sm'>{title}</p>
                             <div className='w-[38px] h-[38px] p-2 flex justify-center items-center rounded-md bg-[#35663A] text-white group-hover:bg-[#E9AA1E]  transition-all duration-500 cursor-pointer'>
                                 <ArrowRTLIcon className="w-[10px]" />

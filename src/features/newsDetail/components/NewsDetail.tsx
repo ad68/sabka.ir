@@ -1,26 +1,34 @@
 'use client'
-import { Link2Icon, MinusIcon, Paperclip, PlusIcon, PrinterIcon, Undo2Icon } from "lucide-react"
+import { PrinterIcon, Undo2Icon } from "lucide-react"
 import Image from "next/image"
 import Leaf from '@/assets/img/contactUs/leaf.png'
 import "@smastrom/react-rating/style.css";
-import useNewsDetail from "../hook/useNewsDetail";
+
 import CustomGallery from "@/components/kit/CustomGallery";
 import Link from "next/link";
+import { PdfIcon } from "@/assets/icons/PdfIcon";
+import { BaleIcon } from "@/assets/icons/BaleIcon";
+import { EitaaIcon } from "@/assets/icons/EitaaIcon";
+import { SoroushIcon } from "@/assets/icons/SoroushIcon";
+import useNewsDetail from "../hooks/useNewsDetail";
 export default function Index() {
-    const { val, setVal, currentNews } = useNewsDetail()
+    const { currentNews, handlePrint, currentUrl, text } = useNewsDetail()
     return (
         <section className="xl:w-[1140px] mb-20 h-auto relative m-auto rounded-xl xl:mt-10 min-h-10 max-w-full">
             <div className="w-full rounded-xl overflow-hidden xl:h-[60px] bg-primary p-4 xl:p-0">
-                <Image src="/assets/img/news/news-header.png" className="absolute hidden xl:block rounded-lg  z-0 top-0 w-full xl:h-[60px]" width={1400} height={300} alt="" />
                 <div className="w-full h-full px-[81px] z-30 relative flex flex-col xl:flex-row  justify-between items-center">
                     <span className="text-white text-lg font-medium">تاريخ :{currentNews?.date}</span>
                     <span className="text-white text-lg font-medium">ساعت : {currentNews?.time}</span>
                     <span className="text-white text-lg font-medium">تعداد بازدید :{currentNews?.view}</span>
-                    <div className="flex justify-between text-white gap-[20px]">
-                        <PlusIcon className="cursor-pointer" />
-                        <MinusIcon className="cursor-pointer" />
-                        <Link2Icon className="cursor-pointer" />
-                        <Paperclip className="cursor-pointer" />
+                    <div className="flex justify-between items-center text-white gap-[20px]">
+                        <button onClick={handlePrint} className="w-[40px] h-[40px] flex justify-center items-center rounded-full transition-all hover:bg-[#ffffff47]">
+                            <PrinterIcon className="cursor-pointer w-[28px]" />
+                        </button>
+                        <button className="w-[40px] h-[40px] flex justify-center items-center rounded-full  transition-all hover:bg-[#ffffff47]">
+                            <PdfIcon className="cursor-pointer w-[28px]" />
+                        </button>
+
+
                     </div>
                 </div>
             </div>
@@ -49,18 +57,34 @@ export default function Index() {
             </article>
             <footer className="mt-[56px] flex flex-col xl:flex-row items-center justify-between">
                 <div className="flex items-center gap-[17px]">
-                    {/*  <Rating style={{ maxWidth: 110 }} value={val} onChange={setVal} /> */}
-                    <span className="text-lg font-medium">امتیاز : 1.00 </span>
-                    <span className="text-lg font-medium">مجموع : 1 </span>
+                    <span>کلمات کلیدی:</span>
+                    <section className="flex gap-2 justify-center">
+                        <div className="px-3 py-2 rounded-lg bg-slate-200">سرمایه‌گذاری</div>
+                        <div className="px-3 py-2 rounded-lg bg-slate-200">تجهیزات</div>
+                        <div className="px-3 py-2 rounded-lg bg-slate-200">راهكارهای نوین</div>
+                    </section>
                 </div>
-                <div className="flex gap-[12px]">
-                    {/*   <button className="bg-primary hover:shadow-xl hover:bg-[#35663ac7]  transition-all w-[150px] h-[40px] text-white font-medium rounded-[8px] flex justify-center items-center gap-[8px]">
-                        <DownloadCloud className="w-[20px]" />
-                        دانلود ضمیمه
-                    </button> */}
-                    <button className="bg-primary hover:shadow-xl hover:bg-[#35663ac7]  transition-all w-[52px] h-[40px] text-white font-medium rounded-[8px] flex justify-center items-center gap-[8px]">
-                        <PrinterIcon className="w-[20px]" />
-                    </button>
+                <div className="flex items-center gap-[12px]">
+
+                    <div className="flex gap-2 items-center mt-2">
+                        <a target="_blank" href={`https://bale.ai/share/url?text=${text}&url=${currentUrl}`}>
+                            <button>
+                                <BaleIcon className="w-[30px] text-secondary hover:text-primary transition-all" />
+                            </button>
+                        </a>
+                        <a target="_blank" href={`https://eitaa.com/share/url?text=${text}&url=${currentUrl}`}>
+                            <button>
+                                <EitaaIcon className="w-[30px] text-secondary hover:text-primary transition-all" />
+                            </button>
+                        </a>
+                        <a target="_blank" href={`https://splus.ir/share/url?text=${text}&url=${currentUrl}`}>
+                            <button>
+                                <SoroushIcon className="w-[30px] text-secondary hover:text-primary transition-all" />
+                            </button>
+                        </a>
+                    </div>
+
+
                     <Link href="/news">
                         <button className="bg-primary hover:shadow-xl hover:bg-[#35663ac7]  transition-all w-[52px] h-[40px] text-white font-medium rounded-[8px] flex justify-center items-center gap-[8px]">
                             <Undo2Icon className="w-[20px]" />

@@ -4,8 +4,8 @@ import ThirdSection from './ThirdSection';
 import FourthSection from './FourthSection';
 import FifthSection from './FifthSection';
 import SixSection from './SixSecction';
-import SevenSection from './SevenSection';
-import EightSection from './EightSection';
+/* import SevenSection from './SevenSection';
+import EightSection from './EightSection'; */
 import NineSection from './NineSection';
 import ScrollToSection from './ScrollToSection';
 import useAboutUs from '../hooks/useAboutUs';

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import rightBg from "@/assets/img/landing/third-right-bg.png";
 import leftBg from "@/assets/img/landing/third-left-bg.png";
-import useAboutUs from "../../hooks/useAboutUs";
+/* import useAboutUs from "../../hooks/useAboutUs"; */
 
 
 export default function Index({ ref }: any) {
