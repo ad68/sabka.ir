@@ -12,7 +12,7 @@ import { EitaaIcon } from "@/assets/icons/EitaaIcon";
 import { SoroushIcon } from "@/assets/icons/SoroushIcon";
 import useNewsDetail from "../hooks/useNewsDetail";
 export default function Index() {
-    const { currentNews, handlePrint, currentUrl, text, pathName } = useNewsDetail()
+    const { currentNews, handlePrint, currentUrl, text } = useNewsDetail()
 
     return (
         <section className="xl:w-[1140px] mb-20 h-auto relative m-auto rounded-xl xl:mt-10 min-h-10 max-w-full">
