@@ -1,3 +1,4 @@
+"use client"
 import FooterBg from "@/assets/img/footer/FooterBg.png";
 
 import { LeafIcon } from "@/assets/icons/LeafIcon";
@@ -14,9 +15,11 @@ import { TelegramIcon } from "@/assets/icons/TelegramIcon";
 import { InstagramIcon } from "@/assets/icons/InstagramIcon";
 
 import { WhatsappIcon } from "@/assets/icons/WhatsappIcon";
+import { usePathname } from "next/navigation";
 export default function Index() {
-    return (
-        <footer
+    const pathName = usePathname()
+    return (<>
+        {!pathName.startsWith("/login") && <footer
             className="w-full bg-gradient-to-r from-white via-[#e9aa1e] to-white  bg-cover pt-[5px] bg-no-repeat bg-center  overflow-hidden"
         >
             <div className="w-full h-full bg-white p-6 md:p-10 lg:p-10 bg-no-repeat bg-left-bottom xl:bg-repeat" style={{ backgroundImage: `url(${FooterBg.src})` }}>
@@ -139,6 +142,9 @@ export default function Index() {
                 </div>
             </div>
 
-        </footer>
+        </footer>}
+    </>
+
+
     );
 }

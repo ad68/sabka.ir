@@ -22,27 +22,21 @@ const useAboutUs = () => {
     };
     const goToSection1 = () => {
         scrollToTop()
-        /*   setActiveSection(1) */
     }
     const goToSection2 = () => {
         scrollToSection(section2Ref)
-        /* setActiveSection(2) */
     }
 
     const goToSection3 = () => {
         scrollToSection(section3Ref)
-        /*  setActiveSection(3) */
     }
 
     const goToSection4 = () => {
         scrollToSection(section4Ref)
-        /*   setActiveSection(4) */
-
     }
 
     const goToSection5 = () => {
         scrollToSection(section5Ref)
-        /* setActiveSection(5) */
     }
     useEffect(() => {
         const handleScroll = () => {
@@ -65,7 +59,7 @@ const useAboutUs = () => {
         if (offset > 2250 && offset < 4289) {
             setActiveSection(4)
         }
-        if (offset > 3780) {
+        if (offset > 3700) {
             setActiveSection(5)
         }
 

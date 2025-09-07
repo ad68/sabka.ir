@@ -196,6 +196,7 @@ nav.menuBox {
   top: 95px;
   opacity: 0;
   visibility: hidden;
+  z-index: 100;
 }
 .mega-box .content {
   background: white;
