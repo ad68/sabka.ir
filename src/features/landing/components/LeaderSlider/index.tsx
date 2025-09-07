@@ -1,8 +1,6 @@
 "use client";
 /* import { CurveArrowIconTwo } from "@/assets/icons/CurveArrowIconTwo"; */
-import Link from "next/link";
-/* import { ArrowTLIcon } from "@/assets/icons/ArrowTLIcon"; */
-import { LeftArrowIcon } from "@/assets/icons/LeftArrowIcon";
+
 import { LeafIcon } from "@/assets/icons/LeafIcon";
 /* import { RightArrowIcon } from "@/assets/icons/RightArrowIcon"; */
 /* import EventItem from "@/features/landing/components/events/components/item/Item";
@@ -80,7 +78,7 @@ export default function Index() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                 },
             },
         ],
@@ -91,7 +89,7 @@ export default function Index() {
             className="relative w-full max-w-sm md:max-w-5xl m-auto mt-[100px] flex flex-row justify-center h-[400px] overflow-hidden">
             <section className="w-full flex flex-col justify-between gap-1  items-center">
                 <section className="w-full flex flex-col gap-1 p-5">
-                    <section className="w-full  flex flex-row justify-between items-center text-sm">
+                    <section className="w-full  flex flex-row justify-center xl:justify-between items-center text-sm">
                         <div className=" ">
 
                             <div className="flex flex-col items-center md:items-start gap-3 text-center md:text-right">
@@ -138,7 +136,7 @@ export default function Index() {
                 </section>
             </section>
 
-            <section className='mr-5'>
+            <section className='mr-5 hidden xl:block'>
                 <EventItem {...eventItems[selectedIndex]} isSelected={true} />
             </section>
         </section>

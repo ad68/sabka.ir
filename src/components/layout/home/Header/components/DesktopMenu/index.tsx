@@ -3,9 +3,7 @@ import { ChevronDown, ChevronsLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 /* import { useEffect } from "react"; */
-import { EmailIcon } from "@/assets/icons/EmailIcon";
-import { PhoneIcon } from "@/assets/icons/PhoneIcon";
-import { IranFlag } from "@/assets/icons/IranFlag";
+
 
 import { menus } from "@/constant/global";
 
