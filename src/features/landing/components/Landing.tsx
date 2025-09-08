@@ -1,6 +1,6 @@
 import FirstSection from './FirstSection'
 import CardSection from './CardSection2'
-/* import ThirdSection from './ThirdSection' */
+import ThirdSection from './ThirdSection'
 import FourthSection from './FourthSection'
 /* import PerformanceSection from "./PerformanceSection" */
 import ElectronicServices from "./ElectronicServices"
@@ -22,8 +22,8 @@ export default function Index() {
                 <CardSection />
             </section>
             <FourthSection />
+            <ThirdSection />
             <LeaderSlider />
-            {/*  <ThirdSection /> */}
             {/*  <PerformanceSection /> */}
             {/*   <MostViewsSection /> */}
             {/* <Slider /> */}
