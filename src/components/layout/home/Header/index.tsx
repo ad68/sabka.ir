@@ -1,10 +1,11 @@
 'use client'
-import useRouteListener from '@/hooks/useRouteListener'
+
 import DesktopMenu from './components/DesktopMenu'
 import MobileMenu from './components/MobileMenu'
 import { useEffect } from 'react'
 import { scrollToTop } from '@/utils'
 import { usePathname } from 'next/navigation'
+import { useRouteListener } from '@/hooks'
 export default function Index() {
     const [routeStatus] = useRouteListener()
     const pathName = usePathname()

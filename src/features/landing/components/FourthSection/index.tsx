@@ -1,67 +1,29 @@
 "use client"
 import React, { useState } from "react";
 import Image from "next/image";
-
 import { LeafIcon } from "@/assets/icons/LeafIcon";
 import { NewsIcon } from "@/assets/icons/NewsIcon";
 import { ImageIcon } from "@/assets/icons/ImageIcon";
 import { FilmIcon } from "@/assets/icons/FilmIcon";
 import { MagazineIcon } from "@/assets/icons/MagazineIcon";
-
-/* import ForthSec1 from "@/assets/img/landing/FourthSec1.png";
-import ForthSec2 from "@/assets/img/landing/FourthSec2.png";
-import ForthSec3 from "@/assets/img/landing/FourthSec3.png";
-import ForthSec5 from "@/assets/img/landing/FourthSec5.png";
-import ForthSec6 from "@/assets/img/landing/FourthSec6.png"; */
-
 import LeafRightBg from '@/assets/img/landing/LeafRightBg.png';
-import FourthSectionItem from "./components/FourthSectionItem";
 import { useIsMobile } from "@/features/products/hooks/useIsMobile";
-import Link from "next/link";
-import { news } from "@/constant/global";
+import News from './components/News'
 
-/* const newsChildren = [
-    { key: 1, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec1, link: '' },
-    { key: 2, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec2, link: '' },
-    { key: 3, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec3, link: '' },
-    { key: 4, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec3, link: '' },
-    { key: 5, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec5, link: '' },
-    { key: 6, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec6, link: '' },
-]; */
+
 
 const tabSection = [
-    { key: 1, title: 'اخبار', icon: NewsIcon, children: news },
-    { key: 2, title: 'تصاویر', icon: ImageIcon, children: [] },
-    { key: 3, title: 'فیلم ها', icon: FilmIcon, children: [] },
-    { key: 4, title: 'نشریات خبری', icon: MagazineIcon, children: [] },
+    { key: 1, title: 'اخبار', icon: NewsIcon, },
+    { key: 2, title: 'تصاویر', icon: ImageIcon, },
+    { key: 3, title: 'فیلم ها', icon: FilmIcon, },
+    { key: 4, title: 'نشریات خبری', icon: MagazineIcon, },
 ];
 
 export default function Index() {
-    const [selectedItem, setSelectedItem] = useState(tabSection[0]);
+
     const [activeTab, setActiveTab] = useState(0);
     const isMobile = useIsMobile();
-    /*  const scrollRef = useRef<HTMLDivElement>(null);
-     const isDragging = useRef(false);
-     const startX = useRef(0);
-     const scrollLeft = useRef(0); */
 
-    /*   const onMouseDown = (e: React.MouseEvent) => {
-          if (!scrollRef.current) return;
-          isDragging.current = true;
-          startX.current = e.pageX - scrollRef.current.offsetLeft;
-          scrollLeft.current = scrollRef.current.scrollLeft;
-      };
-  
-      const onMouseLeave = () => (isDragging.current = false);
-      const onMouseUp = () => (isDragging.current = false);
-  
-      const onMouseMove = (e: React.MouseEvent) => {
-          if (!isDragging.current || !scrollRef.current) return;
-          e.preventDefault();
-          const x = e.pageX - scrollRef.current.offsetLeft;
-          const walk = (x - startX.current) * 1; // scroll speed
-          scrollRef.current.scrollLeft = scrollLeft.current - walk;
-      }; */
 
     return (
         <section className="w-full mt-[80px] relative">
@@ -88,26 +50,20 @@ export default function Index() {
                     {isMobile ? (
                         <section className="bg-[#F5F5F5] w-full h-auto p-2 overflow-scroll">
                             <div
-                                /* ref={scrollRef} */
                                 className="flex gap-2 w-[600px]"
-                            /*  onMouseDown={onMouseDown}
-                             onMouseLeave={onMouseLeave}
-                             onMouseUp={onMouseUp}
-                             onMouseMove={onMouseMove} */
                             >
                                 {tabSection.map((item, idx) => {
-                                    const Icon = item.icon;
+
                                     return (
                                         <li
                                             key={item.key}
                                             onClick={() => {
                                                 setActiveTab(idx);
-                                                setSelectedItem(item);
                                             }}
                                             className={`relative flex group flex-row gap-1 justify-center items-center w-40 rounded-md h-[40px] cursor-pointer flex-shrink-0 ${activeTab === idx ? "bg-[#35663A] text-white" : "bg-white"}`}
                                         >
-                                            <Icon
-                                                color="black"
+                                            <item.icon
+
                                                 className={`${activeTab === idx ? "bg-[#35663A] text-white" : "bg-white"
                                                     } hover:text-white`}
                                             />
@@ -119,25 +75,23 @@ export default function Index() {
                         </section>
                     ) : (
                         <ul className="w-full flex flex-row justify-center items-center bg-[#F5F5F5] rounded-xl p-4 gap-6">
-                            {tabSection.map((tabItem, idx) => {
-                                const Icon = tabItem.icon;
+                            {tabSection.map((item, idx) => {
+
                                 return (
                                     <li
                                         onClick={() => {
-                                            /* alert(idx) */
                                             setActiveTab(idx);
-                                            setSelectedItem(tabItem);
                                         }}
                                         className={`relative flex group flex-row gap-1 justify-center items-center p-5 w-full rounded-md h-[40px] cursor-pointer ${activeTab === idx ? "bg-[#35663A] text-white" : "bg-white"}`}
-                                        key={tabItem.key}
+                                        key={item.key}
                                     >
-                                        <Icon
+                                        <item.icon
                                             color="black"
                                             className={`${activeTab === idx ? "bg-[#35663A] text-[#e9aa1e]" : "bg-white"
                                                 } hover:text-white`}
                                         />
                                         <span className={`${activeTab === idx ? "bg-[#35663A] text-[#e9aa1e]" : "bg-white"}`}>
-                                            {tabItem.title}
+                                            {item.title}
                                         </span>
 
                                     </li>
@@ -145,20 +99,9 @@ export default function Index() {
                             })}
                         </ul>
                     )}
-
-                    <div className="w-full mx-auto grid grid-cols-2 xl:grid-cols-3 gap-3 md:gap-4">
-                        {selectedItem.children.slice(0, 6).map((child, index) => (
-                            <FourthSectionItem {...child} key={index} />
-                        ))}
-                    </div>
-                </div>
-
-                <div className="flex relative z-50 justify-center items-center">
-                    <Link href="/news" className="bg-[#35663A] hover:shadow-xl hover:bg-[#35663ac7]  transition-all flex justify-center items-center rounded-2xl text-white h-[40px] px-3 text-center">
-                        مشاهده بیشتر
-                    </Link>
                 </div>
             </div>
+            <News />
         </section>
     );
 }

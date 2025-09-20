@@ -1,6 +1,8 @@
 export type GlobalResponse<T> = {
-    time_stamp: string
-    error_code: string
-    message: string
-    response: T
+    config: any
+    data: T
+    headers: any
+    request: any
+    status: number,
+    statusText: string
 }
