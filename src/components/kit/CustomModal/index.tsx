@@ -1,10 +1,7 @@
 'use client'
-
 import useModalKit from './modalKit.biz'
 import { ModalProps } from './moadlKit.types'
 import { XIcon } from 'lucide-react'
-
-
 export default function CustomModal({ children, open, onClose, width }: ModalProps) {
   const { modalWrapper, modalOverlay, modalBox, showChildren } =
     useModalKit(open)

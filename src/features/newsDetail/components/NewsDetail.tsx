@@ -13,7 +13,6 @@ import { SoroushIcon } from "@/assets/icons/SoroushIcon";
 import useNewsDetail from "../hooks/useNewsDetail";
 export default function Index() {
     const { currentNews, handlePrint, currentUrl, text } = useNewsDetail()
-
     return (
         <section className="xl:w-[1140px] mb-20 h-auto relative m-auto rounded-xl xl:mt-10 min-h-10 max-w-full">
             <div className="w-full rounded-xl overflow-hidden xl:h-[60px] bg-primary p-4 xl:p-0">
