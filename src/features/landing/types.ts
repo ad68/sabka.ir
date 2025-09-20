@@ -27,6 +27,13 @@ export type News = {
     documentFiles: any,
     metaData: string
 }
+
+export type NewsCardProp = {
+    title: string,
+    id: number,
+    imgUrl: string,
+    date: string
+}
 export type FetchNewsResponse = {
     elements: Array<News>,
     totalElements: number

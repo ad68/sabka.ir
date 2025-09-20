@@ -5,6 +5,6 @@ import Item from './components/Item'
 export default function Index() {
     const { data } = useNews()
     return <>
-        <Item title="ali" id={1} date="ssssss" imageUrl="imgUrl" />
+        {data?.elements.slice(0, 6).map((item, index) => (<Item key={index} title={item.persianTitle2} id={item.id} date={item.createdOn} imgUrl={item.fileUrl} />))}
     </>
 }
