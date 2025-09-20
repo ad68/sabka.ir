@@ -101,7 +101,11 @@ export default function Index() {
                     )}
                 </div>
             </div>
-            <News />
+            <div className="max-w-7xl m-auto">
+                {activeTab === 0 && <News />}
+            </div>
+
+
         </section>
     );
 }

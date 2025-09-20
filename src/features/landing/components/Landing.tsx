@@ -1,7 +1,7 @@
 import FirstSection from './FirstSection'
 import CardSection from './CardSection2'
 import ThirdSection from './ThirdSection'
-import FourthSection from './FourthSection'
+import MediaSection from './MediaSection'
 /* import PerformanceSection from "./PerformanceSection" */
 import ElectronicServices from "./ElectronicServices"
 import MapSection from "./MapSection"
@@ -21,7 +21,7 @@ export default function Index() {
             <section className='xl:mt-[-150px] 2xl:mt-[-150px]'>
                 <CardSection />
             </section>
-            <FourthSection />
+            <MediaSection />
             <ThirdSection />
             <LeaderSlider />
             {/*  <PerformanceSection /> */}
