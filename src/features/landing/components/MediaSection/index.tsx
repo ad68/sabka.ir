@@ -5,6 +5,7 @@ import { LeafIcon } from "@/assets/icons/LeafIcon";
 import LeafRightBg from '@/assets/img/landing/LeafRightBg.png';
 import { useIsMobile } from "@/features/products/hooks/useIsMobile";
 import News from './components/News'
+import Gallery from './components/Gallery'
 import useMediaSection from "../../hooks/useMediaSection";
 export default function Index() {
     const { activeTab, setActiveTab, tabs } = useMediaSection()
@@ -79,8 +80,9 @@ export default function Index() {
                         </ul>
                     )}
                 </div>
-                <div className="w-full mx-auto grid grid-cols-2 xl:grid-cols-3 gap-3 md:gap-4">
+                <div>
                     {activeTab === 0 && <News />}
+                    {activeTab === 1 && <Gallery />}
                 </div>
             </div>
 
