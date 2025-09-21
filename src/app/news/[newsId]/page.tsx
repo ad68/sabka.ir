@@ -10,7 +10,7 @@ const Index: NextPage<IndexProp> = async ({ params }) => {
         return <>
             <NewsDetail data={data} />
         </>
-    } catch () {
+    } catch (err: any) {
         return "eeeee"
     }
 }
