@@ -8,8 +8,8 @@ import { PhoneIcon } from "@/assets/icons/PhoneIcon";
 import { FaxIcon } from "@/assets/icons/FaxIcon";
 import SocialMedia from "@/features/landing/components/SocialMedia";
 import Image from "next/image";
-import { news } from "@/constant/global";
-import { NewsDetail } from "@/features/newsDetail/types";
+/* import { news } from "@/constants/global";
+import { NewsDetail } from "@/features/newsDetail/types"; */
 import Link from "next/link";
 import { TelegramIcon } from "@/assets/icons/TelegramIcon";
 import { InstagramIcon } from "@/assets/icons/InstagramIcon";
@@ -122,13 +122,13 @@ export default function Index() {
                                 <Image width={100} height={100} src="/assets/img/landing/iran-flag.webp" className="w-[55px] h-[55px] xl:w-[80px] xl:h-[80px]" alt="" />
                             </div>
                             <h3 className="font-bold text-lg">آخرین اخبار</h3>
-                            <ul className="text-sm space-y-2 text-right">
+                            {/* <ul className="text-sm space-y-2 text-right">
                                 {news.slice(0, 4).map((item: NewsDetail, index: number) => (
                                     <li key={index}>
                                         <Link href={"/news/" + item.id}>{item.title}</Link>
                                     </li>
                                 ))}
-                            </ul>
+                            </ul> */}
                         </div>
                     </section>
 

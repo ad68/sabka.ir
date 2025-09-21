@@ -1,5 +1,5 @@
 // components/ui/CustomTextBox.tsx
-import React, { forwardRef } from "react";
+import React, { forwardRef, InputHTMLAttributes } from "react";
 import { Input } from "@/components/ui/input";
 
 type CustomTextBoxProps = {
@@ -7,7 +7,7 @@ type CustomTextBoxProps = {
     onChange: (value: string) => void;
     placeholder?: string;
     className?: string;
-};
+} & Omit<InputHTMLAttributes<HTMLInputElement>, "onChange" | "value" | "type">;
 
 const CustomTextBox = forwardRef<HTMLInputElement, CustomTextBoxProps>(
     ({ value, onChange, placeholder, className }, ref) => {

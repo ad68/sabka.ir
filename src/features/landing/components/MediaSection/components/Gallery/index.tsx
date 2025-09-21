@@ -1,5 +1,4 @@
 'use client'
-import useNews from "@/features/landing/hooks/useNews"
 import Item from './components/Item'
 import CustomButton from "@/components/kit/CustomButton"
 import Link from "next/link"

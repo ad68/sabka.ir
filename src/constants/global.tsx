@@ -1,5 +1,5 @@
-import { NewsDetail } from "@/features/newsDetail/types";
-export const news: NewsDetail[] = [
+
+export const news = [
     {
         id: 16,
         imgUrl: "/assets/img/news/news16.jpg",

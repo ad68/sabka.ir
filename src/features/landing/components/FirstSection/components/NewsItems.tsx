@@ -4,7 +4,7 @@
     { key: 2, title: 'گفت‌وگو با مدیران بیمه کشاورزی درباره چالش‌ها و برنامه‌ها', date: '۳ مرداد ۱۴۰۴', link: '' },
     { key: 3, title: 'گفت‌وگو با مدیران بیمه کشاورزی درباره چالش‌ها و برنامه‌ها', date: '۳ مرداد ۱۴۰۴', link: '' },
 ] */
-import { news } from "@/constant/global";
+import { news } from "@/constants/global";
 import { useIsMobile } from "@/features/products/hooks/useIsMobile";
 import Link from "next/link";
 export default function Index() {

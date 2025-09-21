@@ -9,7 +9,7 @@ import { dateToTime, gregorianToJalali } from "@/utils";
 import { ConfigProvider, Pagination } from "antd";
 
 export default function Index() {
-    const { data, error, setCurrentPage, currentPage, total } = useNews()
+    const { data, setCurrentPage, currentPage, total } = useNews()
     return <section className="w-[1140px] mb-20 h-auto relative  m-auto px-[20px] xl:px-0 rounded-xl mt-10 min-h-10 max-w-full">
         <h1 className="text-primary text-[32px] font-bold">آخرین اخبار</h1>
         <ConfigProvider

@@ -11,7 +11,7 @@ const Index: NextPage<IndexProp> = async ({ params }) => {
             <NewsDetail data={data} />
         </>
     } catch (err: any) {
-        return "eeeee"
+        return err
     }
 }
 export default Index

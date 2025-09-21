@@ -1,6 +1,6 @@
 /* import useAuthStore from '@/shared/store/authStore/useAuthStore' */
 import axios, { AxiosInstance } from 'axios'
-import { BASE_URL } from './apiConfig'
+import BASE_URL from './apiConfig'
 export const fetchApi: AxiosInstance = axios.create({
     baseURL: `${BASE_URL}`,
     headers: {
