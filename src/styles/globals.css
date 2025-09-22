@@ -305,3 +305,9 @@ nav.menuBox {
   background: #35663a !important;
   width: 45px !important;
 }
+.slick-arrow::before {
+  display: none;
+}
+.links .slick-list {
+  height: 54px;
+}

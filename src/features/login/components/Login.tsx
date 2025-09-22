@@ -22,7 +22,7 @@ export default function Index() {
                     <span>نام کاربری</span>
                     <div className="relative">
                         <UserIcon className="absolute top-[10px] right-2 text-primary" />
-                        <CustomTextBox placeholder="نام کاربری خود را وراد کنید" className="mt-2 pr-[38px]" onChange={() => { }} />
+                        <CustomTextBox placeholder="نام کاربری خود را وارد کنید" className="mt-2 pr-[38px]" onChange={() => { }} />
                     </div>
                 </div>
                 <div className="relative mt-2">
@@ -40,7 +40,6 @@ export default function Index() {
                         بازگشت به سایت
                         <ArrowLeft />
                     </Link>
-
                 </div>
             </div>
         </section>

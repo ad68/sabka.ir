@@ -8,6 +8,7 @@ import ElectronicServices from "./ElectronicServices"
 import MapSection from "./MapSection"
 import Marquee from './Marquee'
 import LeaderSlider from './LeaderSlider'
+import Links from './Links'
 /* import Slider from "./Slider" */
 /* import RecentNewsSection from "../components/RecentNewsSection/RecentNewsSection"
 import ReportSection from "../components/ReportSection/ReportSection" */
@@ -30,6 +31,7 @@ export default function Index() {
             {/* <Slider /> */}
             <ElectronicServices />
             <MapSection />
+            <Links />
             {/*   <RecentNewsSection /> */}
             {/* <ReportSection /> */}
         </section>
