@@ -12,7 +12,7 @@ import { ComplainIcon } from "@/assets/icons/ComplainIcon";
 import { PortalIcon } from "@/assets/icons/PortalIcon";
 import Link from "next/link";
 import { ArrowRTLIcon } from "@/assets/icons/ArrowRTL";
-import TwoLeavesBg from '@/assets/img/landing/TwoLeavesBg.png';
+
 const items = [
     { title: 'درگاه ملی مجوزها', icon: <CertificateIcon className="text-[#e9aa1e]" />, link: 'https://mojavez.ir/' },
     { title: 'صدور بیمه نامه', icon: <InsuranceLetterIcon className="text-[#e9aa1e]" />, link: 'https://cs.sabka.ir/Login.aspx' },
@@ -26,7 +26,7 @@ const items = [
 export default function Index() {
     return (
         <section className="w-full relative mt-[150px] xl:mt-[180px]">
-            <Image src={TwoLeavesBg} className="hidden xl:block absolute right-0 w-[200px] xl:w-[300px] xl:top-[-300px]" alt="" />
+            <Image width={300} height={300} src="/assets/img/landing/zorat.png" className="hidden xl:block absolute left-0 w-[200px] xl:w-[300px] " alt="" />
             <div
                 className='max-w-6xl m-auto flex flex-row  gap-5 xl:gap-[36px] justify-center items-center px-[20px] xl:px-0'
             >
