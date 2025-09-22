@@ -1,4 +1,4 @@
-import FirstSection from './FirstSection'
+import Hero from './Hero'
 import CardSection from './CardSection2'
 import ThirdSection from './ThirdSection'
 import MediaSection from './MediaSection'
@@ -17,8 +17,8 @@ export default function Index() {
             <section dir='ltr' className='max-w-full'>
                 <Marquee />
             </section>
-            <FirstSection />
-            <section className='xl:mt-[-150px] 2xl:mt-[-150px]'>
+            <Hero />
+            <section className=''>
                 <CardSection />
             </section>
             <MediaSection />

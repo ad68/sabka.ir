@@ -8,9 +8,6 @@ import Header from '@/components/layout/home/Header'
 import Footer from '@/components/layout/home/Footer'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-
-
 export const metadata: Metadata = {
   title: "صندوق بیمه کشاورزی",
   description: "صندوق بیمه کشاورزی",
