@@ -51,7 +51,7 @@ export default function Index() {
     return (
         <section className="max-w-7xl px-5 xl:px-0 m-auto grid xl:grid-cols-3 xl:gap-4 xl:gap-y-[60px]">
             {cardItems.map((item, index) => (
-                <CardItem key={index} title={item.title} icon={item.icon} desc={item.desc} />
+                <CardItem key={index} index={index} title={item.title} icon={item.icon} desc={item.desc} />
             ))}
         </section>
     );
