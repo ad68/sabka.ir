@@ -5,7 +5,7 @@ import Link from "next/link";
 /* import { useEffect } from "react"; */
 
 
-import { menus } from "@/constant/global";
+import { menus } from "@/constants/global";
 
 export default function Index({ menuClass }: any) {
     /*  useEffect(() => {

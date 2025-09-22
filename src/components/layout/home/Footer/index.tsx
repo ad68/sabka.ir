@@ -8,7 +8,7 @@ import { PhoneIcon } from "@/assets/icons/PhoneIcon";
 import { FaxIcon } from "@/assets/icons/FaxIcon";
 import SocialMedia from "@/features/landing/components/SocialMedia";
 import Image from "next/image";
-import { news } from "@/constant/global";
+import { news } from "@/constants/global";
 import { NewsDetail } from "@/features/newsDetail/types";
 import Link from "next/link";
 import { TelegramIcon } from "@/assets/icons/TelegramIcon";

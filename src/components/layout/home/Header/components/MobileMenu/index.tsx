@@ -7,7 +7,7 @@ import Collapse from './components/Collapse'
 import Collapse2Level from './components/Collapse2Level'
 import Image from "next/image";
 import useRouteListener from "@/hooks/useRouteListener";
-import { menus } from "@/constant/global";
+import { menus } from "@/constants/global";
 export default function Index() {
     const [isOpenMenu, setIsOpenMenu] = useState(false)
 

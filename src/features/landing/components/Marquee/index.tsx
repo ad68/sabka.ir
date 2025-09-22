@@ -1,5 +1,5 @@
 
-import { news } from "@/constant/global";
+import { news } from "@/constants/global";
 import { Calendar1Icon } from "lucide-react";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";

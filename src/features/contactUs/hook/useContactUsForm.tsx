@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from 'react-hook-form';
-import { validationMessages } from "@/constant/validationMessage";
+import { validationMessages } from "@/constants/validationMessage";
 import { toastSuccess } from "@/components/kit/toast";
 export const schema = z.object({
     mobileNumber: z

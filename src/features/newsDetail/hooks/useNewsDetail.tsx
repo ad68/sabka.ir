@@ -2,7 +2,7 @@
 import { useParams, usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
 import { NewsDetail } from "../types"
-import { news } from "@/constant/global"
+import { news } from "@/constants/global"
 
 const useNewsDetail = () => {
     const { newsId } = useParams()

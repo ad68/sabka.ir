@@ -18,7 +18,7 @@ import LeafRightBg from '@/assets/img/landing/LeafRightBg.png';
 import FourthSectionItem from "./components/FourthSectionItem";
 import { useIsMobile } from "@/features/products/hooks/useIsMobile";
 import Link from "next/link";
-import { news } from "@/constant/global";
+import { news } from "@/constants/global";
 
 /* const newsChildren = [
     { key: 1, title: 'اصلاح ساختار و توسعه كسب و كار در دستور كار صندوق بیمه كشاورزی', img: ForthSec1, link: '' },

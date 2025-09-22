@@ -2,7 +2,7 @@ import Image from "next/image";
 import Leaf from '@/assets/img/contactUs/leaf.png'
 import Link from "next/link";
 import { Calendar1Icon, EyeIcon, TimerIcon } from "lucide-react";
-import { news } from "@/constant/global";
+import { news } from "@/constants/global";
 import { NewsDetail } from "@/features/newsDetail/types";
 export default function Index() {
     return <section className="w-[1140px] mb-20 h-auto relative  m-auto px-[20px] xl:px-0 rounded-xl mt-10 min-h-10 max-w-full">
