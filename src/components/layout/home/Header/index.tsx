@@ -12,7 +12,7 @@ export default function Index() {
         scrollToTop()
     }, [routeStatus])
     return (<>
-        {!pathName.startsWith("/login") && <header className="h-[60px] xl:h-[84px] z-[200] w-full bg-[#e9aa1e] xl:bg-white fixed top-0 left-0 border-b-[4px] border-b-green-700">
+        {!pathName.startsWith("/login") && <header className="h-[60px] xl:h-[84px] z-[200] w-full bg-[#e9aa1e] xl:bg-white fixed top-0 left-0 border-b-[4px] border-primary">
             <div className="hidden xl:flex m-auto  items-center h-full">
                 <DesktopMenu />
             </div>

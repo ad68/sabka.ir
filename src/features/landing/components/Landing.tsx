@@ -15,11 +15,11 @@ import ReportSection from "../components/ReportSection/ReportSection" */
 export default function Index() {
     return (
         <section className='w-full'>
-            <section dir='ltr' className='max-w-full'>
+            <section dir='ltr' className='max-w-full border-b-[4px] border-primary'>
                 <Marquee />
             </section>
             <Hero />
-            <section className='xl:mt-[-150px] 2xl:mt-[-150px]'>
+            <section>
                 <CardSection2 />
             </section>
             <FourthSection />

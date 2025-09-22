@@ -25,7 +25,7 @@ export default function Index({ menuClass }: any) {
     return (
         <>
             <nav className="menuBox z-[9998] flex" style={{ backgroundColor: menuClass }}>
-                <div className="wrapper relative bg-[#e9aa1e] w-[80%]   h-[80px] items-center xl:flex xl:px-[20px] 2xl:px-[50px]">
+                <div className="wrapper relative bg-secondary w-[80%]   h-[80px] items-center xl:flex xl:px-[20px] 2xl:px-[50px]">
                     <div className="w-[100px] flex flex-col items-center">
                         <Link href="/" className="xl:w-[130px] 2xl:w-[140px] relative z-10 shadow-xl rounded-b-full px-5 2xl:px-3 py-6 mt-[80px] flex justify-center border-[3px] border-primary items-center bg-white">
                             <Image width={100} height={100} className="w-full " src="/assets/img/sandoogh-logo.png" alt="logo" />
