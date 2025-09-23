@@ -1,5 +1,5 @@
 "use client"
-import FooterBg from "@/assets/img/footer/FooterBg.png";
+import FooterBg from "@/assets/img/footer/footer5.png";
 
 import { LeafIcon } from "@/assets/icons/LeafIcon";
 import React from "react";
@@ -8,8 +8,8 @@ import { PhoneIcon } from "@/assets/icons/PhoneIcon";
 import { FaxIcon } from "@/assets/icons/FaxIcon";
 import SocialMedia from "@/features/landing/components/SocialMedia";
 import Image from "next/image";
-import { news } from "@/constants/global";
-import { NewsDetail } from "@/features/newsDetail/types";
+/* import { news } from "@/constants/global";
+import { NewsDetail } from "@/features/newsDetail/types"; */
 import Link from "next/link";
 import { TelegramIcon } from "@/assets/icons/TelegramIcon";
 import { InstagramIcon } from "@/assets/icons/InstagramIcon";
@@ -22,7 +22,7 @@ export default function Index() {
         {!pathName.startsWith("/login") && <footer
             className="w-full bg-gradient-to-r from-white via-[#e9aa1e] to-white  bg-cover pt-[5px] bg-no-repeat bg-center  overflow-hidden"
         >
-            <div className="w-full h-full bg-white p-6 md:p-10 lg:p-10 bg-no-repeat bg-left-bottom xl:bg-repeat" style={{ backgroundImage: `url(${FooterBg.src})` }}>
+            <div className="w-full h-full bg-[#fafafa] p-6 md:p-10 lg:p-10 bg-cover bg-top bg-no-repeat  " style={{ backgroundImage: `url(${FooterBg.src})`, backgroundSize: "100%" }}>
                 <div className="max-w-7xl mx-auto w-full space-y-10 h-full ">
                     {/* Top Section */}
                     <section className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6">
@@ -116,7 +116,7 @@ export default function Index() {
                         </div>
 
                         {/* Useful Links 2 */}
-                        <div className="flex relative flex-col gap-4">
+                        {/*  <div className="flex relative flex-col gap-4">
                             <div className="absolute top-[-20px] xl:top-[-100px] left-0 xl:left-0 flex items-center gap-2">
                                 <Image width={100} height={100} src="/assets/img/landing/slogan.png" className="w-[60px] h-[60px] xl:w-[85px] xl:h-[85px]" alt="" />
                                 <Image width={100} height={100} src="/assets/img/landing/iran-flag.webp" className="w-[55px] h-[55px] xl:w-[80px] xl:h-[80px]" alt="" />
@@ -129,7 +129,7 @@ export default function Index() {
                                     </li>
                                 ))}
                             </ul>
-                        </div>
+                        </div> */}
                     </section>
 
                     {/* Bottom Section */}
