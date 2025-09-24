@@ -1,6 +1,6 @@
 'use client'
-import Header from '@/components/layout/dashboard/Header'
-import Sidebar from '@/components/layout/dashboard/Sidebar'
+import Header from '@/components/layout/admin/components/Header'
+import Sidebar from '@/components/layout/admin/components/Sidebar'
 export default function DashboardLayout({
     children,
 }: Readonly<{
